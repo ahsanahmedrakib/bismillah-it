@@ -1,10 +1,10 @@
 import {
-  LayoutGrid,
-  Eye,
-  Palette,
-  Monitor,
-  Smartphone,
   Award,
+  Eye,
+  LayoutGrid,
+  Monitor,
+  Palette,
+  Smartphone,
 } from "lucide-react";
 
 export const portfolioHeroData = {
@@ -15,10 +15,7 @@ export const portfolioHeroData = {
   description2:
     "Each project showcases our commitment to quality, creativity, and delivering results for our clients.",
   bgImage: "/images/web/web.png",
-  actionButtons: [
-    { label: "Get a Quote", href: "/contact" },
-    { label: "Our Services", href: "/web" },
-  ],
+  actionButtons: [],
 };
 
 export const portfolioCategories = [
@@ -60,3 +57,17 @@ export const portfolioStats = [
   { number: "5+", label: "Years Experience" },
   { number: "98%", label: "Client Satisfaction" },
 ];
+
+export const allPortfoliData = [
+  {
+    title: "Ahead Solar BD",
+    img: "/images/web/portfolio/aheadsolar.png",
+    href: "https://www.aheadsolarbd.com",
+  },
+  {
+    title: "Bismillah IT",
+    img: "/images/web/portfolio/bismillah-it.png",
+    href: "htpps://it-solution-theta.com",
+  },
+];
+

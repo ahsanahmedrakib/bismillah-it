@@ -1,10 +1,10 @@
 import {
-  ShoppingBag,
+  BarChart3,
   CreditCard,
   Package,
-  BarChart3,
-  Truck,
   ShieldCheck,
+  ShoppingBag,
+  Truck,
 } from "lucide-react";
 
 export const ecommerceHeroData = {
@@ -14,11 +14,8 @@ export const ecommerceHeroData = {
     "Powerful eCommerce solutions to help you sell products and services online.",
   description2:
     "From secure payment processing to inventory management, we build stores that convert visitors into customers.",
-  bgImage: "/images/web/web.png",
-  actionButtons: [
-    { label: "Start Selling", href: "/contact" },
-    { label: "See Examples", href: "/web/portfolio" },
-  ],
+  bgImage: "/images/web/development/hero.png",
+  actionButtons: [{ label: "See Examples", href: "/web/portfolio" }],
 };
 
 export const ecommerceFeatures = [
@@ -83,3 +80,4 @@ export const ecommercePlatforms = [
     ],
   },
 ];
+

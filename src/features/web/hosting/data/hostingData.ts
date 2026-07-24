@@ -1,10 +1,10 @@
 import {
   Globe,
+  HardDrive,
+  Headphones,
+  RefreshCcw,
   Server,
   Shield,
-  HardDrive,
-  RefreshCcw,
-  Headphones,
 } from "lucide-react";
 
 export const hostingHeroData = {
@@ -14,11 +14,8 @@ export const hostingHeroData = {
     "Fast, secure, and dependable hosting solutions to keep your website online 24/7.",
   description2:
     "From domain registration to managed hosting, we provide everything you need for a powerful online presence.",
-  bgImage: "/images/web/hero.png",
-  actionButtons: [
-    { label: "Get Started", href: "/contact" },
-    { label: "View Plans", href: "/web/hosting" },
-  ],
+  bgImage: "/images/web/development/hero.png",
+  actionButtons: [],
 };
 
 export const hostingFeatures = [
@@ -86,3 +83,4 @@ export const hostingPlans = [
     ],
   },
 ];
+

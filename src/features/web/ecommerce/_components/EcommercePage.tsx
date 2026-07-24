@@ -1,14 +1,15 @@
 "use client";
 
+import {
+  ecommerceFeatures,
+  ecommerceHeroData,
+  ecommercePlatforms,
+} from "@/features/web/ecommerce/data/ecommerceData";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
-import { ChevronRight, Check } from "lucide-react";
-import {
-  ecommerceHeroData,
-  ecommerceFeatures,
-  ecommercePlatforms,
-} from "@/features/web/ecommerce/data/ecommerceData";
+import { Check, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 function FeatureCard({
   feature,
@@ -58,7 +59,9 @@ function PlatformCard({
       }`}
     >
       <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <h3 className="text-xl font-bold text-slate-900 mb-4">{platform.title}</h3>
+      <h3 className="text-xl font-bold text-slate-900 mb-4">
+        {platform.title}
+      </h3>
       {platform.services.map((service, j) => (
         <div key={j} className="flex items-start mb-3">
           <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-500 shrink-0" />
@@ -111,8 +114,8 @@ export default function EcommercePage() {
             </p>
             <p className="text-slate-600 mb-6 leading-relaxed">
               From product listings to payment processing, we handle every
-              aspect of your online store. Our solutions are designed to
-              scale with your business as it grows.
+              aspect of your online store. Our solutions are designed to scale
+              with your business as it grows.
             </p>
             <a
               href="/contact"
@@ -122,15 +125,18 @@ export default function EcommercePage() {
               Launch Your Store
             </a>
           </HoverableContentCard>
-          <div className="flex justify-center">
-            <div className="w-full max-w-md h-80 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl flex items-center justify-center">
-              <span className="text-blue-600 text-lg font-semibold">
-                eCommerce Solutions
-              </span>
-            </div>
+          <div className="flex justify-center order-1 lg:order-2">
+            <Image
+              src="/images/web/ecommerce/ecommerce.png"
+              alt="Working seamlessly online"
+              height={400}
+              width={400}
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
     </main>
   );
 }
+
