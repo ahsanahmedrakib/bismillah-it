@@ -47,7 +47,8 @@ function ContactButton() {
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <button
+    <Link
+      href="/contact"
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
       className={`px-6 py-2.5 bg-white border border-brand-active text-sky-700 text-xs font-bold tracking-wider uppercase rounded-lg shadow-sm cursor-pointer transition-colors ${
@@ -57,7 +58,7 @@ function ContactButton() {
       }`}
     >
       Contact Us
-    </button>
+    </Link>
   );
 }
 

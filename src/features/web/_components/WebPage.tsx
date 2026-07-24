@@ -198,16 +198,15 @@ export default function WebPage() {
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* LOGO SECTION  */}
-
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 items-center justify-center gap-8"> */}
-        <div className="flex flex-wrap justify-center gap-12">
+        <div className="flex flex-wrap items-center justify-between gap-12">
           {webPartnerLogos.map((a) => (
             <Image
               key={a.logo}
               src={a.logo}
               alt={a.logo}
-              width={180}
-              height={50}
+              width={150}
+              height={120}
+              className="h-auto w-auto object-contain"
             />
           ))}
         </div>
