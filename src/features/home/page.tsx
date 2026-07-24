@@ -1,16 +1,9 @@
-import { HeroSlider, AboutSection, BlogSection, OurApproach, WhatWeDo, HowWeDo, Testimonials, OurTeam } from "./_components";
+import { HomePage } from "./_components";
 
-export default function Homepage() {
+export default function Home() {
   return (
     <div>
-      <HeroSlider />
-      <AboutSection />
-      <BlogSection />
-      <OurApproach />
-      <WhatWeDo />
-      <HowWeDo />
-      <Testimonials />
-      <OurTeam />
+      <HomePage />
     </div>
   );
 }
