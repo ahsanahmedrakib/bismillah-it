@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="12" fill="#EFF6FF"/>
+  <!-- Central dashboard -->
+  <rect x="80" y="40" width="240" height="140" rx="8" stroke="#2563EB" stroke-width="3" fill="#DBEAFE"/>
+  <rect x="90" y="50" width="220" height="100" rx="4" fill="#93C5FD"/>
+  <!-- Dashboard bars -->
+  <rect x="100" y="120" width="30" height="20" rx="2" fill="#2563EB"/>
+  <rect x="140" y="100" width="30" height="40" rx="2" fill="#60A5FA"/>
+  <rect x="180" y="110" width="30" height="30" rx="2" fill="#2563EB"/>
+  <rect x="220" y="90" width="30" height="50" rx="2" fill="#60A5FA"/>
+  <rect x="260" y="115" width="30" height="25" rx="2" fill="#2563EB"/>
+  <!-- Status dots -->
+  <circle cx="100" cy="65" r="5" fill="#22C55E"/>
+  <circle cx="120" cy="65" r="5" fill="#22C55E"/>
+  <circle cx="140" cy="65" r="5" fill="#EAB308"/>
+  <!-- Devices below -->
+  <rect x="100" y="210" width="40" height="55" rx="6" stroke="#2563EB" stroke-width="2" fill="#DBEAFE"/>
+  <rect x="105" y="218" width="30" height="30" rx="2" fill="#93C5FD"/>
+  <rect x="180" y="215" width="50" height="40" rx="6" stroke="#2563EB" stroke-width="2" fill="#DBEAFE"/>
+  <rect x="186" y="221" width="38" height="24" rx="2" fill="#93C5FD"/>
+  <rect x="270" y="210" width="40" height="55" rx="6" stroke="#2563EB" stroke-width="2" fill="#DBEAFE"/>
+  <rect x="275" y="218" width="30" height="30" rx="2" fill="#93C5FD"/>
+  <!-- Connection lines -->
+  <line x1="120" y1="180" x2="120" y2="210" stroke="#2563EB" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="205" y1="180" x2="205" y2="215" stroke="#2563EB" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="290" y1="180" x2="290" y2="210" stroke="#2563EB" stroke-width="2" stroke-dasharray="4,4"/>
+</svg>
