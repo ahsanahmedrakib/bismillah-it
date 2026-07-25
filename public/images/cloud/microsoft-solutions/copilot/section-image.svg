@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" rx="24" fill="#f0f7ff"/>
+  <rect x="40" y="40" width="320" height="320" rx="16" fill="white" stroke="#e0e7ff" stroke-width="2"/>
+  <!-- Image frame -->
+  <rect x="80" y="80" width="240" height="180" rx="12" fill="#e0e7ff"/>
+  <!-- Mountain landscape -->
+  <polygon points="80,260 160,160 200,200 260,140 320,260" fill="#2563eb" opacity="0.3"/>
+  <polygon points="80,260 140,180 200,260" fill="#2563eb" opacity="0.5"/>
+  <polygon points="180,260 240,170 320,260" fill="#1d4ed8" opacity="0.4"/>
+  <!-- Sun -->
+  <circle cx="280" cy="120" r="20" fill="#fbbf24"/>
+  <!-- AI generation lines -->
+  <rect x="80" y="290" width="160" height="6" rx="3" fill="#cbd5e1"/>
+  <rect x="80" y="306" width="120" height="6" rx="3" fill="#cbd5e1"/>
+  <rect x="80" y="322" width="140" height="6" rx="3" fill="#cbd5e1"/>
+  <!-- AI sparkle icon -->
+  <circle cx="320" cy="80" r="20" fill="#2563eb"/>
+  <path d="M320 68 L323 77 L332 80 L323 83 L320 92 L317 83 L308 80 L317 77 Z" fill="white"/>
+  <!-- Paint palette dots -->
+  <circle cx="300" cy="200" r="6" fill="#ef4444"/>
+  <circle cx="316" cy="190" r="6" fill="#22c55e"/>
+  <circle cx="328" cy="204" r="6" fill="#3b82f6"/>
+  <circle cx="318" cy="218" r="6" fill="#f59e0b"/>
+</svg>

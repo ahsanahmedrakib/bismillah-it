@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" rx="24" fill="#f0f7ff"/>
+  <rect x="40" y="40" width="320" height="320" rx="16" fill="white" stroke="#e0e7ff" stroke-width="2"/>
+  <!-- Chat bubbles -->
+  <rect x="80" y="100" width="160" height="40" rx="20" fill="#2563eb"/>
+  <rect x="160" y="160" width="160" height="40" rx="20" fill="#e0e7ff"/>
+  <rect x="80" y="220" width="140" height="40" rx="20" fill="#2563eb"/>
+  <rect x="180" y="280" width="140" height="40" rx="20" fill="#e0e7ff"/>
+  <!-- AI sparkle icon -->
+  <circle cx="320" cy="80" r="20" fill="#2563eb"/>
+  <path d="M320 68 L323 77 L332 80 L323 83 L320 92 L317 83 L308 80 L317 77 Z" fill="white"/>
+  <!-- Lines in bubbles -->
+  <rect x="100" y="115" width="80" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="100" y="125" width="60" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="180" y="175" width="80" height="4" rx="2" fill="#94a3b8" opacity="0.7"/>
+  <rect x="180" y="185" width="50" height="4" rx="2" fill="#94a3b8" opacity="0.7"/>
+  <rect x="100" y="235" width="70" height="4" rx="2" fill="white" opacity="0.7"/>
+  <rect x="200" y="295" width="70" height="4" rx="2" fill="#94a3b8" opacity="0.7"/>
+</svg>
