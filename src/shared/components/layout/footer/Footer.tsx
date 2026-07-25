@@ -22,7 +22,7 @@ export default function Footer() {
                     height={70}
                     alt="Logo"
                     priority
-                    className="object-fit"
+                    style={{ width: "auto", height: "auto" }}
                   />
                 </Link>
               </div>
