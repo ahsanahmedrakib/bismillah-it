@@ -1,5 +1,7 @@
+import { AzurePage } from "@/features/cloud/microsoft-solutions/azure/_components";
+
 const page = () => {
-  return <div></div>;
+  return <AzurePage />;
 };
 
 export default page;
