@@ -1,5 +1,7 @@
+import { CondtionalAccessPage } from "@/features/cloud/microsoft-solutions/conditional-access/_components";
+
 const page = () => {
-  return <div></div>;
+  return <CondtionalAccessPage />;
 };
 
 export default page;
