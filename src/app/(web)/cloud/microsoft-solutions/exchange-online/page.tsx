@@ -1,5 +1,7 @@
+import { ExchangeOnlinePage } from "@/features/cloud/microsoft-solutions/exchange-online/_components";
+
 const page = () => {
-  return <div></div>;
+  return <ExchangeOnlinePage />;
 };
 
 export default page;

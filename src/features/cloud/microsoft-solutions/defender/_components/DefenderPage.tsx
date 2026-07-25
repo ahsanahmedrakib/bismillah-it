@@ -227,7 +227,7 @@ export default function DefenderPage() {
       <section className="py-16 lg:py-24 bg-white" id="what-is">
         {" "}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
-          <HoverableContentCard>
+          <HoverableContentCard className="order-2 lg:order-1">
             <h2 className="text-3xl text-center font-bold text-blue-900 mb-6">
               {defenderWhatIs.title}
             </h2>
@@ -244,7 +244,7 @@ export default function DefenderPage() {
             </div>
           </HoverableContentCard>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center order-1 lg:order-2">
             <Image
               src="/images/cloud/microsoft-solutions/defender/section-2.jpg"
               alt="Microsoft Defender for Business"
@@ -311,7 +311,7 @@ export default function DefenderPage() {
 
       {/* ================= WHAT'S INCLUDED ================= */}
       <section className="py-16 lg:py-24 bg-white" id="included">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             What Does Defender for Business Include?
           </h2>
@@ -319,12 +319,12 @@ export default function DefenderPage() {
             Defender for Business is a collection of capabilities bundled into a
             single Managed Security Services offering
           </p>
-          <div className="bg-white border-2 border-blue-100 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="bg-white border-2 border-blue-100 rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
             <div className="grid grid-cols-2 gap-px bg-blue-100">
-              <div className="bg-blue-600 text-white font-bold text-sm px-6 py-3">
+              <div className="bg-brand-blue text-white font-bold text-sm px-6 py-3">
                 Feature
               </div>
-              <div className="bg-blue-600 text-white font-bold text-sm px-6 py-3 text-center">
+              <div className="bg-brand-blue text-white font-bold text-sm px-6 py-3 text-center">
                 Defender for Business
               </div>
             </div>
@@ -357,7 +357,7 @@ export default function DefenderPage() {
 
       {/* ================= FEATURE COMPARISON TABLE ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="comparison">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Feature Comparison
           </h2>
@@ -365,10 +365,10 @@ export default function DefenderPage() {
             How Defender for Business compares to Defender for Endpoint P1 and
             P2
           </p>
-          <div className="bg-white border-2 border-blue-100 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-x-auto">
+          <div className="bg-white border-2 border-blue-100 rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-x-auto">
             <table className="w-full min-w-160">
               <thead>
-                <tr className="bg-blue-600 text-white">
+                <tr className="bg-brand-blue text-white">
                   <th className="text-left text-sm font-bold px-6 py-3">
                     Feature
                   </th>
@@ -461,7 +461,7 @@ export default function DefenderPage() {
 
       {/* ================= LIMITATIONS SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="limitations">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Defender for Business Limitations
           </h2>
@@ -485,7 +485,7 @@ export default function DefenderPage() {
 
       {/* ================= FAQ SECTION ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="faq">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Frequently Asked Questions
           </h2>
