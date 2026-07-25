@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 300" fill="none">
+  <rect width="450" height="300" rx="12" fill="#EFF6FF"/>
+  <g transform="translate(50, 30)">
+    <rect x="145" y="10" width="110" height="60" rx="8" stroke="#2563EB" stroke-width="3" fill="#DBEAFE"/>
+    <text x="200" y="35" text-anchor="middle" font-size="10" fill="#2563EB" font-family="sans-serif">Your App</text>
+    <text x="200" y="50" text-anchor="middle" font-size="9" fill="#64748B" font-family="sans-serif">Enterprise Ready</text>
+    <line x1="175" y1="70" x2="80" y2="110" stroke="#2563EB" stroke-width="2"/>
+    <line x1="200" y1="70" x2="200" y2="110" stroke="#2563EB" stroke-width="2"/>
+    <line x1="225" y1="70" x2="320" y2="110" stroke="#2563EB" stroke-width="2"/>
+    <rect x="40" y="110" width="80" height="40" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="80" y="134" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">SSO</text>
+    <rect x="160" y="110" width="80" height="40" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="200" y="134" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">Provisioning</text>
+    <rect x="280" y="110" width="80" height="40" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="320" y="134" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">User Mgmt</text>
+    <line x1="80" y1="150" x2="80" y2="170" stroke="#2563EB" stroke-width="2"/>
+    <line x1="200" y1="150" x2="200" y2="170" stroke="#2563EB" stroke-width="2"/>
+    <line x1="320" y1="150" x2="320" y2="170" stroke="#2563EB" stroke-width="2"/>
+    <rect x="80" y="170" width="240" height="60" rx="8" stroke="#2563EB" stroke-width="2" fill="#DBEAFE"/>
+    <text x="200" y="195" text-anchor="middle" font-size="10" fill="#2563EB" font-family="sans-serif">Microsoft Identity Platform</text>
+    <text x="200" y="215" text-anchor="middle" font-size="9" fill="#64748B" font-family="sans-serif">OAuth 2.0 / OpenID Connect / SAML</text>
+  </g>
+</svg>

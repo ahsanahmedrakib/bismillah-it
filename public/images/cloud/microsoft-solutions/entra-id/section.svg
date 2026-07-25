@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="12" fill="#EFF6FF"/>
+  <g transform="translate(50, 30)">
+    <rect x="0" y="0" width="300" height="240" rx="12" stroke="#2563EB" stroke-width="3" fill="#DBEAFE"/>
+    <rect x="15" y="15" width="270" height="30" rx="6" fill="#93C5FD"/>
+    <circle cx="35" cy="30" r="6" fill="#EF4444"/>
+    <circle cx="55" cy="30" r="6" fill="#EAB308"/>
+    <circle cx="75" cy="30" r="6" fill="#22C55E"/>
+    <rect x="15" y="55" width="120" height="80" rx="8" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <circle cx="75" cy="80" r="18" fill="#93C5FD"/>
+    <path d="M60 110 C60 100 90 100 90 110" stroke="#93C5FD" stroke-width="2" fill="none"/>
+    <rect x="150" y="55" width="135" height="35" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <rect x="160" y="63" width="80" height="6" rx="3" fill="#93C5FD"/>
+    <rect x="160" y="75" width="60" height="6" rx="3" fill="#BFDBFE"/>
+    <rect x="150" y="100" width="135" height="35" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <rect x="160" y="108" width="90" height="6" rx="3" fill="#93C5FD"/>
+    <rect x="160" y="120" width="50" height="6" rx="3" fill="#BFDBFE"/>
+    <rect x="15" y="145" width="270" height="25" rx="6" fill="#93C5FD"/>
+    <text x="150" y="162" text-anchor="middle" font-size="11" fill="#1E3A5F" font-family="sans-serif">Azure Active Directory</text>
+    <rect x="15" y="180" width="80" height="45" rx="8" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="55" y="207" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">SSO</text>
+    <rect x="110" y="180" width="80" height="45" rx="8" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="150" y="207" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">MFA</text>
+    <rect x="205" y="180" width="80" height="45" rx="8" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="245" y="207" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">Conditional</text>
+  </g>
+</svg>

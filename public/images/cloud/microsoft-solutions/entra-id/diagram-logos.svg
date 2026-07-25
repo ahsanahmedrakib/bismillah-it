@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 300" fill="none">
+  <rect width="400" height="300" rx="12" fill="#EFF6FF"/>
+  <g transform="translate(40, 40)">
+    <rect x="140" y="10" width="80" height="60" rx="8" stroke="#2563EB" stroke-width="3" fill="#DBEAFE"/>
+    <text x="180" y="45" text-anchor="middle" font-size="10" fill="#2563EB" font-family="sans-serif">Entra ID</text>
+    <line x1="120" y1="70" x2="60" y2="110" stroke="#2563EB" stroke-width="2"/>
+    <line x1="160" y1="70" x2="140" y2="110" stroke="#2563EB" stroke-width="2"/>
+    <line x1="200" y1="70" x2="220" y2="110" stroke="#2563EB" stroke-width="2"/>
+    <line x1="240" y1="70" x2="300" y2="110" stroke="#2563EB" stroke-width="2"/>
+    <rect x="20" y="110" width="80" height="45" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="60" y="137" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">Office 365</text>
+    <rect x="110" y="110" width="80" height="45" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="150" y="137" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">Azure</text>
+    <rect x="200" y="110" width="80" height="45" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="240" y="137" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">Dynamics</text>
+    <rect x="290" y="110" width="80" height="45" rx="6" stroke="#2563EB" stroke-width="2" fill="white"/>
+    <text x="330" y="137" text-anchor="middle" font-size="9" fill="#2563EB" font-family="sans-serif">SaaS Apps</text>
+    <rect x="60" y="180" width="280" height="40" rx="8" stroke="#2563EB" stroke-width="2" fill="#DBEAFE"/>
+    <text x="200" y="205" text-anchor="middle" font-size="10" fill="#2563EB" font-family="sans-serif">2,800+ Pre-integrated SaaS Applications</text>
+  </g>
+</svg>
