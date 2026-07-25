@@ -37,7 +37,7 @@ const HeroSlider = ({ slides }: { slides: Slides[] }) => {
       >
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx}>
-            <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 pb-12 md:pb-20">
+            <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 pb-8">
               {/* Text Layout Block */}
               <div className="flex flex-col items-start space-y-4 md:space-y-6 text-left order-2 md:order-1">
                 {slide.badge && (

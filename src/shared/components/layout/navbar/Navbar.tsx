@@ -69,7 +69,7 @@ export default function Navbar() {
                   height={70}
                   alt="Logo"
                   priority
-                  className="object-contain"
+                  className="object-fit"
                 />
               </Link>
             </div>
@@ -100,3 +100,4 @@ export default function Navbar() {
     </>
   );
 }
+

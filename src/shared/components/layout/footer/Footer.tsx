@@ -22,7 +22,7 @@ export default function Footer() {
                     height={70}
                     alt="Logo"
                     priority
-                    className="object-contain"
+                    className="object-fit"
                   />
                 </Link>
               </div>
@@ -212,3 +212,4 @@ export default function Footer() {
     </footer>
   );
 }
+
