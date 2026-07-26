@@ -170,11 +170,11 @@ export default function MobileDrawer({ open, onClose }: MobileDrawerProps) {
       </div>
       <div className="flex items-center shrink-0 ml-2">
         <a
-          href="tel:0260614222"
+          href="tel:01972721388"
           className="bg-brand-blue hover:bg-brand-hover active:bg-brand-active text-white px-pill-px py-pill-py rounded-pill text-phone shadow-pill-glow transition-all duration-200 hover:shadow-md inline-flex items-center gap-1"
         >
-          <span className="font-normal">(02)</span>
-          <span className="font-extrabold">6061 4222</span>
+          <span className="font-normal">(+88)</span>
+          <span className="font-extrabold">0 1972-721388</span>
         </a>
       </div>
     </div>

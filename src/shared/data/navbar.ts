@@ -136,7 +136,11 @@ export const SOCIAL_ICONS: SocialIcon[] = [
     color: "#1877F2",
   },
   { href: "https://www.twitter.com", icon: FaXTwitter, color: "#000000" },
-  { href: "https://www.linkedin.com", icon: FaLinkedinIn, color: "#0A66C2" },
+  {
+    href: "https://www.linkedin.com/company/bctbd/",
+    icon: FaLinkedinIn,
+    color: "#0A66C2",
+  },
   { href: "https://www.instagram.com", icon: FaInstagram, color: "#E4405F" },
 ];
 
