@@ -698,7 +698,7 @@ export const CLOUD_MEGA_MENU = {
         },
         {
           label: "Email Signature Management",
-          href: "/cloud/services/email-signature-management",
+          href: "/cloud/services/email-signature",
           image: "/images/navbar/cloud/signature.png",
           icon: PenTool,
           description: "Centralized branding for corporate email signatures",
