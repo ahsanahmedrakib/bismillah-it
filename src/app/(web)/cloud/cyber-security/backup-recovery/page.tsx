@@ -1,5 +1,7 @@
+import { BackupRecoveryPage } from "@/features/cloud/cyber-security/backup-recovery/_components";
+
 const page = () => {
-  return <div></div>;
+  return <BackupRecoveryPage />;
 };
 
 export default page;
