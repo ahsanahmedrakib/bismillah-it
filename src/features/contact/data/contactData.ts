@@ -33,7 +33,7 @@ export const contactDetails = [
   {
     icon: Clock,
     label: "Business Hours",
-    value: "Sat - Thu: 9:00 AM - 6:00 PM",
-    sub: "Friday: Closed",
+    value: "Sun - Thu: 9:00 AM - 6:00 PM",
+    sub: "Friday and Saturday: Closed",
   },
 ];
