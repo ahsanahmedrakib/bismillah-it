@@ -154,10 +154,19 @@ export const teamMembers = [
     bgLabel: "Consultant",
     image: "/images/home/team/1.png",
     social: [
-      { label: "Facebook", href: "#" },
-      { label: "X", href: "#" },
-      { label: "Instagram", href: "#" },
-      { label: "LinkedIn", href: "#" },
+      {
+        label: "Facebook",
+        href: "#https://www.facebook.com/TamzidHasanProtik",
+      },
+      { label: "X", href: "https://x.com/protik_uttara" },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/tamzidhasanprotik/",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/tamzidhasanprotik/",
+      },
     ],
   },
   {
@@ -167,8 +176,8 @@ export const teamMembers = [
     bgLabel: "Director",
     image: "/images/home/team/2.jpg",
     social: [
-      { label: "Facebook", href: "#" },
-      { label: "LinkedIn", href: "#" },
+      { label: "Facebook", href: "https://www.facebook.com/Tanzim.H.Anik" },
+      { label: "Instagram", href: "https://www.instagram.com/i_m_blacksmoke/" },
     ],
   },
   {
@@ -178,10 +187,10 @@ export const teamMembers = [
     bgLabel: "Developer",
     image: "/images/home/team/3.png",
     social: [
-      { label: "Facebook", href: "#" },
-      { label: "X", href: "#" },
-      { label: "Instagram", href: "#" },
-      { label: "LinkedIn", href: "#" },
+      { label: "Facebook", href: "" },
+      { label: "X", href: "" },
+      { label: "Instagram", href: "" },
+      { label: "LinkedIn", href: "" },
     ],
   },
   {
@@ -191,10 +200,16 @@ export const teamMembers = [
     bgLabel: "Engineer",
     image: "/images/home/team/4.jpg",
     social: [
-      { label: "Facebook", href: "#" },
-      { label: "X", href: "#" },
-      { label: "Instagram", href: "#" },
-      { label: "LinkedIn", href: "#" },
+      { label: "Facebook", href: "https://www.facebook.com/rakibahsanahmed/" },
+      { label: "X", href: "https://x.com/A_A_Rakib" },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/ahsan_ahmed_rakib",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/ahsanahmedrakib",
+      },
     ],
   },
 ];
