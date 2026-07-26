@@ -1,16 +1,16 @@
 import {
-  Shield,
-  Lock,
-  Users,
-  Smartphone,
-  Mail,
-  FileCheck,
-  Eye,
-  Key,
-  Server,
-  RefreshCw,
   AlertTriangle,
+  Eye,
+  FileCheck,
+  Key,
+  Lock,
+  Mail,
+  RefreshCw,
+  Server,
   Settings,
+  Shield,
+  Smartphone,
+  Users,
 } from "lucide-react";
 
 export const m365SecurityHeroData = {
@@ -18,7 +18,7 @@ export const m365SecurityHeroData = {
   title2: "Business Protection",
   description1:
     "In today's digital-first world, cybersecurity is no longer optional—it's a necessity. Businesses of all sizes face increasingly sophisticated threats, making robust security solutions critical for safeguarding sensitive data. Microsoft 365 stands out as a comprehensive suite designed to not only enhance productivity but also provide top-tier cybersecurity features.",
-  bgImage: "/images/cloud/cyber-security/m365-security/bg.png",
+  bgImage: "/images/it-support/cyber-security/cloud-and-network/hero.png",
   actionButtons: [
     { label: "OVERVIEW", href: "#overview" },
     { label: "FEATURES", href: "#features" },
@@ -260,3 +260,4 @@ export const securityAreas = [
     icon: Mail,
   },
 ];
+
