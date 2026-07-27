@@ -4,22 +4,22 @@ import OurApproach from "@/features/home/_components/OurApproach";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
-import { ArrowRight, ChevronDown, Check } from "lucide-react";
+import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import {
+  dispFaqs,
   dispHeroData,
   dispOverview,
   dispSecurityDomains,
-  essentialEightML2,
-  ongoingRequirements,
-  supportingFrameworks,
-  whyItMatters,
-  preparationSteps,
   dispServices,
   dispUsefulLinks,
-  dispFaqs,
+  essentialEightML2,
+  ongoingRequirements,
+  preparationSteps,
+  supportingFrameworks,
+  whyItMatters,
 } from "../data/dispData";
 
 function DomainCard({
@@ -261,7 +261,7 @@ export default function DispPage() {
                 <RequirementCard key={i} item={item} />
               ))}
             </div>
-            <div className="relative h-80 lg:h-full min-h-[320px] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
+            <div className="relative h-80 lg:h-full min-h-80 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
               <Image
                 src="/images/cloud/cyber-security/disp/section-3.jpg"
                 alt="Ongoing Cyber Security Requirements"
@@ -288,7 +288,7 @@ export default function DispPage() {
             ensure systems and data are adequately protected.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="relative h-80 lg:h-full min-h-[320px] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
+            <div className="relative h-80 lg:h-full min-h-80 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
               <Image
                 src="/images/cloud/cyber-security/disp/section-4.jpg"
                 alt="Supporting Frameworks"
@@ -323,8 +323,8 @@ export default function DispPage() {
               <p className="text-slate-600 text-sm text-justify">
                 By aligning with these frameworks, organisations can ensure they
                 meet Defence security expectations, improve risk management, and
-                maintain a consistent, auditable approach to cybersecurity across
-                all operations.
+                maintain a consistent, auditable approach to cybersecurity
+                across all operations.
               </p>
             </div>
           </div>
@@ -350,7 +350,7 @@ export default function DispPage() {
                 <RequirementCard key={i} item={item} />
               ))}
             </div>
-            <div className="relative h-80 lg:h-full min-h-[320px] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
+            <div className="relative h-80 lg:h-full min-h-80 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
               <Image
                 src="/images/cloud/cyber-security/disp/section-5.jpg"
                 alt="Why DISP Matters for Defence Suppliers"
@@ -361,7 +361,7 @@ export default function DispPage() {
             </div>
           </div>
           <div className="bg-blue-50 border-2 border-blue-100 rounded-2xl p-8 mt-12">
-            <p className="text-slate-600 text-sm text-center text-justify">
+            <p className="text-slate-600 text-sm text-justify">
               Implementing these frameworks is not just about compliance — it
               delivers long-term business value, strengthens security maturity,
               and positions organisations as trusted, reliable partners in the
@@ -382,9 +382,9 @@ export default function DispPage() {
             <p className="text-slate-600 mb-12 text-justify">
               Achieving alignment with the Essential Eight Maturity Level 2
               (ML2) requires organisations to assess their current environment,
-              identify gaps, and implement practical security improvements. Early
-              planning is critical, as uplift activities can take time depending
-              on existing systems and processes.
+              identify gaps, and implement practical security improvements.
+              Early planning is critical, as uplift activities can take time
+              depending on existing systems and processes.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {preparationSteps.map((item, i) => (
@@ -392,7 +392,7 @@ export default function DispPage() {
               ))}
             </div>
           </div>
-          <div className="relative h-80 lg:h-full min-h-[400px] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 lg:sticky lg:top-24">
+          <div className="relative h-80 lg:h-full min-h-100 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 lg:sticky lg:top-24">
             <Image
               src="/images/cloud/cyber-security/disp/section-6.jpg"
               alt="How to Prepare for DISP"
@@ -416,7 +416,7 @@ export default function DispPage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-10 text-white">
+          <div className="bg-linear-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-10 text-white">
             <h2 className="text-2xl lg:text-3xl font-bold mb-6">
               Need Help Becoming DISP Compliant?
             </h2>
@@ -431,19 +431,16 @@ export default function DispPage() {
             <div className="space-y-3 mb-6">
               {dispServices.map((service, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <Check
-                    size={18}
-                    className="text-blue-200 shrink-0 mt-0.5"
-                  />
+                  <Check size={18} className="text-blue-200 shrink-0 mt-0.5" />
                   <span className="text-blue-50 text-sm">{service}</span>
                 </div>
               ))}
             </div>
             <p className="text-blue-100 text-sm mb-6">
               Whether you&apos;re preparing for Defence contracts or uplifting
-              an existing environment, we provide a clear pathway to
-              compliance, helping you assess, secure, and optimise your systems
-              for long-term success and resilience.
+              an existing environment, we provide a clear pathway to compliance,
+              helping you assess, secure, and optimise your systems for
+              long-term success and resilience.
             </p>
             <Link
               href="/contact"
