@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import { ContactPage } from "@/features/contact/_components";
 
-const page = () => {
-  return <ContactPage />;
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Bismillah Computer & Technology for IT support, cloud services, web design, and more.",
 };
 
-export default page;
+export default function Page() {
+  return <ContactPage />;
+}

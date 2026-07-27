@@ -16,8 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bismillah Computer & Technology",
-  description: "IT Support | Cyber | Web | NBN | Phones",
+  title: {
+    default: "Bismillah Computer & Technology",
+    template: "%s | Bismillah Computer & Technology",
+  },
+  description:
+    "Comprehensive IT solutions including web design, cloud services, voice systems, internet connectivity, and managed IT support across Australia.",
   icons: {
     icon: "/favicon.png",
   },
