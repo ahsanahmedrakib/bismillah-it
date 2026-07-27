@@ -13,11 +13,11 @@ export const heroData = {
   description1: "",
   bgImage: "/images/web/hero.png",
   actionButtons: [
-    { label: "Web Development", href: "/" },
-    { label: "SEO", href: "/" },
-    { label: "Domain & Hosting", href: "/" },
-    { label: "Ecommerce", href: "/" },
-    { label: "Portfolio", href: "/" },
+    { label: "Web Development", href: "/web/development" },
+    { label: "SEO", href: "/web/seo" },
+    { label: "Domain & Hosting", href: "/web/hosting" },
+    { label: "Ecommerce", href: "/web/ecommerce" },
+    { label: "Portfolio", href: "/web/portfolio" },
   ],
 };
 
@@ -100,3 +100,4 @@ export const webPartnerLogos = [
   { logo: "/images/web/synergy.png" },
   { logo: "/images/web/cloudfare.png" },
 ];
+
