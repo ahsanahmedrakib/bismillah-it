@@ -1,62 +1,20 @@
 "use client";
 
-import Hero from "@/shared/components/ui/Hero";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
-import Image from "next/image";
-import { useState } from "react";
 import {
   faqs,
   heroData,
-  voiceTestimonials,
-  voiceServices,
-  voiceFeatures,
   voiceBenefits,
+  voiceFeatures,
+  voiceServices,
+  voiceTestimonials,
 } from "@/features/voice/data/voiceData";
-
-function VoiceServiceCard({
-  service,
-}: {
-  service: { title: string; img: string; desc: string };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 flex flex-col group transition-all duration-300 ${
-        touched
-          ? "border-blue-300 shadow-xl -translate-y-1"
-          : "border-blue-100 hover:border-blue-300 hover:shadow-xl hover:-translate-y-1"
-      }`}
-    >
-      <div className="relative h-48 w-full overflow-hidden">
-        <Image
-          src={service.img}
-          alt={service.title}
-          fill
-          className={`object-cover transition-transform duration-700 ${
-            touched ? "scale-105" : "group-hover:scale-105"
-          }`}
-        />
-      </div>
-      <div className="p-6 flex-1 flex flex-col">
-        <h3 className="font-bold text-lg text-slate-900 mb-3">
-          {service.title}
-        </h3>
-        <p className="text-sm text-slate-600">{service.desc}</p>
-      </div>
-    </div>
-  );
-}
+import FAQAccordion from "@/shared/components/ui/FAQAccordion";
+import Hero from "@/shared/components/ui/Hero";
+import ImageCard from "@/shared/components/ui/ImageCard";
+import TestimonialCard from "@/shared/components/ui/TestimonialCard";
+import Image from "next/image";
 
 export default function VoicePage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <main className="flex min-h-screen flex-col font-sans text-slate-800 bg-slate-50">
       {/* HERO SECTION */}
@@ -69,20 +27,11 @@ export default function VoicePage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {voiceTestimonials.map((testimonial, i) => (
-            <div
+            <TestimonialCard
               key={i}
-              className="bg-[#2a2a2a] text-gray-200 p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 relative"
-            >
-              <span className="text-5xl text-blue-600 absolute top-6 left-6 font-serif">
-                &quot;
-              </span>
-              <p className="mt-8 mb-6 text-sm leading-relaxed">
-                {testimonial.text}
-              </p>
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                {testimonial.name}
-              </p>
-            </div>
+              text={testimonial.text}
+              name={testimonial.name}
+            />
           ))}
         </div>
       </section>
@@ -222,7 +171,12 @@ export default function VoicePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {voiceServices.map((service, i) => (
-              <VoiceServiceCard key={i} service={service} />
+              <ImageCard
+                key={i}
+                title={service.title}
+                desc={service.desc}
+                image={service.img}
+              />
             ))}
           </div>
         </div>
@@ -420,47 +374,7 @@ export default function VoicePage() {
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
             FAQs
           </h2>
-          <div className="space-y-4 mx-auto">
-            {faqs.map((faq, i) => {
-              const isOpen = openIndex === i;
-              return (
-                <div
-                  key={i}
-                  className="border-2 border-blue-100 rounded-xl overflow-hidden transition-all relative"
-                >
-                  <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-                  <button
-                    onClick={() => toggle(i)}
-                    className="w-full flex justify-between items-center px-6 py-5 text-left cursor-pointer hover:bg-slate-50 transition-colors"
-                  >
-                    <span className="font-medium text-slate-900 pr-4">
-                      {faq.question}
-                    </span>
-                    <span
-                      className={`text-2xl text-blue-600 font-semibold shrink-0 transition-transform duration-300 ${
-                        isOpen ? "rotate-45" : ""
-                      }`}
-                    >
-                      +
-                    </span>
-                  </button>
-                  <div
-                    className={`grid transition-all duration-300 ease-in-out ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <p className="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <FAQAccordion items={faqs} />
         </div>
       </section>
     </main>

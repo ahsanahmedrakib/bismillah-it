@@ -58,7 +58,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
         >
           {member.social?.map(({ label, href }) => {
             const Icon = socialIconMap[label];
-            if (!Icon) return null;
+            if (!href) return null;
             return (
               <Link
                 key={label}

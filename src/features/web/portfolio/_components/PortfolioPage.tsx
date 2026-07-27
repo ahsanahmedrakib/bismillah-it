@@ -8,42 +8,11 @@ import {
 } from "@/features/web/portfolio/data/portfolioData";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-function CategoryCard({
-  category,
-}: {
-  category: {
-    title: string;
-    desc: string;
-    icon: React.ComponentType<{ size?: number }>;
-  };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-  const Icon = category.icon;
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <div className="flex justify-center pb-6 text-blue-600">
-        <Icon size={60} />
-      </div>
-      <h3 className="text-xl font-bold text-blue-900 text-center mb-3">
-        {category.title}
-      </h3>
-      <p className="text-slate-600 text-sm text-justify">{category.desc}</p>
-    </div>
-  );
-}
 
 function PortfolioCard({
   portfolio,
@@ -106,7 +75,12 @@ export default function PortfolioPage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {portfolioCategories.map((category, i) => (
-            <CategoryCard key={i} category={category} />
+            <IconFeatureCard
+              key={i}
+              title={category.title}
+              desc={category.desc}
+              icon={category.icon}
+            />
           ))}
         </div>
       </section>

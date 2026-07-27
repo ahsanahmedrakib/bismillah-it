@@ -1,79 +1,16 @@
 "use client";
 
-import Hero from "@/shared/components/ui/Hero";
-import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
-import { ChevronRight, Check } from "lucide-react";
 import {
-  hostingHeroData,
   hostingFeatures,
+  hostingHeroData,
   hostingPlans,
 } from "@/features/web/hosting/data/hostingData";
-
-function FeatureCard({
-  feature,
-}: {
-  feature: {
-    title: string;
-    desc: string;
-    icon: React.ComponentType<{ size?: number }>;
-  };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-  const Icon = feature.icon;
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <div className="flex justify-center pb-6 text-blue-600">
-        <Icon size={60} />
-      </div>
-      <h3 className="text-xl font-bold text-blue-900 text-center mb-3">
-        {feature.title}
-      </h3>
-      <p className="text-slate-600 text-sm text-justify">{feature.desc}</p>
-    </div>
-  );
-}
-
-function PlanCard({
-  plan,
-}: {
-  plan: { title: string; services: string[] };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`relative border-2 rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <h3 className="text-xl font-bold text-slate-900 mb-4">{plan.title}</h3>
-      {plan.services.map((service, j) => (
-        <div key={j} className="flex items-start mb-3">
-          <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-500 shrink-0" />
-          <span className="text-slate-600 text-sm">{service}</span>
-        </div>
-      ))}
-      <a
-        href="/contact"
-        className="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
-      >
-        Choose Plan
-      </a>
-    </div>
-  );
-}
+import Hero from "@/shared/components/ui/Hero";
+import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
+import ListCard from "@/shared/components/ui/ListCard";
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export default function HostingPage() {
   return (
@@ -86,7 +23,12 @@ export default function HostingPage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {hostingFeatures.map((feature, i) => (
-            <FeatureCard key={i} feature={feature} />
+            <IconFeatureCard
+              key={i}
+              title={feature.title}
+              desc={feature.desc}
+              icon={feature.icon}
+            />
           ))}
         </div>
       </section>
@@ -98,7 +40,12 @@ export default function HostingPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {hostingPlans.map((plan, i) => (
-              <PlanCard key={i} plan={plan} />
+              <ListCard
+                key={i}
+                title={plan.title}
+                items={plan.services}
+                variant="check"
+              />
             ))}
           </div>
         </div>
@@ -106,7 +53,7 @@ export default function HostingPage() {
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
-          <HoverableContentCard>
+          <HoverableContentCard className="order-2 lg:order-1">
             <h2 className="text-3xl font-bold text-blue-900 mb-6 mt-2">
               Domain & Hosting Made Simple
             </h2>
@@ -128,15 +75,18 @@ export default function HostingPage() {
               Get Started Today
             </a>
           </HoverableContentCard>
-          <div className="flex justify-center">
-            <div className="w-full max-w-md h-80 bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl flex items-center justify-center">
-              <span className="text-blue-600 text-lg font-semibold">
-                Web Hosting
-              </span>
-            </div>
+          <div className="flex justify-center order-1 lg:order-2">
+            <Image
+              src="/images/web/hosting/server.webp"
+              alt="Working seamlessly online"
+              height={400}
+              width={400}
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
     </main>
   );
 }
+

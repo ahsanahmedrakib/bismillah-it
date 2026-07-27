@@ -7,70 +7,10 @@ import {
 } from "@/features/web/ecommerce/data/ecommerceData";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
-import { Check, ChevronRight } from "lucide-react";
+import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
+import ListCard from "@/shared/components/ui/ListCard";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-
-function FeatureCard({
-  feature,
-}: {
-  feature: {
-    title: string;
-    desc: string;
-    icon: React.ComponentType<{ size?: number }>;
-  };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-  const Icon = feature.icon;
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <div className="flex justify-center pb-6 text-blue-600">
-        <Icon size={60} />
-      </div>
-      <h3 className="text-xl font-bold text-blue-900 text-center mb-3">
-        {feature.title}
-      </h3>
-      <p className="text-slate-600 text-sm text-justify">{feature.desc}</p>
-    </div>
-  );
-}
-
-function PlatformCard({
-  platform,
-}: {
-  platform: { title: string; services: string[] };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`relative border-2 rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <h3 className="text-xl font-bold text-slate-900 mb-4">
-        {platform.title}
-      </h3>
-      {platform.services.map((service, j) => (
-        <div key={j} className="flex items-start mb-3">
-          <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-500 shrink-0" />
-          <span className="text-slate-600 text-sm">{service}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 export default function EcommercePage() {
   return (
@@ -83,7 +23,12 @@ export default function EcommercePage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {ecommerceFeatures.map((feature, i) => (
-            <FeatureCard key={i} feature={feature} />
+            <IconFeatureCard
+              key={i}
+              title={feature.title}
+              desc={feature.desc}
+              icon={feature.icon}
+            />
           ))}
         </div>
       </section>
@@ -95,7 +40,12 @@ export default function EcommercePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {ecommercePlatforms.map((platform, i) => (
-              <PlatformCard key={i} platform={platform} />
+              <ListCard
+                key={i}
+                title={platform.title}
+                items={platform.services}
+                variant="check"
+              />
             ))}
           </div>
         </div>

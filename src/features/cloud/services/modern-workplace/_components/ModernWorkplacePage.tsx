@@ -3,11 +3,12 @@
 import OurApproach from "@/features/home/_components/OurApproach";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
-import { ArrowRight, Check, ChevronDown } from "lucide-react";
+import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
+import FAQAccordion from "@/shared/components/ui/FAQAccordion";
+import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import {
   advancedFeatures,
   coreApps,
@@ -20,38 +21,6 @@ import {
   tsitServices,
   workplacePlatforms,
 } from "../data/modernWorkplaceData";
-
-function FeatureCard({
-  feature,
-}: {
-  feature: {
-    title: string;
-    desc: string;
-    icon: React.ComponentType<{ size?: number }>;
-  };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-  const Icon = feature.icon;
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all flex flex-col ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <div className="flex items-center gap-3 mb-3">
-        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
-          <Icon size={20} />
-        </div>
-        <h3 className="text-lg font-bold text-slate-900">{feature.title}</h3>
-      </div>
-      <p className="text-slate-600 text-sm text-justify">{feature.desc}</p>
-    </div>
-  );
-}
 
 function BenefitCard({
   benefit,
@@ -81,38 +50,6 @@ function BenefitCard({
         <h3 className="text-xl font-bold text-slate-900">{benefit.title}</h3>
       </div>
       <p className="text-slate-600 text-sm text-justify">{benefit.desc}</p>
-    </div>
-  );
-}
-
-function ServiceCard({
-  service,
-}: {
-  service: {
-    title: string;
-    desc: string;
-    icon: React.ComponentType<{ size?: number }>;
-  };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-  const Icon = service.icon;
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all flex flex-col ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
-          <Icon size={24} />
-        </div>
-        <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-      </div>
-      <p className="text-slate-600 text-sm text-justify">{service.desc}</p>
     </div>
   );
 }
@@ -150,39 +87,6 @@ function PlatformCard({
           {platform.title}
         </h3>
         <p className="text-slate-600 text-sm text-justify">{platform.desc}</p>
-      </div>
-    </div>
-  );
-}
-
-function FAQItem({ faq }: { faq: { question: string; answer: string } }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="border-2 border-blue-100 rounded-xl overflow-hidden relative">
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex justify-between items-center px-6 py-5 text-left"
-      >
-        <span className="font-medium text-slate-900 pr-4">{faq.question}</span>
-        <ChevronDown
-          size={20}
-          className={`text-blue-600 shrink-0 transition-transform duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
-        />
-      </button>
-      <div
-        className={`grid transition-all duration-300 ${
-          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        }`}
-      >
-        <div className="overflow-hidden">
-          <p className="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
-            {faq.answer}
-          </p>
-        </div>
       </div>
     </div>
   );
@@ -255,7 +159,14 @@ export default function ModernWorkplacePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {coreApps.map((app, i) => (
-              <FeatureCard key={i} feature={app} />
+              <IconFeatureCard
+                key={i}
+                title={app.title}
+                desc={app.desc}
+                icon={app.icon}
+                iconSize={20}
+                className="flex flex-col"
+              />
             ))}
           </div>
         </div>
@@ -294,7 +205,14 @@ export default function ModernWorkplacePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {advancedFeatures.map((feature, i) => (
-              <FeatureCard key={i} feature={feature} />
+              <IconFeatureCard
+                key={i}
+                title={feature.title}
+                desc={feature.desc}
+                icon={feature.icon}
+                iconSize={20}
+                className="flex flex-col"
+              />
             ))}
           </div>
         </div>
@@ -333,7 +251,14 @@ export default function ModernWorkplacePage() {
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {modernWorkplaceServices.map((service, i) => (
-              <ServiceCard key={i} service={service} />
+              <IconFeatureCard
+                key={i}
+                title={service.title}
+                desc={service.desc}
+                icon={service.icon}
+                iconSize={24}
+                className="flex flex-col"
+              />
             ))}
           </div>
         </div>
@@ -493,11 +418,7 @@ export default function ModernWorkplacePage() {
           <p className="text-slate-600 text-center mb-12">
             Common questions about Microsoft 365 Modern Workplace
           </p>
-          <div className="space-y-4">
-            {modernWorkplaceFaqs.map((faq, i) => (
-              <FAQItem key={i} faq={faq} />
-            ))}
-          </div>
+          <FAQAccordion items={modernWorkplaceFaqs} />
         </div>
       </section>
     </main>

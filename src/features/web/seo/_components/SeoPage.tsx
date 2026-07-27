@@ -8,41 +8,10 @@ import {
 } from "@/features/web/seo/data/seoData";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
-
-function ServiceCard({
-  service,
-}: {
-  service: {
-    title: string;
-    desc: string;
-    icon: React.ComponentType<{ size?: number }>;
-  };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-  const Icon = service.icon;
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <div className="flex justify-center pb-6 text-blue-600">
-        <Icon size={60} />
-      </div>
-      <h3 className="text-xl font-bold text-blue-900 text-center mb-3">
-        {service.title}
-      </h3>
-      <p className="text-slate-600 text-sm text-justify">{service.desc}</p>
-    </div>
-  );
-}
 
 function PointerCard({
   item,
@@ -88,7 +57,12 @@ export default function SeoPage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {seoServices.map((service, i) => (
-            <ServiceCard key={i} service={service} />
+            <IconFeatureCard
+              key={i}
+              title={service.title}
+              desc={service.desc}
+              icon={service.icon}
+            />
           ))}
         </div>
       </section>

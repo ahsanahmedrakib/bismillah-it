@@ -3,6 +3,7 @@
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
+import TestimonialCard from "@/shared/components/ui/TestimonialCard";
 import {
   BarChart3,
   ChartNoAxesGantt,
@@ -75,20 +76,11 @@ const ServersAndNetworkingPage = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial, i) => (
-            <div
+            <TestimonialCard
               key={i}
-              className="bg-[#2a2a2a] text-gray-200 p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 relative"
-            >
-              <span className="text-5xl text-blue-600 absolute top-6 left-6 font-serif">
-                &quot;
-              </span>
-              <p className="mt-8 mb-6 text-sm leading-relaxed">
-                {testimonial.text}
-              </p>
-              <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                {testimonial.name}
-              </p>
-            </div>
+              text={testimonial.text}
+              name={testimonial.name}
+            />
           ))}
         </div>
       </section>

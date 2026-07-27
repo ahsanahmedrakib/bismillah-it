@@ -2,47 +2,9 @@
 
 import { heroData, internetCards } from "@/features/internet/data/internetData";
 import Hero from "@/shared/components/ui/Hero";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
+import ImageCard from "@/shared/components/ui/ImageCard";
 import { ChevronRight, HeartHandshake, Users, Wrench } from "lucide-react";
 import Image from "next/image";
-
-function InternetCard({
-  card,
-}: {
-  card: { title: string; desc: string; img: string };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] border-2 flex flex-col group transition-all duration-300 ${
-        touched
-          ? "border-blue-400 shadow-xl -translate-y-1"
-          : "border-blue-100 hover:border-blue-400 hover:shadow-xl hover:-translate-y-1"
-      }`}
-    >
-      <div className="relative h-48 w-full overflow-hidden">
-        <Image
-          src={card.img}
-          alt={card.title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-          className={`object-cover transition-transform duration-700 ${
-            touched ? "scale-105" : "group-hover:scale-105"
-          }`}
-        />
-      </div>
-      <div className="p-6 flex flex-col grow">
-        <h3 className="text-xl font-bold text-slate-800 mb-3">{card.title}</h3>
-        <p className="text-slate-600 text-sm leading-relaxed grow">
-          {card.desc}
-        </p>
-      </div>
-    </div>
-  );
-}
 
 export default function InternetPage() {
   return (
@@ -55,7 +17,12 @@ export default function InternetPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {internetCards.map((card, idx) => (
-              <InternetCard key={idx} card={card} />
+              <ImageCard
+                key={idx}
+                title={card.title}
+                desc={card.desc}
+                image={card.img}
+              />
             ))}
           </div>
         </div>

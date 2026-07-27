@@ -2,16 +2,16 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
+import FAQAccordion from "@/shared/components/ui/FAQAccordion";
 import { Cpu, Database, Server, Shield, Wifi, Wrench } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
 import {
   deviceRepairHeroData,
   deviceRepairPartnersData,
   faqs,
   RepairPartnerLogo,
 } from "../data/deviceRepairData";
+import { useTouchHover } from "@/shared/hooks/useTouchHover";
 
 function PartnerCard({ partner }: { partner: RepairPartnerLogo }) {
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
@@ -38,11 +38,6 @@ function PartnerCard({ partner }: { partner: RepairPartnerLogo }) {
 }
 
 const DeviceRepairPage = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
   return (
     <main className="flex min-h-screen flex-col font-sans text-slate-800 bg-slate-50">
       {/* HERO SECTION */}
@@ -713,47 +708,7 @@ const DeviceRepairPage = () => {
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
             Computer Repair FAQ
           </h2>
-          <div className="space-y-4 mx-auto">
-            {faqs.map((faq, i) => {
-              const isOpen = openIndex === i;
-              return (
-                <div
-                  key={i}
-                  className="border-2 border-blue-100 rounded-xl overflow-hidden transition-all relative"
-                >
-                  <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-                  <button
-                    onClick={() => toggle(i)}
-                    className="w-full flex justify-between items-center px-6 py-5 text-left cursor-pointer hover:bg-slate-50 transition-colors"
-                  >
-                    <span className="font-medium text-slate-900 pr-4">
-                      {faq.question}
-                    </span>
-                    <span
-                      className={`text-2xl text-blue-600 font-semibold shrink-0 transition-transform duration-300 ${
-                        isOpen ? "rotate-45" : ""
-                      }`}
-                    >
-                      +
-                    </span>
-                  </button>
-                  <div
-                    className={`grid transition-all duration-300 ease-in-out ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <p className="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <FAQAccordion items={faqs} />
         </div>
       </section>
 

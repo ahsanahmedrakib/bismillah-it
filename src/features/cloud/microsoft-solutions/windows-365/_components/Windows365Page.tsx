@@ -3,11 +3,12 @@
 import OurApproach from "@/features/home/_components/OurApproach";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
-import { ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
+import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
+import FAQAccordion from "@/shared/components/ui/FAQAccordion";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import {
   windows365Benefits,
   windows365FAQs,
@@ -38,71 +39,6 @@ function BenefitCard({
       <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
       <h3 className="text-lg font-bold text-slate-900 mb-3">{benefit.title}</h3>
       <p className="text-slate-600 text-sm text-justify">{benefit.desc}</p>
-    </div>
-  );
-}
-
-function FeatureCard({
-  feature,
-}: {
-  feature: {
-    title: string;
-    desc: string;
-    icon: React.ComponentType<{ size?: number }>;
-  };
-}) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-  const Icon = feature.icon;
-
-  return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      }`}
-    >
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <div className="flex justify-center pb-4 text-brand-active">
-        <Icon size={44} />
-      </div>
-      <h3 className="text-lg font-bold text-slate-900 text-center mb-3">
-        {feature.title}
-      </h3>
-      <p className="text-slate-600 text-sm text-justify">{feature.desc}</p>
-    </div>
-  );
-}
-
-function FAQItem({ faq }: { faq: { question: string; answer: string } }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="border-2 border-blue-100 rounded-xl overflow-hidden relative">
-      <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex justify-between items-center px-6 py-5 text-left"
-      >
-        <span className="font-medium text-slate-900 pr-4">{faq.question}</span>
-        <ChevronDown
-          size={20}
-          className={`text-blue-600 shrink-0 transition-transform duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
-        />
-      </button>
-      <div
-        className={`grid transition-all duration-300 ${
-          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        }`}
-      >
-        <div className="overflow-hidden">
-          <p className="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
-            {faq.answer}
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
@@ -167,9 +103,15 @@ export default function Windows365Page() {
             Everything you need for a secure, cloud-based desktop experience
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {windows365KeyFeatures.map((feature, i) => (
-              <FeatureCard key={i} feature={feature} />
-            ))}
+          {windows365KeyFeatures.map((feature, i) => (
+            <IconFeatureCard
+              key={i}
+              title={feature.title}
+              desc={feature.desc}
+              icon={feature.icon}
+              iconSize={44}
+            />
+          ))}
           </div>
         </div>
       </section>
@@ -320,11 +262,7 @@ export default function Windows365Page() {
           <p className="text-slate-600 text-center mb-12">
             Common questions about Windows 365 Cloud PC
           </p>
-          <div className="space-y-4">
-            {windows365FAQs.map((faq, i) => (
-              <FAQItem key={i} faq={faq} />
-            ))}
-          </div>
+          <FAQAccordion items={windows365FAQs} />
         </div>
       </section>
     </main>
