@@ -18,8 +18,8 @@ function NavLink({ btn }: { btn: { label: string; href: string } }) {
       onTouchEnd={onTouchEnd}
       className={`inline-flex items-center justify-center px-7 py-3 text-white text-xs sm:text-sm font-bold tracking-wider uppercase rounded-lg shadow-xl transition-all duration-200 group border border-slate-700/30 ${
         touched
-          ? "bg-[#12273d] shadow-2xl"
-          : "bg-[#17324d] hover:bg-[#12273d] hover:shadow-2xl"
+          ? "bg-dark-blue-hover shadow-2xl"
+          : "bg-dark-blue hover:bg-dark-blue-hover hover:shadow-2xl"
       }`}
     >
       <span>{btn.label}</span>

@@ -10,6 +10,7 @@ export interface SlideData {
   image: string;
   indicatorTitle: string;
   indicatorSubtitle: string;
+  href?: string;
 }
 
 export const slides: SlideData[] = [
@@ -22,6 +23,7 @@ export const slides: SlideData[] = [
     image: "/images/home/hero/cloud-hero.png",
     indicatorTitle: "Cloud Services & Microsoft 365",
     indicatorSubtitle: "Modern cloud tools",
+    href: "/cloud",
   },
   {
     badge: "IT Services >",
@@ -32,6 +34,7 @@ export const slides: SlideData[] = [
     image: "/images/home/hero/administrator-hero.png",
     indicatorTitle: "IT Services for Business and Home",
     indicatorSubtitle: "Fully Managed & AdHoc",
+    href: "/it-support",
   },
   {
     badge: "Cyber Security >",
@@ -42,6 +45,7 @@ export const slides: SlideData[] = [
     image: "/images/home/hero/cybersecurity-hero.png",
     indicatorTitle: "Cyber Security & Data Protection",
     indicatorSubtitle: "Proactive Security",
+    href: "/it-support/cyber-security",
   },
   {
     badge: "Telecoms >",
@@ -52,6 +56,7 @@ export const slides: SlideData[] = [
     image: "/images/home/hero/telecom-hero.png",
     indicatorTitle: "Telecommunications & Phone Systems",
     indicatorSubtitle: "Modern voice solutions",
+    href: "/voice",
   },
   {
     badge: "Internet >",
@@ -62,6 +67,7 @@ export const slides: SlideData[] = [
     image: "/images/home/hero/internet-hero.png",
     indicatorTitle: "NBN & Business Internet",
     indicatorSubtitle: "Internet, Home & Business",
+    href: "/internet/nbn",
   },
 ];
 

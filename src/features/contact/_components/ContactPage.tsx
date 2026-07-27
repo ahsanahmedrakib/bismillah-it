@@ -60,7 +60,7 @@ export default function ContactPage() {
                     href={WHATSAPP}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-brand-green-hover hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                    className="inline-flex items-center gap-3 bg-brand-green text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-brand-green-hover hover:shadow-lg hover:-translate-y-0.5 transition-all"
                   >
                     <FaWhatsapp size={22} />
                     WhatsApp
@@ -69,7 +69,7 @@ export default function ContactPage() {
                     href={MESSENGER}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-[#0084ff] text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-[#0073e6] hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                    className="inline-flex items-center gap-3 bg-messenger text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-messenger-hover hover:shadow-lg hover:-translate-y-0.5 transition-all"
                   >
                     <FaFacebookMessenger size={22} />
                     Messenger

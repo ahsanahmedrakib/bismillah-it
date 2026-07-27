@@ -472,7 +472,7 @@ export const INTERNET_MEGA_MENU = {
     {
       id: "nbn",
       title: "NBN",
-      href: "nbn",
+      href: "/internet/nbn",
       icon: Wifi,
       description:
         "Access Australia's National Broadband Network (NBN) to delivery quality internet to your premises.",
@@ -517,7 +517,7 @@ export const INTERNET_MEGA_MENU = {
     {
       id: "cel-fi",
       title: "Cel-Fi (4G/5G Boosters)",
-      href: "cel-fi",
+      href: "/internet/cel-fi",
       icon: RadioTower,
       description:
         "Cel-Fi products are the first carrier-class cellular coverage solution for industry leading signal gain.",
@@ -526,7 +526,7 @@ export const INTERNET_MEGA_MENU = {
     {
       id: "starlink",
       title: "StarLink",
-      href: "starlink",
+      href: "/internet/starlink",
       icon: Globe2,
       description:
         "Starlink offers global broadband coverage to underserved and remote areas via satellite.",
@@ -535,7 +535,7 @@ export const INTERNET_MEGA_MENU = {
     {
       id: "4g-5g-internet",
       title: "4G/5G Internet",
-      href: "4g-5g-internet",
+      href: "/internet/4g-5g-internet",
       icon: Clock,
       description:
         "Ensure a seamless transition in the event of any disruptions by using a 4G/5G backup.",

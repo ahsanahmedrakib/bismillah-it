@@ -41,29 +41,29 @@ const HeroSlider = ({ slides }: { slides: Slides[] }) => {
               {/* Text Layout Block */}
               <div className="flex flex-col items-start space-y-4 md:space-y-6 text-left order-2 md:order-1">
                 {slide.badge && (
-                  <span className="inline-block bg-[#22C55E] text-white text-xs font-semibold px-3 py-1.5 rounded-sm cursor-pointer hover:bg-green-600 transition-colors">
+                  <span className="inline-block bg-brand-green text-white text-xs font-semibold px-3 py-1.5 rounded-sm hover:bg-brand-green-hover transition-colors">
                     {slide.badge}
                   </span>
                 )}
                 {slide.title && (
-                  <h1 className="whitespace-pre-line text-xl font-extrabold tracking-tight text-[#2A3342] sm:text-4xl md:text-5xl lg:text-5xl leading-tight">
+                  <h1 className="whitespace-pre-line text-xl font-extrabold tracking-tight text-heading sm:text-4xl md:text-5xl lg:text-5xl leading-tight">
                     {slide.title}
                   </h1>
                 )}
                 {slide.subtitle && (
-                  <p className="max-w-md text-base text-[#556987] md:text-lg">
+                  <p className="max-w-md text-base text-body-muted md:text-lg">
                     {slide.subtitle}
                   </p>
                 )}
 
                 {slide.href && slide.buttonText ? (
                   <Link href={slide.href}>
-                    <button className="rounded-full bg-[#3B82F6] px-8 py-3.5 text-sm font-bold text-white tracking-wide shadow-md transition-all hover:bg-blue-600 hover:shadow-lg focus:outline-none">
+                    <button className="rounded-full bg-blue-500 px-8 cursor-pointer py-3.5 text-sm font-bold text-white tracking-wide shadow-md transition-all hover:bg-blue-600 hover:shadow-lg focus:outline-none">
                       {slide.buttonText}
                     </button>
                   </Link>
                 ) : !slide.href && slide.buttonText ? (
-                  <button className="rounded-full bg-[#3B82F6] px-8 py-3.5 text-sm font-bold text-white tracking-wide shadow-md transition-all hover:bg-blue-600 hover:shadow-lg focus:outline-none">
+                  <button className="rounded-full bg-blue-500 px-8 py-3.5 text-sm font-bold text-white tracking-wide shadow-md transition-all hover:bg-blue-600 hover:shadow-lg focus:outline-none">
                     {slide.buttonText}
                   </button>
                 ) : null}
@@ -105,7 +105,7 @@ const HeroSlider = ({ slides }: { slides: Slides[] }) => {
                 <span
                   className={`absolute top-0 left-0 h-.75 transition-all duration-300 ${
                     isActive
-                      ? "w-full bg-[#3B82F6]"
+                      ? "w-full bg-blue-500"
                       : "w-0 bg-transparent group-hover:w-1/2 group-hover:bg-gray-300"
                   }`}
                 />
@@ -119,7 +119,7 @@ const HeroSlider = ({ slides }: { slides: Slides[] }) => {
                 {slide.indicatorSubtitle && (
                   <span
                     className={`mt-1 text-xs font-bold leading-tight md:text-sm ${
-                      isActive ? "text-[#2A3342]" : "text-gray-500"
+                      isActive ? "text-heading" : "text-gray-500"
                     }`}
                   >
                     {slide.indicatorSubtitle}

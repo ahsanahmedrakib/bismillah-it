@@ -30,10 +30,10 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 {/* Mocking the Microsoft Partner logo */}
                 <div className="grid grid-cols-2 gap-0.5 w-8 h-8">
-                  <div className="bg-[#f25022]"></div>
-                  <div className="bg-[#7fba00]"></div>
-                  <div className="bg-[#00a4ef]"></div>
-                  <div className="bg-[#ffb900]"></div>
+                  <div className="bg-ms-red"></div>
+                  <div className="bg-ms-green"></div>
+                  <div className="bg-ms-blue"></div>
+                  <div className="bg-ms-yellow"></div>
                 </div>
                 <div className="leading-tight">
                   <span className="block text-lg font-bold">Microsoft</span>

@@ -17,7 +17,7 @@ function ApproachCard({
     <div
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
-      className={`group relative flex flex-col h-full rounded-2xl bg-linear-to-b from-[#161f30] to-[#0f1522] border p-8 transition-all duration-300 ${
+      className={`group relative flex flex-col h-full rounded-2xl bg-linear-to-b from-dark-card to-dark-card-alt border p-8 transition-all duration-300 ${
         touched
           ? "-translate-y-2 border-blue-500/50 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)]"
           : "border-gray-800 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)]"
@@ -68,7 +68,7 @@ function ApproachCard({
 
 export default function OurApproach() {
   return (
-    <section className="bg-[#0b0f19] text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="bg-dark-deep text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Aesthetic Background glow accents — using fixed-size composited layers */}
       <div
         className="absolute top-0 left-1/4 w-96 h-96 rounded-full pointer-events-none"

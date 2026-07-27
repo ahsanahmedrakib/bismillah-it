@@ -2,8 +2,8 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import TestimonialCard from "@/shared/components/ui/TestimonialCard";
+import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import {
   BarChart3,
   ChartNoAxesGantt,
@@ -24,16 +24,16 @@ import {
 import Image from "next/image";
 
 import {
-  partnersData,
-  heroData,
-  testimonials,
-  networkingSolutions,
-  topFeatureCards,
-  networkingSolutionsDetails,
-  wirelessCards,
-  wanTopCards,
   advancedNetworkingCard,
+  heroData,
+  networkingSolutions,
+  networkingSolutionsDetails,
+  partnersData,
+  testimonials,
+  topFeatureCards,
   wanAdvancedCards,
+  wanTopCards,
+  wirelessCards,
 } from "@/features/it-support/servers-and-networking/data/serversAndNetworkingData";
 
 import type { PartnerLogo } from "@/features/it-support/servers-and-networking/data/serversAndNetworkingData";
@@ -178,8 +178,8 @@ const ServersAndNetworkingPage = () => {
                 key={idx}
                 className={`group flex cursor-pointer items-center justify-between px-6 py-4 text-white text-sm font-semibold rounded-xl shadow-md transition-all ${
                   touched
-                    ? "bg-[#2a4a7f] -translate-y-0.5 shadow-lg"
-                    : "bg-[#1a365d] hover:bg-[#2a4a7f] hover:-translate-y-0.5 hover:shadow-lg"
+                    ? "bg-navy-active -translate-y-0.5 shadow-lg"
+                    : "bg-navy hover:bg-navy-active hover:-translate-y-0.5 hover:shadow-lg"
                 }`}
               >
                 <span className="flex justify-between items-end">
@@ -200,8 +200,8 @@ const ServersAndNetworkingPage = () => {
               <button
                 className={`px-6 py-2.5 bg-white border border-brand-active text-sky-700 text-xs font-bold tracking-wider uppercase rounded-lg shadow-sm cursor-pointer transition-colors ${
                   touched
-                    ? "bg-[#2a4a7f] text-white"
-                    : "hover:bg-[#2a4a7f] hover:text-white"
+                    ? "bg-navy-active text-white"
+                    : "hover:bg-navy-active hover:text-white"
                 }`}
               >
                 LEARN MORE
@@ -256,10 +256,20 @@ const ServersAndNetworkingPage = () => {
           {/* 6 Grid Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {networkingSolutionsDetails.map((card, i) => {
-              const icons = [Server, ShieldCheck, Wifi, BarChart3, Cloud, Settings];
+              const icons = [
+                Server,
+                ShieldCheck,
+                Wifi,
+                BarChart3,
+                Cloud,
+                Settings,
+              ];
               const Icon = icons[i];
               return (
-                <div key={i} className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+                <div
+                  key={i}
+                  className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6 hover:border-blue-500/50 transition-all"
+                >
                   <div className="flex items-start flex-col sm:flex-row space-x-4 space-y-4">
                     <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
                       <span className="text-white">
@@ -369,7 +379,10 @@ const ServersAndNetworkingPage = () => {
               const icons = [Globe, RefreshCw];
               const Icon = icons[i];
               return (
-                <div key={i} className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6">
+                <div
+                  key={i}
+                  className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6"
+                >
                   <div className="flex items-start flex-col sm:flex-row space-x-4 space-y-4">
                     <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
                       <span className="text-white">
@@ -414,7 +427,13 @@ const ServersAndNetworkingPage = () => {
           {/* Bottom 5 Grid Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {wanAdvancedCards.map((card, i) => {
-              const icons = [Wifi, Network, ChartSpline, LayoutPanelTop, ChartNoAxesGantt];
+              const icons = [
+                Wifi,
+                Network,
+                ChartSpline,
+                LayoutPanelTop,
+                ChartNoAxesGantt,
+              ];
               const Icon = icons[i];
               return (
                 <div

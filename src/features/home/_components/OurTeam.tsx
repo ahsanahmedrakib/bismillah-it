@@ -37,7 +37,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
             }`}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-[#111620]/90 via-[#111620]/20 to-transparent transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-linear-to-t from-dark-hero/90 via-dark-hero/20 to-transparent transition-opacity duration-300" />
         </div>
 
         <div className="absolute -right-4 bottom-1 select-none pointer-events-none">
@@ -50,7 +50,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
         </div>
 
         <div
-          className={`absolute left-4 bottom-4 bg-[#f05c26] text-white p-3 rounded-lg shadow-xl flex flex-col gap-4 transition-all duration-300 ease-out z-10 ${
+          className={`absolute left-4 bottom-4 bg-accent-orange text-white p-3 rounded-lg shadow-xl flex flex-col gap-4 transition-all duration-300 ease-out z-10 ${
             touched
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0"
@@ -79,8 +79,8 @@ function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
           / {member.role} /
         </p>
         <h3
-          className={`text-xl font-bold text-[#111620] transition-colors duration-300 ${
-            touched ? "text-[#f05c26]" : "group-hover:text-[#f05c26]"
+          className={`text-xl font-bold text-dark-hero transition-colors duration-300 ${
+            touched ? "text-accent-orange" : "group-hover:text-accent-orange"
           }`}
         >
           {member.name}

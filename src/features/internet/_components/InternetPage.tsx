@@ -118,7 +118,7 @@ export default function InternetPage() {
             <div className="space-y-8">
               {/* List Item 1 */}
               <div className="flex gap-4">
-                <div className="mt-1 shrink-0 w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-[#1a5b8f]">
+                <div className="mt-1 shrink-0 w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-icon-blue">
                   <Users className="w-5 h-5" />
                 </div>
                 <div>
@@ -134,7 +134,7 @@ export default function InternetPage() {
 
               {/* List Item 2 */}
               <div className="flex gap-4">
-                <div className="mt-1 shrink-0 w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-[#1a5b8f]">
+                <div className="mt-1 shrink-0 w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-icon-blue">
                   <Wrench className="w-5 h-5" />
                 </div>
                 <div>
@@ -152,7 +152,7 @@ export default function InternetPage() {
 
               {/* List Item 3 */}
               <div className="flex gap-4">
-                <div className="mt-1 shrink-0 w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-[#1a5b8f]">
+                <div className="mt-1 shrink-0 w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center text-icon-blue">
                   <HeartHandshake className="w-5 h-5" />
                 </div>
                 <div>

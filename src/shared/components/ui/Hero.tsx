@@ -29,8 +29,8 @@ function HeroActionButton({ btn }: { btn: ActionButtons }) {
       onTouchEnd={onTouchEnd}
       className={`group flex cursor-pointer items-center justify-between px-6 py-4 text-white text-sm font-semibold rounded-xl shadow-md transition-all ${
         touched
-          ? "bg-[#2a4a7f] -translate-y-0.5 shadow-lg"
-          : "bg-[#1a365d] hover:bg-[#2a4a7f] hover:-translate-y-0.5 hover:shadow-lg"
+          ? "bg-navy-active -translate-y-0.5 shadow-lg"
+          : "bg-navy hover:bg-navy-active hover:-translate-y-0.5 hover:shadow-lg"
       }`}
     >
       {btn.label}
@@ -53,8 +53,8 @@ function ContactButton() {
       onTouchEnd={onTouchEnd}
       className={`px-6 py-2.5 bg-white border border-brand-active text-sky-700 text-xs font-bold tracking-wider uppercase rounded-lg shadow-sm cursor-pointer transition-colors ${
         touched
-          ? "bg-[#2a4a7f] text-white"
-          : "hover:bg-[#2a4a7f] hover:text-white"
+          ? "bg-navy-active text-white"
+          : "hover:bg-navy-active hover:text-white"
       }`}
     >
       Contact Us
@@ -64,7 +64,7 @@ function ContactButton() {
 
 const Hero = ({ data }: { data: Data }) => {
   return (
-    <section className="relative bg-linear-to-t from-[#c2dde6] to-white pt-24 pb-32 lg:pt-32">
+    <section className="relative bg-linear-to-t from-hero-gradient to-white pt-24 pb-32 lg:pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-24 items-center relative z-10">
         {/* Hero Content */}
         <div className="space-y-8 order-2 lg:order-1 lg:col-span-2">

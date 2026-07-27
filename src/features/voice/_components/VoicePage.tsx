@@ -183,7 +183,7 @@ export default function VoicePage() {
       </section>
 
       {/* DARK BANNER */}
-      <section className="bg-[#2a2a2a] py-16">
+      <section className="bg-dark-section py-16">
         <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row items-center gap-12">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold text-white leading-relaxed">
@@ -289,7 +289,7 @@ export default function VoicePage() {
       </section>
 
       {/* HARDWARE CTA */}
-      <section className="bg-[#2a2a2a] py-16 text-white">
+      <section className="bg-dark-section py-16 text-white">
         <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
           <div className="relative h-64 md:h-80 w-full">
             <Image

@@ -32,7 +32,7 @@ export default function SocialChat() {
         href={`https://m.me/${MESSENGER_PAGE}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#0084ff] text-white p-3 rounded-full shadow-lg hover:bg-[#0073e6] hover:scale-110 transition-all"
+        className="bg-messenger text-white p-3 rounded-full shadow-lg hover:bg-messenger-hover hover:scale-110 transition-all"
         aria-label="Chat on Messenger"
       >
         <FaFacebookMessenger size={28} />

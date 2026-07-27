@@ -24,6 +24,9 @@ html {
 }
 
 @theme {
+  /* ==============================
+     BRAND — primary identity
+     ============================== */
   --color-brand-blue: #157cc1;
   --color-brand-hover: #1066a1;
   --color-brand-active: #0c4f7d;
@@ -32,9 +35,103 @@ html {
   --color-brand-subtle-border: #e2e8f0;
   --color-brand-secondary: #da3825;
   --color-brand-secondary-hover: #c12f1f;
-  --color-brand-green: #25d366; /* Quick Support green badge */
+  --color-brand-green: #25d366;
   --color-brand-green-hover: #1da851;
 
+  /* ==============================
+     SLATE
+     ============================== */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+
+  /* ==============================
+     BLUE
+     ============================== */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+
+  /* ==============================
+     GRAY
+     ============================== */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-800: #1f2937;
+
+  /* ==============================
+     SKY
+     ============================== */
+  --color-sky-100: #e0f2fe;
+  --color-sky-700: #0369a1;
+
+  /* ==============================
+     PURPLE
+     ============================== */
+  --color-purple-500: #a855f7;
+  --color-purple-600: #9333ea;
+
+  /* ==============================
+     GREEN
+     ============================== */
+  --color-green-600: #16a34a;
+
+  /* ==============================
+     SEMANTIC — edit these to re-theme
+     ============================== */
+
+  /* Text */
+  --color-heading: #2a3342;
+  --color-body-muted: #556987;
+  --color-icon-blue: #1a5b8f;
+
+  /* Messenger / Social */
+  --color-messenger: #0084ff;
+  --color-messenger-hover: #0073e6;
+
+  /* Dark surfaces */
+  --color-dark-section: #2a2a2a;
+  --color-dark-hero: #0e1622;
+  --color-dark-deep: #0b0f19;
+  --color-dark-card: #161f30;
+  --color-dark-card-alt: #0f1522;
+  --color-dark-blue: #17324d;
+  --color-dark-blue-hover: #12273d;
+
+  /* Navy (darker blue accents) */
+  --color-navy: #1a365d;
+  --color-navy-active: #2a4a7f;
+
+  /* Accent */
+  --color-accent-orange: #f05c26;
+  --color-hero-gradient: #c2dde6;
+
+  /* Microsoft brand */
+  --color-ms-red: #f25022;
+  --color-ms-green: #7fba00;
+  --color-ms-blue: #00a4ef;
+  --color-ms-yellow: #ffb900;
+
+  /* ==============================
+     SPACING / RADIUS / SHADOW
+     ============================== */
   --font-weight-utility: 700;
   --font-weight-nav: 700;
 
@@ -70,13 +167,13 @@ body {
   height: 8px;
   display: inline-block;
   border-radius: 50%;
-  background-color: #4b5563;
+  background-color: var(--color-slate-500);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .custom-bullet-active {
-  background-color: #da3825 !important;
+  background-color: var(--color-brand-secondary) !important;
   transform: scale(1.2);
 }
 
@@ -110,4 +207,3 @@ body {
 @utility font-logo-bold {
   font-weight: 800;
 }
-
