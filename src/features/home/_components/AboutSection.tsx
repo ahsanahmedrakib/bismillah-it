@@ -1,183 +1,158 @@
 "use client";
 
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import type { Engine } from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim";
 
-function NavLink({ btn }: { btn: { label: string; href: string } }) {
-  const { touched, onTouchStart, onTouchEnd } = useTouchHover();
-
-  return (
-    <Link
-      href={btn.href}
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`inline-flex items-center justify-center px-7 py-3 text-white text-xs sm:text-sm font-bold tracking-wider uppercase rounded-lg shadow-xl transition-all duration-200 group border border-slate-700/30 ${
-        touched
-          ? "bg-dark-blue-hover shadow-2xl"
-          : "bg-dark-blue hover:bg-dark-blue-hover hover:shadow-2xl"
-      }`}
-    >
-      <span>{btn.label}</span>
-      <span className={`ml-2 transform text-base leading-none transition-transform ${
-        touched ? "translate-x-1" : "group-hover:translate-x-1"
-      }`}>
-        &rsaquo;
-      </span>
-    </Link>
-  );
+interface AboutFeature {
+  icon: string;
+  title: string;
+  text: string;
 }
 
-function AboutImage() {
+const aboutFeatures: AboutFeature[] = [
+  {
+    icon: "/images/home/about/about_13_1.svg",
+    title: "Innovation at our core",
+    text: "Driving growth through smart, reliable, and future-ready IT solutions.",
+  },
+  {
+    icon: "/images/home/about/about_13_2.svg",
+    title: "Internal Networking",
+    text: "Streamline communication and data sharing with secure, high-performance internal networks.",
+  },
+  {
+    icon: "/images/home/about/about_13_3.svg",
+    title: "Simplifying complexity",
+    text: "Turning complicated technology into simple, effective solutions.",
+  },
+];
+
+function FeatureItem({ feature }: { feature: AboutFeature }) {
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
     <div
+      className="group flex items-start gap-5"
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
-      className={`relative w-full max-w-md aspect-4/3 rounded-2xl overflow-hidden shadow-2xl transition-transform duration-300 ${
-        touched ? "scale-[1.01]" : "hover:scale-[1.01]"
-      }`}
     >
-      <Image
-        src="/images/home/about.jpeg"
-        alt="Bismillah Computer landscape view"
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-        className="object-cover"
-        priority
-      />
+      <div
+        className={`shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 ring-1 ring-blue-100 shadow-sm transition-all duration-300 ${
+          touched
+            ? "scale-105 ring-blue-300 shadow-md"
+            : "group-hover:scale-105 group-hover:ring-blue-300 group-hover:shadow-md"
+        }`}
+      >
+        <Image
+          src={feature.icon}
+          alt={feature.title}
+          width={28}
+          height={28}
+          className="object-contain"
+        />
+      </div>
+      <div className="min-w-0">
+        <h3
+          className={`text-xl font-bold text-gray-900 tracking-tight transition-colors duration-300 ${
+            touched ? "text-brand-blue" : "group-hover:text-brand-blue"
+          }`}
+        >
+          {feature.title}
+        </h3>
+        <p className="text-gray-500 text-sm sm:text-base font-light leading-relaxed mt-1.5">
+          {feature.text}
+        </p>
+      </div>
     </div>
   );
 }
 
 export default function AboutSection() {
-  const navButtons = [
-    { label: "OUR SERVICES", href: "#services" },
-    { label: "QUICK SUPPORT", href: "#support" },
-    { label: "NBN STATUS", href: "#nbn-status" },
-  ];
-
-  // Initialize the tsparticles engine
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadSlim(engine);
-  }, []);
-
   return (
-    <div className="w-full font-sans antialiased text-gray-800">
-      {/* ---------------- Top Navigation Bar ---------------- */}
-      <header className="relative w-full border-t border-t-brand-active bg-white py-10 md:py-12 overflow-hidden">
-        {/* ---------------- 3D Network Background ---------------- */}
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          className="absolute inset-0 z-0 pointer-events-none"
-          options={{
-            fullScreen: { enable: false }, // Keeps particles confined to this container
-            fpsLimit: 60,
-            particles: {
-              color: {
-                value: "#5ba4e5", // Light blue nodes matching your theme
-              },
-              links: {
-                color: "#5ba4e5",
-                distance: 120,
-                enable: true,
-                opacity: 0.4,
-                width: 1,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: {
-                  default: "bounce", // Keeps them from drifting off screen
-                },
-                random: true,
-                speed: 0.8, // Slow, elegant movement like the video
-                straight: false,
-              },
-              number: {
-                density: {
-                  enable: true,
-                  area: 800,
-                },
-                value: 100, // Number of nodes
-              },
-              opacity: {
-                value: 0.6,
-              },
-              shape: {
-                type: "circle",
-              },
-              size: {
-                value: { min: 1, max: 3 },
-              },
-            },
-            detectRetina: true,
-            interactivity: {
-              detectsOn: "canvas",
-              events: {
-                onHover: {
-                  enable: true,
-                  mode: "grab", // Connects nodes to the mouse pointer
-                },
-              },
-              modes: {
-                grab: {
-                  distance: 200, // How far the pointer reaches to grab nodes
-                  links: {
-                    opacity: 0.6,
-                    color: "#5ba4e5",
-                  },
-                },
-              },
-            },
-          }}
-        />
+    <section
+      id="about-sec"
+      className="relative bg-linear-to-b from-gray-50 via-white to-gray-50 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+    >
+      {/* Background Decorative Ambient Blur */}
+      <div
+        className="absolute top-20 left-1/2 -translate-x-1/2 w-125 h-125 rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(191,219,254,0.15) 0%, transparent 70%)",
+          willChange: "transform",
+        }}
+      />
 
-        {/* ---------------- Foreground Content ---------------- */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8">
-            {navButtons.map((btn, idx) => (
-              <NavLink key={idx} btn={btn} />
-            ))}
-          </nav>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* ---------------- Section Heading ---------------- */}
+        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+          <span className="text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 px-3 py-1.5 rounded-md ring-1 ring-blue-600/10">
+            About Us
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mt-4 leading-tight">
+            Empowering businesses with smart IT solutions
+          </h2>
         </div>
-      </header>
 
-      {/* ---------------- Main Hero Section ---------------- */}
-      <section className="bg-brand-active text-white py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Image */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <AboutImage />
-          </div>
-
-          {/* Right Column: Content */}
-          <div className="lg:col-span-7 text-center lg:text-left space-y-4 md:space-y-6">
-            <div className="space-y-1 md:space-y-2">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-                Bismillah Computer
-              </h1>
-              <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/95 leading-snug">
-                Local company, local people.
-              </p>
+        {/* ---------------- Main Layout ---------------- */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-center">
+          {/* Left: image + floating stat card */}
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden border border-blue-100 shadow-[0_20px_50px_-20px_rgba(21,124,193,0.35)]">
+              <Image
+                src="/images/home/about/about_13_2.png"
+                alt="Bismillah Computer & Technology"
+                width={305}
+                height={335}
+                className="w-full h-auto object-cover"
+              />
             </div>
 
-            <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-justify">
-              We offer our services to small businesses, medium-sized businesses
-              and private customers in Albury, Wodonga and surrounding areas.
-              Bismillah Computer has the skills and the capacity to guide you
-              through planning, design, implementation and ongoing management of
-              your IT infrastructure at a low cost.
+            {/* Floating stat card */}
+            <div className="absolute -bottom-6 left-6 sm:left-10 flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.12)] ring-1 ring-brand-subtle-border">
+              <div className="text-4xl sm:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-linear-to-b from-brand-blue to-cyan-500">
+                10+
+              </div>
+              <div>
+                <p className="font-bold text-gray-900">Years of</p>
+                <p className="text-sm text-gray-500 font-medium">
+                  Trusted Experience
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: description + features + CTA */}
+          <div>
+            <p className="text-gray-500 text-base sm:text-lg font-light leading-relaxed">
+              Bismillah Computer &amp; Technology delivers secure, scalable, and
+              affordable IT solutions — from network consultancy and website
+              development to ISP, hardware, and software support. With over 10
+              years of trusted experience, we help businesses stay connected,
+              reliable, and future-ready.
             </p>
+
+            <div className="flex flex-col gap-8 mt-10">
+              {aboutFeatures.map((feature, idx) => (
+                <FeatureItem key={idx} feature={feature} />
+              ))}
+            </div>
+
+            <Link
+              href="/about"
+              className="group mt-10 inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-hover active:bg-brand-active text-white px-pill-px py-pill-py rounded-pill text-phone shadow-pill-glow transition-all duration-200 hover:shadow-md"
+            >
+              Discover More
+              <ArrowRight
+                size={18}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

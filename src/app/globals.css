@@ -130,6 +130,14 @@ html {
   --color-ms-yellow: #ffb900;
 
   /* ==============================
+     ABOUT SECTION (BCT style)
+     ============================== */
+  --color-theme-blue: #0b59db;
+  --color-theme-navy: #0b1422;
+  --color-smoke-soft: #f2f5fa;
+  --color-theme-border: #d5d7da;
+
+  /* ==============================
      SPACING / RADIUS / SHADOW
      ============================== */
   --font-weight-utility: 700;
@@ -175,6 +183,15 @@ body {
 .custom-bullet-active {
   background-color: var(--color-brand-secondary) !important;
   transform: scale(1.2);
+}
+
+@keyframes spin-badge {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @utility text-utility {

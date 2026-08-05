@@ -349,19 +349,19 @@ export const VOICE_MEGA_MENU = {
       links: [
         {
           label: "Small Business",
-          href: "/voice/phone-systems/small-business",
+          href: "",
           icon: Users,
           description: "Flexible VoIP setup for small teams",
         },
         {
           label: "Medium Business",
-          href: "/voice/phone-systems/medium-business",
+          href: "",
           icon: Building,
           description: "Scalable communication solutions",
         },
         {
           label: "Enterprise Business",
-          href: "/voice/phone-systems/enterprise-business",
+          href: "",
           icon: Building2,
           description: "Robust enterprise phone infrastructure",
         },
@@ -370,31 +370,30 @@ export const VOICE_MEGA_MENU = {
     {
       id: "brands",
       title: "BRANDS",
-      href: "brands",
-      // Custom text-only header as shown in the image (or uses default icon)
+      href: "",
       icon: Phone,
       links: [
         {
           label: "Vodia (Cloud System)",
-          href: "/voice/brands/vodia",
+          href: "",
           icon: Phone,
           description: "Cloud-based PBX system",
         },
         {
           label: "Grandstream",
-          href: "/voice/brands/grandstream",
+          href: "",
           icon: Phone,
           description: "IP phones and gateways",
         },
         {
           label: "Avaya IP Office",
-          href: "/voice/brands/avaya",
+          href: "",
           icon: Phone,
           description: "Hybrid & IP communication platforms",
         },
         {
           label: "LG iPECS",
-          href: "/voice/brands/lg-ipecs",
+          href: "",
           icon: Phone,
           description: "Unified communication phone systems",
         },
@@ -407,19 +406,19 @@ export const VOICE_MEGA_MENU = {
       links: [
         {
           label: "Headsets",
-          href: "/voice/hardware/headsets",
+          href: "",
           icon: Headphones,
           description: "Noise-canceling office headsets",
         },
         {
           label: "Cordless Phones",
-          href: "/voice/hardware/cordless-phones",
+          href: "",
           icon: Smartphone,
           description: "Wireless DECT handsets",
         },
         {
           label: "Cel-Fi 4G Repeater",
-          href: "/voice/hardware/celfi-4g-repeater",
+          href: "",
           icon: Radio,
           description: "Mobile coverage booster",
         },
@@ -432,31 +431,31 @@ export const VOICE_MEGA_MENU = {
       links: [
         {
           label: "Unified Comms",
-          href: "/voice/features/unified-comms",
+          href: "",
           icon: Share2,
           description: "Integrated voice, video, and chat",
         },
         {
           label: "Conferencing Solutions",
-          href: "/voice/features/conferencing-solutions",
+          href: "",
           icon: Video,
           description: "HD video & audio conference rooms",
         },
         {
           label: "Hold Music",
-          href: "/voice/features/hold-music",
+          href: "",
           icon: Music,
           description: "Custom message & music on hold",
         },
         {
           label: "Microsoft Teams",
-          href: "/voice/features/microsoft-teams",
+          href: "",
           icon: MessagesSquare,
           description: "Teams Direct Routing integration",
         },
         {
           label: "More Features",
-          href: "/voice/more-features",
+          href: "",
           icon: PlusCircle,
           description: "Explore all voice capabilities",
         },
@@ -472,44 +471,44 @@ export const INTERNET_MEGA_MENU = {
     {
       id: "nbn",
       title: "NBN",
-      href: "/internet/nbn",
+      href: "",
       icon: Wifi,
       description:
         "Access Australia's National Broadband Network (NBN) to delivery quality internet to your premises.",
       links: [
         {
           label: "Free Fibre Upgrade",
-          href: "/internet/nbn/free-fibre-upgrade",
+          href: "",
           icon: Zap,
         },
         {
           label: "Home and Small Business",
-          href: "/internet/nbn/home-small-business",
+          href: "",
           icon: Home,
         },
         {
           label: "Business",
-          href: "/internet/nbn/business",
+          href: "",
           icon: Building,
         },
         {
           label: "Enterprise Fibre",
-          href: "/internet/nbn/enterprise-fibre",
+          href: "",
           icon: Building2,
         },
         {
           label: "Fixed Wireless (FW)",
-          href: "/internet/nbn/fixed-wireless",
+          href: "",
           icon: WifiPen,
         },
         {
           label: "Sky Muster",
-          href: "/internet/nbn/sky-muster",
+          href: "",
           icon: Cloud,
         },
         {
           label: "Order Now",
-          href: "/internet/nbn/order",
+          href: "",
           icon: ListOrdered,
         },
       ],
@@ -517,7 +516,7 @@ export const INTERNET_MEGA_MENU = {
     {
       id: "cel-fi",
       title: "Cel-Fi (4G/5G Boosters)",
-      href: "/internet/cel-fi",
+      href: "",
       icon: RadioTower,
       description:
         "Cel-Fi products are the first carrier-class cellular coverage solution for industry leading signal gain.",
@@ -526,7 +525,7 @@ export const INTERNET_MEGA_MENU = {
     {
       id: "starlink",
       title: "StarLink",
-      href: "/internet/starlink",
+      href: "",
       icon: Globe2,
       description:
         "Starlink offers global broadband coverage to underserved and remote areas via satellite.",
@@ -535,7 +534,7 @@ export const INTERNET_MEGA_MENU = {
     {
       id: "4g-5g-internet",
       title: "4G/5G Internet",
-      href: "/internet/4g-5g-internet",
+      href: "",
       icon: Clock,
       description:
         "Ensure a seamless transition in the event of any disruptions by using a 4G/5G backup.",
@@ -770,21 +769,21 @@ export const INDUSTRIES_MEGA_MENU = {
       links: [
         {
           label: "Community/aged care",
-          href: "/industries/community-aged-care",
+          href: "",
           icon: Home,
           description:
             "Secure systems for healthcare workers and care facilities",
         },
         {
           label: "Medical and fertility",
-          href: "/industries/medical-and-fertility",
+          href: "",
           icon: Stethoscope,
           description:
             "Compliant infrastructure for clinics & medical practices",
         },
         {
           label: "IT Support for Veterinary",
-          href: "/industries/veterinary",
+          href: "",
           icon: Bird,
           description:
             "Specialized software and network support for vet clinics",
@@ -798,21 +797,21 @@ export const INDUSTRIES_MEGA_MENU = {
       links: [
         {
           label: "Professional Services",
-          href: "/industries/professional-services",
+          href: "",
           icon: Briefcase,
           description:
             "IT support and security for legal, consulting, and corporate firms",
         },
         {
           label: "Accounting and financial",
-          href: "/industries/accounting-and-financial",
+          href: "",
           icon: Landmark,
           description:
             "Encrypted networks and compliance tools for financial practices",
         },
         {
           label: "Government and non-profit",
-          href: "/industries/government-and-non-profit",
+          href: "",
           icon: GraduationCap,
           description:
             "Budget-friendly, highly secure systems for public sectors and NPOs",
@@ -826,20 +825,20 @@ export const INDUSTRIES_MEGA_MENU = {
       links: [
         {
           label: "Freight and logistics",
-          href: "/industries/freight-and-logistics",
+          href: "",
           icon: Truck,
           description:
             "Supply chain connectivity and fleet management technology",
         },
         {
           label: "Real estate and storage",
-          href: "/industries/real-estate-and-storage",
+          href: "",
           icon: Building,
           description: "Property management software & cloud hosting solutions",
         },
         {
           label: "Construction and projects",
-          href: "/industries/construction-and-projects",
+          href: "",
           icon: HardHat,
           description:
             "Mobile workforce connectivity and site setup technology",
@@ -853,14 +852,14 @@ export const INDUSTRIES_MEGA_MENU = {
       links: [
         {
           label: "Agriculture and microbials",
-          href: "/industries/agriculture-and-microbials",
+          href: "",
           icon: Sprout,
           description:
             "Tailored IT solutions for agricultural and bio-tech operations",
         },
         {
           label: "Engineering & Science",
-          href: "/industries/engineering-and-science",
+          href: "",
           icon: Wrench,
           description:
             "High-performance computing and secure data infrastructure",

@@ -148,63 +148,6 @@ const DeviceRepairPage = () => {
         </div>
       </section>
 
-      <section className="bg-brand-active text-white py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
-          We offer an onsite residential repair service for your home computers.
-        </h2>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Image */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-4/3 rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/it-support/device-repair/offer.jpg"
-                alt="Bismillah Computer landscape view"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Right Column: Content */}
-          <div className="lg:col-span-7 text-center lg:text-left space-y-4 md:space-y-6">
-            <div className="space-y-1 md:space-y-2">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-                Bismillah Computer
-              </h1>
-              <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/95 leading-snug">
-                Local company, local people.
-              </p>
-            </div>
-
-            <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-justify">
-              Total Solutions IT provides reliable computer repair services for
-              home users, helping resolve common issues such as slow computers,
-              startup failures, virus infections, and system errors. If your
-              computer isn’t working properly, our experienced technicians are
-              ready to help.
-              <br />
-              <br /> One of our qualified technicians can visit your home at a
-              convenient time to diagnose and repair most problems onsite. We
-              carry a range of common replacement parts and diagnostic tools,
-              allowing many computer repairs to be completed during the first
-              visit.
-              <br /> <br />
-              If a repair requires additional work, we will clearly explain the
-              issue and take your computer to our workshop for further testing
-              and repair. Once completed, your system will be fully tested,
-              optimised, and ready to use. <br />
-              <br />
-              Where available, we can also provide temporary loan computers so
-              you are not left without access while repairs are underway. <br />
-              <br />
-              Clear advice. Honest pricing. Local technicians you can trust.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ==================== SECTION 1: Repair Services ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
