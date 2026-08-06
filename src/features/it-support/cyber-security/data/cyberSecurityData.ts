@@ -63,12 +63,13 @@ export const cyberFaqs = [
       "Multifactor authentication (MFA) is a layered security approach that requires users to provide multiple credentials to verify their identity before accessing a resource.",
   },
   {
-    title: "What are the different roles of the Australian Cyber Security Centre?",
+    title:
+      "What are the different roles of the Bangladeshi Cyber Security Centre?",
     description:
-      "The role of the ACSC is to lead the Australian Government's operational responses to cybersecurity incidents and coordinate national cybersecurity operations and resources. Additionally, it is responsible for raising awareness about the levels of cyber threats facing Australia.",
+      "The role of the ACSC is to lead the Bangladeshi Government's operational responses to cybersecurity incidents and coordinate national cybersecurity operations and resources. Additionally, it is responsible for raising awareness about the levels of cyber threats facing Australia.",
   },
   {
-    title: "Why is Australian Cyber Security important?",
+    title: "Why is Bangladeshi Cyber Security important?",
     description:
       "A cybersecurity strategy is a high-level plan for securing your organization's assets over the next three to five years. However, because technology and cyber threats can change unpredictably, you may need to update your strategy sooner than expected, even if it seems unnecessary right now. Consequently, it's important to remain flexible and, at the same time, prepared for evolving risks.",
   },
@@ -77,7 +78,10 @@ export const cyberFaqs = [
 export const partnerLogos = [
   { alt: "Partner Logo", src: "/images/it-support/cyber-security/cove.png" },
   { alt: "N-ABLE", src: "/images/it-support/cyber-security/nable.png" },
-  { alt: "Microsoft Defender", src: "/images/it-support/cyber-security/defender.png" },
+  {
+    alt: "Microsoft Defender",
+    src: "/images/it-support/cyber-security/defender.png",
+  },
   { alt: "Datto", src: "/images/it-support/cyber-security/datto.png" },
   { alt: "Acronis", src: "/images/it-support/cyber-security/acronis.png" },
 ];
@@ -127,7 +131,10 @@ export const incidentResponseHeroData = {
     "Protect your business from costly and damaging cybersecurity incidents with Total Solutions IT. Our incident response services are designed to swiftly address and mitigate incidents, minimizing and, where possible, reversing the impact of breaches.",
   bgImage: "/images/it-support/cyber-security/incident-response/hero.jpg",
   actionButtons: [
-    { label: "MICROSOFT ACCOUNT", href: "https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account" },
+    {
+      label: "MICROSOFT ACCOUNT",
+      href: "https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account",
+    },
     { label: "REPORT INCIDENT", href: "#" },
     { label: "INCIDENT PLAN", href: "#" },
     { label: "INCIDENT RESPONSE PLAN", href: "#" },
@@ -266,3 +273,4 @@ export const bitdefenderFeatures = [
   "Centralized Management Console",
   "Performance Optimization",
 ];
+

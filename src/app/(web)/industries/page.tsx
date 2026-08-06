@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { IndustriesPage } from "@/features/industries/_components";
+import { createMetadata } from "@/shared/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Industries",
   description:
-    "Tailored IT solutions for education, hospitality, healthcare, and other industries across Australia.",
-};
+    "Tailored IT solutions for education, hospitality, healthcare, and other industries across Bangladesh.",
+  path: "/industries",
+});
 
 const page = () => {
   return (
@@ -16,3 +17,4 @@ const page = () => {
 };
 
 export default page;
+

@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/shared/lib/seo";
 import { CloudPage } from "@/features/cloud/_components";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Cloud Services",
-  description:
-    "Microsoft 365, Azure, cloud migration, and cybersecurity solutions to keep your business connected and secure.",
-};
+  description: "Microsoft 365, Azure, cloud migration, and cybersecurity solutions to keep your business connected and secure.",
+  path: "/cloud",
+});
 
 const page = () => {
   return (

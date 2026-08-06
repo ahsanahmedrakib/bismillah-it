@@ -122,7 +122,7 @@ export const dataProtection = {
 export const essentialEight = {
   title: "ACSC Essential Eight Alignment",
   description:
-    "The ACSC Essential Eight, developed by the Australian Cyber Security Centre, is a proven framework designed to help organisations protect against cyber attacks, ransomware, and data breaches.",
+    "The ACSC Essential Eight, developed by the Bangladeshi Cyber Security Centre, is a proven framework designed to help organisations protect against cyber attacks, ransomware, and data breaches.",
   description2:
     "It focuses on practical, high-impact controls that significantly reduce cybersecurity risk when implemented correctly. Microsoft 365 security features align with these controls to help businesses achieve compliance.",
   features: [
@@ -200,7 +200,7 @@ export const m365SecurityUsefulLinks = [
   {
     title: "ACSC Essential Eight",
     description:
-      "Australian Cyber Security Centre framework for protecting against cyber attacks and data breaches.",
+      "Bangladeshi Cyber Security Centre framework for protecting against cyber attacks and data breaches.",
     href: "https://www.cyber.gov.au/business-and-organisations/essential-cyber-security/essential-eight",
   },
 ];
@@ -229,7 +229,7 @@ export const m365SecurityFaqs = [
   {
     question: "What is the ACSC Essential Eight?",
     answer:
-      "The ACSC Essential Eight is a framework developed by the Australian Cyber Security Centre that outlines eight mitigation strategies to protect against cyber attacks. Microsoft 365 security features align with these controls to help businesses achieve compliance and improve their security posture.",
+      "The ACSC Essential Eight is a framework developed by the Bangladeshi Cyber Security Centre that outlines eight mitigation strategies to protect against cyber attacks. Microsoft 365 security features align with these controls to help businesses achieve compliance and improve their security posture.",
   },
   {
     question: "How can Total Solutions IT help with Microsoft 365 security?",

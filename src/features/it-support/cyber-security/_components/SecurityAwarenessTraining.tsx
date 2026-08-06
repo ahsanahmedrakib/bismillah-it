@@ -155,7 +155,7 @@ const SecurityAwarenessTraining = () => {
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
             Total Solutions IT brings extensive experience in delivering
-            customized cybersecurity services across Australia. From employee
+            customized cybersecurity services accross Bangladesh. From employee
             training and dark web monitoring to incident response and
             penetration testing, we help your organization stay vigilant and
             secure against breaches and attacks. Our training reduces the fear

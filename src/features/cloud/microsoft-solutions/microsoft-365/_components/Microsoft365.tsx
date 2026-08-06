@@ -131,7 +131,7 @@ export default function Microsoft365() {
           <div className="flex justify-center">
             <Image
               src="/images/cloud/microsoft-solutions/micrsoft-365/office-365.png"
-              alt="Australian Cyber Security Centre Logo"
+              alt="Bangladeshi Cyber Security Centre Logo"
               height={400}
               width={400}
               className="object-cover"
@@ -254,7 +254,7 @@ export default function Microsoft365() {
           <div className="flex justify-center order-1 lg:order-2">
             <Image
               src="/images/cloud/microsoft-solutions/micrsoft-365/collaboration.png"
-              alt="Australian Cyber Security Centre Logo"
+              alt="Bangladeshi Cyber Security Centre Logo"
               height={400}
               width={400}
               className="object-cover"
@@ -269,7 +269,7 @@ export default function Microsoft365() {
           <div className="flex justify-center">
             <Image
               src="/images/cloud/microsoft-solutions/micrsoft-365/microsoft-365.png"
-              alt="Australian Cyber Security Centre Logo"
+              alt="Bangladeshi Cyber Security Centre Logo"
               height={400}
               width={300}
               className="object-cover"
@@ -360,7 +360,7 @@ export default function Microsoft365() {
           <div className="flex justify-center order-1 lg:order-2">
             <Image
               src="/images/cloud/microsoft-solutions/micrsoft-365/copilot.png"
-              alt="Australian Cyber Security Centre Logo"
+              alt="Bangladeshi Cyber Security Centre Logo"
               height={400}
               width={400}
               className="object-cover"

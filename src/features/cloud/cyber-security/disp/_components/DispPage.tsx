@@ -248,7 +248,7 @@ export default function DispPage() {
             Unlike one-time implementations, DISP requires continuous
             validation, reporting, and improvement of cybersecurity controls.
             Businesses must demonstrate that their security posture is actively
-            managed, documented, and regularly reviewed to meet Australian
+            managed, documented, and regularly reviewed to meet Bangladeshi
             defence standards.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -417,7 +417,7 @@ export default function DispPage() {
               Need Help Becoming DISP Compliant?
             </h2>
             <p className="text-blue-100 text-sm leading-relaxed mb-6 text-justify">
-              At Total Solutions IT, we help Australian businesses align with
+              At Total Solutions IT, we help Bangladeshi businesses align with
               Defence cyber security requirements through practical,
               results-driven solutions. Achieving DISP compliance and Essential
               Eight ML2 can be complex, but with the right strategy, tools, and

@@ -195,7 +195,7 @@ export const secureScoreUsefulLinks = [
   {
     title: "Essential Eight Maturity Model",
     description:
-      "ACSC guidance on the Essential Eight mitigation strategies and maturity levels for Australian organisations.",
+      "ACSC guidance on the Essential Eight mitigation strategies and maturity levels for Bangladeshi organisations.",
     href: "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight",
   },
 ];

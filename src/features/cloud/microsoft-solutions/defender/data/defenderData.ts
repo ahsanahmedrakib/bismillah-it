@@ -1,20 +1,17 @@
 import {
+  AlertTriangle,
+  Bug,
+  Eye,
+  Laptop,
+  Lock,
+  Radar,
+  RefreshCw,
+  Search,
+  Server,
   Shield,
   ShieldCheck,
-  Search,
-  RefreshCw,
-  AlertTriangle,
-  Lock,
-  Laptop,
-  Server,
-  Eye,
-  Zap,
   Target,
-  Radar,
-  Bug,
-  FileCheck,
-  Users,
-  Settings,
+  Zap,
 } from "lucide-react";
 
 export const defenderHeroData = {
@@ -40,9 +37,10 @@ export const defenderOverview = {
 };
 
 export const defenderWhatIs = {
-  title: "What is Microsoft Defender for Business, and could it suit your Business?",
+  title:
+    "What is Microsoft Defender for Business, and could it suit your Business?",
   description:
-    "Small and Medium Enterprises (SMEs) form the backbone of the Australian economy and play a crucial role in the supply chain. However, in today's digital era, this significance also brings challenges. SMEs are increasingly targeted by malicious actors due to a fiercely competitive market and limited budgets for security measures, unlike larger corporations.",
+    "Small and Medium Enterprises (SMEs) form the backbone of the Bangladeshi economy and play a crucial role in the supply chain. However, in today's digital era, this significance also brings challenges. SMEs are increasingly targeted by malicious actors due to a fiercely competitive market and limited budgets for security measures, unlike larger corporations.",
   description2:
     "Over recent years, SMEs have embraced cloud technology for their operations, which has enhanced flexibility and mobility, positively impacting our daily lives. Yet, this shift has altered the risk landscape, emphasizing the importance of Endpoints and the necessity for a Zero Trust Architecture. The traditional notion of 'trust, but verify' is outdated, especially in light of current global events.",
   description3:
@@ -153,38 +151,134 @@ export const defenderNistFramework = [
 ];
 
 export const defenderFeatureTable = [
-  { feature: "Threat & vulnerability management", defenderBusiness: true, endpointP1: false, endpointP2: true },
-  { feature: "Attack surface reduction capabilities", defenderBusiness: true, endpointP1: true, endpointP2: true },
-  { feature: "Next-generation protection", defenderBusiness: true, endpointP1: true, endpointP2: true },
-  { feature: "Endpoint detection and response", defenderBusiness: true, endpointP1: false, endpointP2: true },
-  { feature: "Automated investigation and response", defenderBusiness: true, endpointP1: false, endpointP2: true },
-  { feature: "Threat hunting and six months of data retention", defenderBusiness: false, endpointP1: false, endpointP2: true },
-  { feature: "Device discovery", defenderBusiness: true, endpointP1: false, endpointP2: true },
-  { feature: "Custom detections", defenderBusiness: false, endpointP1: false, endpointP2: true },
-  { feature: "Sandbox", defenderBusiness: false, endpointP1: false, endpointP2: true },
-  { feature: "Device timeline events", defenderBusiness: false, endpointP1: false, endpointP2: true },
-  { feature: "Threat analytics", defenderBusiness: "Optimized for SMBs", endpointP1: false, endpointP2: true },
-  { feature: "Cross-platform support (Windows, macOS, iOS, Android)", defenderBusiness: true, endpointP1: "Limited", endpointP2: "Limited" },
-  { feature: "Server support", defenderBusiness: "Add-on", endpointP1: false, endpointP2: true },
-  { feature: "Microsoft Threat Experts", defenderBusiness: false, endpointP1: false, endpointP2: true },
-  { feature: "Partner APIs", defenderBusiness: true, endpointP1: true, endpointP2: true },
-  { feature: "Microsoft 365 Lighthouse integration", defenderBusiness: true, endpointP1: true, endpointP2: true },
-  { feature: "Stream events to Sentinel", defenderBusiness: true, endpointP1: "?", endpointP2: true },
+  {
+    feature: "Threat & vulnerability management",
+    defenderBusiness: true,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Attack surface reduction capabilities",
+    defenderBusiness: true,
+    endpointP1: true,
+    endpointP2: true,
+  },
+  {
+    feature: "Next-generation protection",
+    defenderBusiness: true,
+    endpointP1: true,
+    endpointP2: true,
+  },
+  {
+    feature: "Endpoint detection and response",
+    defenderBusiness: true,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Automated investigation and response",
+    defenderBusiness: true,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Threat hunting and six months of data retention",
+    defenderBusiness: false,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Device discovery",
+    defenderBusiness: true,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Custom detections",
+    defenderBusiness: false,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Sandbox",
+    defenderBusiness: false,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Device timeline events",
+    defenderBusiness: false,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Threat analytics",
+    defenderBusiness: "Optimized for SMBs",
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Cross-platform support (Windows, macOS, iOS, Android)",
+    defenderBusiness: true,
+    endpointP1: "Limited",
+    endpointP2: "Limited",
+  },
+  {
+    feature: "Server support",
+    defenderBusiness: "Add-on",
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Microsoft Threat Experts",
+    defenderBusiness: false,
+    endpointP1: false,
+    endpointP2: true,
+  },
+  {
+    feature: "Partner APIs",
+    defenderBusiness: true,
+    endpointP1: true,
+    endpointP2: true,
+  },
+  {
+    feature: "Microsoft 365 Lighthouse integration",
+    defenderBusiness: true,
+    endpointP1: true,
+    endpointP2: true,
+  },
+  {
+    feature: "Stream events to Sentinel",
+    defenderBusiness: true,
+    endpointP1: "?",
+    endpointP2: true,
+  },
 ];
 
 export const defenderIncludedFeatures = [
   { feature: "Centralized management", included: true },
-  { feature: "Simplified Firewall and Antivirus configuration for Windows", included: true },
+  {
+    feature: "Simplified Firewall and Antivirus configuration for Windows",
+    included: true,
+  },
   { feature: "Threat and Vulnerability Management", included: true },
   { feature: "Attack Surface Reduction", included: true },
   { feature: "Next-Gen Protection", included: true },
   { feature: "Endpoint Detection and Response", included: true },
   { feature: "Automated Investigation and Remediation", included: true },
   { feature: "Threat Analytics", included: true },
-  { feature: "Cross platform support for Windows, MacOS, iOS, and Android clients", included: true },
+  {
+    feature:
+      "Cross platform support for Windows, MacOS, iOS, and Android clients",
+    included: true,
+  },
   { feature: "Windows server and Linux server", included: "Add-on" },
   { feature: "Partner APIs", included: true },
-  { feature: "Microsoft 365 Lighthouse for viewing security incidents across customers", included: true },
+  {
+    feature:
+      "Microsoft 365 Lighthouse for viewing security incidents across customers",
+    included: true,
+  },
   { feature: "Threat Hunting and 6-months data retention", included: false },
   { feature: "Microsoft Threat Experts", included: false },
 ];
@@ -261,7 +355,8 @@ export const defenderFAQs = [
       "Defender for Business is an AI-powered, enterprise-grade device security solution that helps businesses with up to 300 employees protect against ransomware and other cyberthreats in an easy-to-use and cost-effective package.",
   },
   {
-    question: "How does Defender for Business differ from standard Microsoft Defender Antivirus?",
+    question:
+      "How does Defender for Business differ from standard Microsoft Defender Antivirus?",
     answer:
       "Microsoft Defender Antivirus provides next-generation protection built into Windows devices, helping protect them from viruses, malware, and potentially unwanted applications. Defender for Business adds enterprise-grade capabilities including EDR, automated investigation and remediation, vulnerability management, and centralized management across multiple device platforms.",
   },
@@ -271,7 +366,8 @@ export const defenderFAQs = [
       "Defender for Business supports Windows 10/11, macOS (three most current releases), iOS, and Android devices. You can protect up to 300 users with up to five devices per user, with no minimum device requirement.",
   },
   {
-    question: "Is Defender for Business included in Microsoft 365 Business Premium?",
+    question:
+      "Is Defender for Business included in Microsoft 365 Business Premium?",
     answer:
       "Yes. Microsoft 365 Business Premium includes Defender for Business, along with Defender for Office 365 Plan 1 for email protection, Azure AD Premium Plan 1, and Microsoft Intune for device management.",
   },
@@ -291,8 +387,10 @@ export const defenderFAQs = [
       "Defender for Business supports multiple onboarding methods including Microsoft Intune/Endpoint Manager, Local Script, Group Policy, and VDI Onboarding script. The wizard-based setup guides you through the process.",
   },
   {
-    question: "What are the differences between Defender for Business and Defender for Endpoint P2?",
+    question:
+      "What are the differences between Defender for Business and Defender for Endpoint P2?",
     answer:
       "Defender for Business includes most features of P2 but lacks Advanced Hunting, Threat Experts, 6-month data retention, device timeline events, sandbox, and custom detections. It's optimized for SMBs with simplified management.",
   },
 ];
+

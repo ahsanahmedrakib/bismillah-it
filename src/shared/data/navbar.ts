@@ -172,7 +172,7 @@ export const IT_MEGA_MENU = {
       href: "/it-support/cyber-security",
       icon: Lock,
       description:
-        "Advanced Endpoint security, email security, Australian Cyber Security Centre (ASCS) standards and recommendations.",
+        "Advanced Endpoint security, email security, Bangladeshi Cyber Security Centre (ASCS) standards and recommendations.",
       links: [
         {
           label: "Cloud & Network Security",
@@ -474,7 +474,7 @@ export const INTERNET_MEGA_MENU = {
       href: "",
       icon: Wifi,
       description:
-        "Access Australia's National Broadband Network (NBN) to delivery quality internet to your premises.",
+        "Access Bangladesh's National Broadband Network (NBN) to delivery quality internet to your premises.",
       links: [
         {
           label: "Free Fibre Upgrade",
@@ -655,7 +655,8 @@ export const CLOUD_MEGA_MENU = {
           href: "/cloud/cyber-security/essential-eight",
           icon: ClipboardCheck,
           image: "/images/navbar/cloud/acsc.svg",
-          description: "Australian Cyber Security Centre mitigation strategies",
+          description:
+            "Bangladeshi Cyber Security Centre mitigation strategies",
         },
         {
           label: "DISP – Defence Industry Security Program",

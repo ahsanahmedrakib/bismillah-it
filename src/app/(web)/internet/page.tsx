@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { InternetPage } from "@/features/internet/_components";
+import { createMetadata } from "@/shared/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Internet Solutions",
   description:
-    "High-speed internet connectivity including NBN, Starlink, 4G/5G, and Cel-Fi solutions for homes and businesses across Australia.",
-};
+    "High-speed internet connectivity including NBN, Starlink, 4G/5G, and Cel-Fi solutions for homes and businesses accross Bangladesh.",
+  path: "/internet",
+});
 
 const page = () => {
   return (
@@ -16,3 +17,4 @@ const page = () => {
 };
 
 export default page;
+

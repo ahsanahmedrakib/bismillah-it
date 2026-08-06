@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/shared/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "NBN",
   description:
-    "NBN internet plans and connections for homes, small businesses, and enterprises across Australia.",
-};
+    "NBN internet plans and connections for homes, small businesses, and enterprises accross Bangladesh.",
+  path: "/internet/nbn",
+});
 
 const page = () => {
   return <div></div>;
 };
 
 export default page;
+

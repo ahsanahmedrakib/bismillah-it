@@ -15,7 +15,7 @@ const IncidentResponse = () => {
       <section className="pt-12 sm:pt-16 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
         <HoverableContentCard>
           <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
-            Our experienced incident response team supports Australian
+            Our experienced incident response team supports Bangladeshi
             organizations and businesses across various industries in managing
             complex and sensitive cybersecurity challenges. With deep industry
             expertise and an in-depth understanding of the local threat
@@ -113,7 +113,7 @@ const IncidentResponse = () => {
           <div className="space-y-4 text-xs sm:text-sm text-slate-500 leading-relaxed">
             <p>
               {
-                "  In today's digital landscape, vigilance in IT security is crucial or organizations and businesses across Australia. Our highly experienced team is equipped to defend against both known and emerging threats, ensuring rapid response to any cyber attacks orsecurity incidents."
+                "  In today's digital landscape, vigilance in IT security is crucial or organizations and businesses accross Bangladesh. Our highly experienced team is equipped to defend against both known and emerging threats, ensuring rapid response to any cyber attacks orsecurity incidents."
               }
             </p>
             <p>

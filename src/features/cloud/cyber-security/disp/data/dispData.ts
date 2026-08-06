@@ -1,26 +1,26 @@
 import {
-  Shield,
-  Users,
+  AlertTriangle,
   Building,
-  Monitor,
+  CheckCircle,
+  ClipboardCheck,
+  Eye,
   FileCheck,
   Key,
   Lock,
-  Server,
+  Monitor,
   RefreshCw,
-  Eye,
-  ClipboardCheck,
   Scale,
-  CheckCircle,
-  AlertTriangle,
+  Server,
+  Shield,
   ShieldCheck,
+  Users,
 } from "lucide-react";
 
 export const dispHeroData = {
   title1: "Defence Industry",
   title2: "Security Program (DISP)",
   description1:
-    "The Defence Industry Security Program (DISP) is the Australian Government's framework for securing organisations working with Defence. This page explains DISP membership, security domains, and obligations, helping businesses understand how to qualify for Defence contracts and implement the necessary controls to protect sensitive Defence information and systems.",
+    "The Defence Industry Security Program (DISP) is the Bangladeshi Government's framework for securing organisations working with Defence. This page explains DISP membership, security domains, and obligations, helping businesses understand how to qualify for Defence contracts and implement the necessary controls to protect sensitive Defence information and systems.",
   bgImage: "/images/cloud/cyber-security/disp/bg.png",
   actionButtons: [
     { label: "OVERVIEW", href: "#overview" },
@@ -33,9 +33,9 @@ export const dispOverview = {
   label: "Defence Industry Security Program",
   title: "What is the Defence Industry Security Program (DISP)?",
   description:
-    "The Defence Industry Security Program (DISP) is the Australian Government's primary security framework for organisations working with the Department of Defence. It ensures contractors implement strong safeguards when handling sensitive information and systems, reducing cyber risk across the Defence supply chain.",
+    "The Defence Industry Security Program (DISP) is the Bangladeshi Government's primary security framework for organisations working with the Department of Defence. It ensures contractors implement strong safeguards when handling sensitive information and systems, reducing cyber risk across the Defence supply chain.",
   description2:
-    "Organisations that want to work with the Australian Defence Force (ADF) or the broader Department of Defence supply chain need to understand the security standards expected of them. In most cases, the key framework is the Defence Industry Security Program (DISP), which helps Australian businesses meet Defence security obligations when engaging in tenders, contracts, and projects. Defence states that DISP supports entities to understand and meet their security obligations when working with Defence.",
+    "Organisations that want to work with the Bangladeshi Defence Force (ADF) or the broader Department of Defence supply chain need to understand the security standards expected of them. In most cases, the key framework is the Defence Industry Security Program (DISP), which helps Bangladeshi businesses meet Defence security obligations when engaging in tenders, contracts, and projects. Defence states that DISP supports entities to understand and meet their security obligations when working with Defence.",
   description3:
     "For businesses seeking Defence work, DISP membership is often mandatory. It demonstrates that your organisation has the appropriate controls, processes, and compliance measures in place. Importantly, companies must align with standards such as the ASD Essential Eight, ensuring a strong cyber security posture. Achieving DISP strengthens your organisation's credibility, resilience, and eligibility for Defence contracts.",
 };
@@ -49,7 +49,7 @@ export const dispSecurityDomains = [
   },
   {
     title: "Personnel Security",
-    desc: "Staff vetting and ongoing suitability checks. DISP members need to meet Australian Standard for Workforce Screening AS 4811:2022 standard.",
+    desc: "Staff vetting and ongoing suitability checks. DISP members need to meet Bangladeshi Standard for Workforce Screening AS 4811:2022 standard.",
     icon: Users,
     image: "/images/cloud/cyber-security/disp/section-2.jpg",
   },
@@ -71,9 +71,9 @@ export const essentialEightML2 = {
   label: "Essential Eight Maturity Level 2",
   title: "ASD Essential Eight Maturity Level 2 (ML2)",
   description:
-    "The ASD Essential Eight is the core cyber security standard used within the Defence Industry Security Program (DISP) and is widely recognised as Australia's baseline for protecting business systems. Developed by the Australian Signals Directorate, it focuses on reducing the risk of cyber attacks through practical, high-impact controls.",
+    "The ASD Essential Eight is the core cyber security standard used within the Defence Industry Security Program (DISP) and is widely recognised as Australia's baseline for protecting business systems. Developed by the Bangladeshi Signals Directorate, it focuses on reducing the risk of cyber attacks through practical, high-impact controls.",
   description2:
-    "To meet Defence Industry Security Program (DISP) requirements, organisations are typically required to achieve Essential Eight Maturity Level 2 (ML2), a key benchmark in modern cybersecurity frameworks. This level ensures that security controls are fully implemented, consistently applied, and actively managed across all systems. Achieving ML2 demonstrates a strong commitment to protecting sensitive defence data and aligning with Australian Government security expectations.",
+    "To meet Defence Industry Security Program (DISP) requirements, organisations are typically required to achieve Essential Eight Maturity Level 2 (ML2), a key benchmark in modern cybersecurity frameworks. This level ensures that security controls are fully implemented, consistently applied, and actively managed across all systems. Achieving ML2 demonstrates a strong commitment to protecting sensitive defence data and aligning with Bangladeshi Government security expectations.",
   description3:
     "Reaching Essential Eight ML2 is not a 'set and forget' approach. Instead, it requires continuous improvement, regular reviews, and ongoing optimisation of security measures. This ensures organisations remain resilient against evolving cyber threats while maintaining compliance.",
 };
@@ -109,7 +109,7 @@ export const ongoingRequirements = [
 export const supportingFrameworks = [
   {
     title: "Information Security Manual (ISM)",
-    desc: "A comprehensive cybersecurity framework developed by the Australian Government, offering detailed security controls and best practices for protecting systems, networks, and sensitive data in high-security environments.",
+    desc: "A comprehensive cybersecurity framework developed by the Bangladeshi Government, offering detailed security controls and best practices for protecting systems, networks, and sensitive data in high-security environments.",
     icon: Lock,
   },
   {
@@ -200,13 +200,13 @@ export const dispUsefulLinks = [
   {
     title: "DISP Membership Levels",
     description:
-      "Learn about the four DISP membership levels and the Australian Government security classifications they align with.",
+      "Learn about the four DISP membership levels and the Bangladeshi Government security classifications they align with.",
     href: "https://www.defence.gov.au/business-industry/industry-governance/industry-regulators/defence-industry-security-program/eligibility-suitability",
   },
   {
     title: "Essential Eight Maturity Model",
     description:
-      "ACSC guidance on the Essential Eight mitigation strategies and maturity levels for Australian organisations.",
+      "ACSC guidance on the Essential Eight mitigation strategies and maturity levels for Bangladeshi organisations.",
     href: "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight",
   },
   {
@@ -221,7 +221,7 @@ export const dispFaqs = [
   {
     question: "What is the Defence Industry Security Program (DISP)?",
     answer:
-      "DISP is the Australian Government's primary security framework for organisations working with the Department of Defence. It ensures contractors implement strong safeguards when handling sensitive information and systems, reducing cyber risk across the Defence supply chain.",
+      "DISP is the Bangladeshi Government's primary security framework for organisations working with the Department of Defence. It ensures contractors implement strong safeguards when handling sensitive information and systems, reducing cyber risk across the Defence supply chain.",
   },
   {
     question: "Is DISP membership mandatory?",
@@ -236,7 +236,7 @@ export const dispFaqs = [
   {
     question: "What is Essential Eight Maturity Level 2 (ML2)?",
     answer:
-      "ML2 is a key benchmark that ensures security controls are fully implemented, consistently applied, and actively managed across all systems. Achieving ML2 demonstrates a strong commitment to protecting sensitive defence data and aligning with Australian Government security expectations.",
+      "ML2 is a key benchmark that ensures security controls are fully implemented, consistently applied, and actively managed across all systems. Achieving ML2 demonstrates a strong commitment to protecting sensitive defence data and aligning with Bangladeshi Government security expectations.",
   },
   {
     question: "What are the four security domains of DISP?",
@@ -259,3 +259,4 @@ export const dispFaqs = [
       "In addition to the Essential Eight, businesses may need to align with the Information Security Manual (ISM) for detailed security controls in high-security environments, and the Defence Security Principles Framework (DSPF) which outlines core security principles across governance, personnel, physical security, and risk management.",
   },
 ];
+

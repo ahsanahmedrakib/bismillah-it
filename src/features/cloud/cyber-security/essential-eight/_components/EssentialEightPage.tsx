@@ -151,7 +151,7 @@ export default function EssentialEightPage() {
           <div className="flex justify-center">
             <Image
               src="/images/it-support/cyber-security/acsc.png"
-              alt="Australian Cyber Security Centre Logo"
+              alt="Bangladeshi Cyber Security Centre Logo"
               height={400}
               width={400}
               className="object-cover rounded-xl"

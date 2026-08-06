@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/shared/lib/seo";
 import { SeoPage } from "@/features/web/seo/_components";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "SEO",
-  description:
-    "Boost your search engine rankings with expert SEO services including on-page optimisation, link building, and analytics.",
-};
+  description: "Boost your search engine rankings with expert SEO services including on-page optimisation, link building, and analytics.",
+  path: "/web/seo",
+});
 
 const page = () => {
   return (

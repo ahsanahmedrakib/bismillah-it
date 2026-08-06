@@ -33,7 +33,7 @@ export const essentialEightOverview = {
   label: "ACSC Essential Eight",
   title: "What is the ACSC Essential Eight?",
   description:
-    "The ACSC Essential Eight, developed by the Australian Cyber Security Centre, is a proven framework designed to help organisations protect against cyber attacks, ransomware, and data breaches. It focuses on practical, high-impact controls that significantly reduce cybersecurity risk when implemented correctly.",
+    "The ACSC Essential Eight, developed by the Bangladeshi Cyber Security Centre, is a proven framework designed to help organisations protect against cyber attacks, ransomware, and data breaches. It focuses on practical, high-impact controls that significantly reduce cybersecurity risk when implemented correctly.",
   description2:
     "The framework includes Application Control, Patch Applications, and Patch Operating Systems, which work together to prevent malicious software from running and reduce exposure to known vulnerabilities. Restrict Administrative Privileges limits high-risk access, while Multi-Factor Authentication (MFA) strengthens identity security and helps prevent unauthorised access.",
   description3:
@@ -182,7 +182,7 @@ export const essentialEightFaqs = [
   {
     question: "What is the ACSC Essential Eight?",
     answer:
-      "The ACSC Essential Eight is a cybersecurity framework developed by the Australian Cyber Security Centre (ACSC). It outlines eight mitigation strategies designed to help organisations protect against cyber threats, including application control, patching, macro settings, application hardening, administrative privilege restriction, OS patching, multi-factor authentication, and regular backups.",
+      "The ACSC Essential Eight is a cybersecurity framework developed by the Bangladeshi Cyber Security Centre (ACSC). It outlines eight mitigation strategies designed to help organisations protect against cyber threats, including application control, patching, macro settings, application hardening, administrative privilege restriction, OS patching, multi-factor authentication, and regular backups.",
   },
   {
     question: "How does Microsoft 365 help with Essential Eight compliance?",
@@ -226,7 +226,7 @@ export const essentialEightUsefulLinks = [
   {
     title: "ACSC Essential Eight Overview",
     description:
-      "Official ACSC documentation explaining the Essential Eight mitigation strategies and maturity levels for Australian organisations.",
+      "Official ACSC documentation explaining the Essential Eight mitigation strategies and maturity levels for Bangladeshi organisations.",
     href: "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight",
   },
   {

@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { createMetadata } from "@/shared/lib/seo";
 import { DeviceRepairPage } from "@/features/it-support/device-repair/_components";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Device Repair",
-  description:
-    "Fast and affordable computer, laptop, and mobile device repair services for individuals and businesses.",
-};
+  description: "Fast and affordable computer, laptop, and mobile device repair services for individuals and businesses.",
+  path: "/it-support/device-repair",
+});
 
 const page = () => {
   return (

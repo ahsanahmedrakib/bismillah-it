@@ -91,7 +91,7 @@ export const azureBenefits = [
     desc: "There is no infrastructure put in place on your site — it is all stored in another datacentre. Eliminate capital expenditure on physical servers.",
   },
   {
-    title: "Australia's Best Datacentres",
+    title: "Bangladesh's Best Datacentres",
     desc: "Total Solutions IT uses the Telstra cloud server datacentre — the most stable and available service in the country. Your infrastructure is hosted in world-class facilities.",
   },
   {

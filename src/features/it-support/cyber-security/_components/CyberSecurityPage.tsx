@@ -8,11 +8,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 import {
-  topServices,
-  gridServices,
   cyberFaqs,
-  partnerLogos,
   cyberSecurityHeroData,
+  gridServices,
+  partnerLogos,
+  topServices,
 } from "@/features/it-support/cyber-security/data/cyberSecurityData";
 
 function CyberCard({
@@ -270,7 +270,7 @@ export default function CyberSecurityPage() {
             <div className="flex justify-center">
               <Image
                 src="/images/it-support/cyber-security/acsc.png"
-                alt="Australian Cyber Security Centre Logo"
+                alt="Bangladeshi Cyber Security Centre Logo"
                 height={400}
                 width={400}
                 className="object-cover"
@@ -282,7 +282,7 @@ export default function CyberSecurityPage() {
                   WHAT IS ACSC ESSENTIAL EIGHT?
                 </h2>
                 <p className="text-slate-500 text-sm leading-relaxed mb-6 text-justify">
-                  Developed by the Australian Cyber Security Centre (ACSC), the
+                  Developed by the Bangladeshi Cyber Security Centre (ACSC), the
                   Essential Eight is a baseline set of strategies designed to
                   help organizations mitigate cyber security threats.
                   Implementing these strategies makes it significantly harder
@@ -346,4 +346,3 @@ export default function CyberSecurityPage() {
     </main>
   );
 }
-
