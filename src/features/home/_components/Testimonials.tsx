@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { testimonialsData } from "../data/homeData";
+import Reveal from "@/shared/components/ui/Reveal";
 
 function SwiperNavButton({ direction }: { direction: "prev" | "next" }) {
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
@@ -40,7 +41,7 @@ export default function Testimonials() {
     <section className="bg-dark-hero text-white py-16 md:py-24 font-sans overflow-hidden">
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* ---------------- Left Column ---------------- */}
-        <div className="lg:col-span-5 space-y-8">
+        <Reveal variant="fade-right" className="lg:col-span-5 space-y-8">
           {/* Subtitle Badge */}
           <div className="flex items-center space-x-2 text-brand-blue font-semibold text-xl tracking-widest uppercase">
             <span>OUR TESTIMONIALS</span>
@@ -68,10 +69,10 @@ export default function Testimonials() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* ---------------- Right Column (Swiper Slider) ---------------- */}
-        <div className="lg:col-span-7 relative w-full">
+        <Reveal variant="fade-left" className="lg:col-span-7 relative w-full">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -139,7 +140,7 @@ export default function Testimonials() {
 
             <SwiperNavButton direction="next" />
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { teamMembers } from "../data/homeData";
+import Reveal from "@/shared/components/ui/Reveal";
 
 const socialIconMap: Record<
   string,
@@ -17,15 +18,22 @@ const socialIconMap: Record<
   LinkedIn: FaLinkedinIn,
 };
 
-function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
+function TeamCard({
+  member,
+  index,
+}: {
+  member: (typeof teamMembers)[number];
+  index: number;
+}) {
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className="group cursor-pointer flex flex-col"
-    >
+    <Reveal className="h-full" delay={(index % 4) * 100}>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        className="group cursor-pointer flex flex-col h-full"
+      >
       <div className="relative w-full aspect-4/5 rounded-xl bg-gray-100">
         <div className="absolute inset-0 rounded-xl overflow-hidden">
           <Image
@@ -87,6 +95,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[number] }) {
         </h3>
       </div>
     </div>
+    </Reveal>
   );
 }
 
@@ -95,17 +104,17 @@ export default function OurTeam() {
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Reveal className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-xl font-bold tracking-widest text-brand-blue uppercase">
             OUR TEAM
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mt-3 leading-tight">
             Meet our expert team memebers
           </h2>
-        </div>
+        </Reveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {teamMembers.map((member) => (
-            <TeamCard key={member.id} member={member} />
+          {teamMembers.map((member, index) => (
+            <TeamCard key={member.id} member={member} index={index} />
           ))}
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 
 import { incidentResponseHeroData } from "@/features/it-support/cyber-security/data/cyberSecurityData";
 
@@ -13,6 +14,7 @@ const IncidentResponse = () => {
 
       {/* ==================== SECTION 1: Introduction ==================== */}
       <section className="pt-12 sm:pt-16 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">
             Our experienced incident response team supports Bangladeshi
@@ -23,10 +25,12 @@ const IncidentResponse = () => {
             response cycle efficiently.
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 2: How Does It Work? ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800 mb-4 uppercase tracking-tight">
             HOW DOES IT WORK?
@@ -88,10 +92,12 @@ const IncidentResponse = () => {
             </li>
           </ul>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 3: Customised Remediation Action Plans ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full  text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4">
             Customised Remediation Action Plans
@@ -102,10 +108,12 @@ const IncidentResponse = () => {
             future breaches.
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 4: Benefits of Cyber Incident Response Services ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full  text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4">
             Benefits of Cyber Incident Response Services
@@ -124,10 +132,12 @@ const IncidentResponse = () => {
             </p>
           </div>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 5: Why Choose Total Solutions IT ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full  text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800 mb-4">
             Why Choose Total Solutions IT for Cyber Incident Response Services?
@@ -189,10 +199,12 @@ const IncidentResponse = () => {
             networks.
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 6: Contact Us ==================== */}
       <section className="pt-6 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4">
             Contact Us
@@ -210,6 +222,7 @@ const IncidentResponse = () => {
             .
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
     </main>
   );

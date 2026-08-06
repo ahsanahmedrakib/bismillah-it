@@ -4,20 +4,22 @@ import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { MessageSquare, User } from "lucide-react"; // npm install lucide-react
 import Image from "next/image";
 import { BlogCardProps, blogData } from "../data/homeData";
+import Reveal from "@/shared/components/ui/Reveal";
 
-function BlogCard({ post }: { post: BlogCardProps }) {
+function BlogCard({ post, index }: { post: BlogCardProps; index: number }) {
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <article
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`group relative flex flex-col h-full bg-white rounded-2xl shadow-[0_4px_25px_-5px_rgba(0,0,0,0.04)] duration-300 outline-none overflow-hidden border border-blue-200 transition-all ${
-        touched
-          ? "border-blue-400 shadow-lg -translate-y-1"
-          : "hover:border-blue-400 hover:shadow-lg hover:-translate-y-1"
-      }`}
-    >
+    <Reveal className="h-full" delay={(index % 3) * 120}>
+      <article
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        className={`group relative flex flex-col h-full bg-white rounded-2xl shadow-[0_4px_25px_-5px_rgba(0,0,0,0.04)] duration-300 outline-none overflow-hidden border border-blue-200 transition-all ${
+          touched
+            ? "border-blue-400 shadow-lg -translate-y-1"
+            : "hover:border-blue-400 hover:shadow-lg hover:-translate-y-1"
+        }`}
+      >
       {/* Image Container with Badges */}
       <div className="relative w-full aspect-4/3 bg-gray-100 overflow-hidden">
         <Image
@@ -71,6 +73,7 @@ function BlogCard({ post }: { post: BlogCardProps }) {
         </div>
       </div>
     </article>
+    </Reveal>
   );
 }
 
@@ -79,19 +82,19 @@ export default function BlogSection() {
     <section className="bg-linear-to-b from-gray-50 via-white to-gray-50 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Reveal className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-xl font-bold tracking-widest text-brand-blue uppercase">
             OUR BLOG
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mt-3 leading-tight">
             Innovations shaping the digital world
           </h2>
-        </div>
+        </Reveal>
 
         {/* Grid Setup - strictly same height cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-stretch">
           {blogData.map((post, idx) => (
-            <BlogCard key={idx} post={post} />
+            <BlogCard key={idx} post={post} index={idx} />
           ))}
         </div>
       </div>

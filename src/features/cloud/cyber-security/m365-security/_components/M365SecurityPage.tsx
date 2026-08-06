@@ -2,6 +2,7 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -126,7 +127,10 @@ export default function M365SecurityPage() {
 
       {/* ================= OVERVIEW SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="overview">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="flex justify-center h-75">
             <Image
               src="/images/cloud/cyber-security/m365-security/section-1.jpg"
@@ -162,12 +166,15 @@ export default function M365SecurityPage() {
               </a>
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= SECURITY AREAS ================= */}
       <section className="py-16 lg:py-24 bg-white" id="security-areas">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Microsoft 365 Security Areas
           </h2>
@@ -177,15 +184,20 @@ export default function M365SecurityPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {securityAreas.map((area, i) => (
-              <SecurityAreaCard key={i} area={area} />
+              <Reveal key={i} delay={i * 80}>
+                <SecurityAreaCard area={area} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= ESSENTIAL FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="features">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Essential Cybersecurity Features
           </h2>
@@ -196,15 +208,20 @@ export default function M365SecurityPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {essentialFeatures.map((feature, i) => (
-              <FeatureCard key={i} feature={feature} />
+              <Reveal key={i} delay={i * 80}>
+                <FeatureCard feature={feature} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= ADVANCED FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="advanced">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Advanced Cybersecurity Features
           </h2>
@@ -346,12 +363,15 @@ export default function M365SecurityPage() {
               </div>
             </HoverableContentCard>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= ESSENTIAL EIGHT ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="essential-eight">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             {essentialEight.title}
           </h2>
@@ -365,32 +385,34 @@ export default function M365SecurityPage() {
             {essentialEight.features.map((feature, i) => {
               const Icon = feature.icon;
               return (
-                <div
-                  key={i}
-                  className="border-2 border-blue-100 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white flex flex-col"
-                >
-                  <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
-                      <Icon size={20} />
+                <Reveal key={i} delay={i * 80}>
+                  <div className="border-2 border-blue-100 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white flex flex-col">
+                    <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
+                        <Icon size={20} />
+                      </div>
+                      <h4 className="font-semibold text-slate-900 text-sm">
+                        {feature.title}
+                      </h4>
                     </div>
-                    <h4 className="font-semibold text-slate-900 text-sm">
-                      {feature.title}
-                    </h4>
+                    <p className="text-slate-600 text-sm text-justify">
+                      {feature.desc}
+                    </p>
                   </div>
-                  <p className="text-slate-600 text-sm text-justify">
-                    {feature.desc}
-                  </p>
-                </div>
+                </Reveal>
               );
             })}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= NEED HELP ================= */}
       <section className="py-16 lg:py-24 bg-white" id="help">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center"
+        >
           <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
             <Image
               src="/images/cloud/cyber-security/m365-security/section-1.jpg"
@@ -431,44 +453,49 @@ export default function M365SecurityPage() {
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= USEFUL LINKS ================= */}
       <section className="py-8 lg:py-10 bg-slate-50" id="useful-links">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
             Useful Links
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {m365SecurityUsefulLinks.map((link, i) => (
-              <div
-                key={i}
-                className="border-2 border-blue-100 hover:border-blue-300 relative rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all"
-              >
-                <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-                <h3 className="text-lg font-bold text-slate-900 mb-3">
-                  {link.title}
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  {link.description}
-                </p>
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  className="text-blue-600 font-semibold text-sm hover:underline"
-                >
-                  Find Out More &rarr;
-                </Link>
-              </div>
+              <Reveal key={i} delay={i * 80}>
+                <div className="border-2 border-blue-100 hover:border-blue-300 relative rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all">
+                  <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">
+                    {link.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    {link.description}
+                  </p>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    className="text-blue-600 font-semibold text-sm hover:underline"
+                  >
+                    Find Out More &rarr;
+                  </Link>
+                </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= FAQ SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="faq">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -480,7 +507,7 @@ export default function M365SecurityPage() {
               <FAQItem key={i} faq={faq} />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

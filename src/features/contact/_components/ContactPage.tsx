@@ -2,6 +2,7 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 
 import { FaFacebookMessenger, FaWhatsapp } from "react-icons/fa";
 import {
@@ -19,7 +20,7 @@ export default function ContactPage() {
 
       {/* CONTACT DETAILS + MAP */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left: Contact Details + Messaging */}
             <HoverableContentCard>
@@ -92,7 +93,7 @@ export default function ContactPage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

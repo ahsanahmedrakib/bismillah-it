@@ -2,6 +2,7 @@
 
 import HeroSlider from "@/shared/components/ui/HeroSlider";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -127,7 +128,10 @@ export default function Microsoft365() {
 
       {/* ================= OVERVIEW SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="overview">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="flex justify-center">
             <Image
               src="/images/cloud/microsoft-solutions/micrsoft-365/office-365.png"
@@ -163,12 +167,15 @@ export default function Microsoft365() {
               </a>
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= PRODUCT BUNDLES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="plans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Microsoft 365 Product Bundles
           </h2>
@@ -180,37 +187,42 @@ export default function Microsoft365() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {m365Bundles.map((bundle, i) => (
-              <div key={i} className="relative h-full">
-                <HoverableContentCard className="h-full">
-                  {i === 1 && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-400 text-white text-xs font-bold px-4 py-1 rounded-full">
-                      Most Popular
-                    </span>
-                  )}
-                  <h3 className={`text-2xl font-bold mb-6 text-center`}>
-                    {bundle.name}
-                  </h3>
-                  <ul className="space-y-3">
-                    {bundle.features.map((feature, j) => (
-                      <li key={j} className="flex items-center gap-3">
-                        <CheckCircle
-                          size={18}
-                          className="shrink-0 text-slate-600"
-                        />
-                        <span className="text-slate-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </HoverableContentCard>
-              </div>
+              <Reveal key={i} delay={i * 80}>
+                <div className="relative h-full">
+                  <HoverableContentCard className="h-full">
+                    {i === 1 && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-400 text-white text-xs font-bold px-4 py-1 rounded-full">
+                        Most Popular
+                      </span>
+                    )}
+                    <h3 className={`text-2xl font-bold mb-6 text-center`}>
+                      {bundle.name}
+                    </h3>
+                    <ul className="space-y-3">
+                      {bundle.features.map((feature, j) => (
+                        <li key={j} className="flex items-center gap-3">
+                          <CheckCircle
+                            size={18}
+                            className="shrink-0 text-slate-600"
+                          />
+                          <span className="text-slate-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </HoverableContentCard>
+                </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= KEY FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="features">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Key Features
           </h2>
@@ -219,15 +231,20 @@ export default function Microsoft365() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {m365KeyFeatures.map((feature, i) => (
-              <FeatureCard key={i} feature={feature} />
+              <Reveal key={i} delay={i * 80}>
+                <FeatureCard feature={feature} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= COLLABORATION SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="collaboration">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <HoverableContentCard className="order-2 lg:order-1">
             <span className="text-blue-500 font-bold text-sm tracking-wide mb-3 block">
               Team Collaboration
@@ -260,12 +277,15 @@ export default function Microsoft365() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= SHAREPOINT & ONEDRIVE ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="sharepoint">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="flex justify-center">
             <Image
               src="/images/cloud/microsoft-solutions/micrsoft-365/microsoft-365.png"
@@ -312,12 +332,15 @@ export default function Microsoft365() {
               ))}
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= COPILOT AI SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="copilot">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <HoverableContentCard className="order-2 lg:order-1">
             <span className="text-blue-500 font-bold text-sm tracking-wide mb-3 block">
               AI-Powered Productivity
@@ -366,12 +389,15 @@ export default function Microsoft365() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= CYBER SECURITY SECTION ================= */}
       <section className="py-16 lg:py-24 bg-slate-900 text-white" id="security">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-blue-400 font-bold text-sm tracking-wide mb-3 block">
               Advanced Security
@@ -389,7 +415,9 @@ export default function Microsoft365() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {m365SecurityFeatures.map((feature, i) => (
-              <SecurityCard key={i} feature={feature} />
+              <Reveal key={i} delay={i * 80}>
+                <SecurityCard feature={feature} />
+              </Reveal>
             ))}
           </div>
 
@@ -413,12 +441,15 @@ export default function Microsoft365() {
               Access policies, reducing the risk of unauthorised access.
             </p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= FAQ SECTION ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="faq">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -430,7 +461,7 @@ export default function Microsoft365() {
               <FAQItem key={i} faq={faq} />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

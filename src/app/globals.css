@@ -185,12 +185,100 @@ body {
   transform: scale(1.2);
 }
 
+/* ==============================
+   SCROLL REVEAL ANIMATIONS
+   Hidden only when JS has loaded
+   (html.js-reveal), so content is
+   never invisible without JS.
+   ============================== */
+.js-reveal .reveal {
+  opacity: 0;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.js-reveal .reveal.reveal-fade-up {
+  transform: translateY(32px);
+}
+
+.js-reveal .reveal.reveal-fade-down {
+  transform: translateY(-32px);
+}
+
+.js-reveal .reveal.reveal-fade-left {
+  transform: translateX(-40px);
+}
+
+.js-reveal .reveal.reveal-fade-right {
+  transform: translateX(40px);
+}
+
+.js-reveal .reveal.reveal-zoom {
+  transform: scale(0.94);
+}
+
+.js-reveal .reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @keyframes spin-badge {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* ==============================
+   LOAD ENTRANCE ANIMATIONS
+   (one-time, play when page loads)
+   ============================== */
+@keyframes nav-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-enter {
+  animation: nav-slide-in 0.6s ease-out;
+}
+
+@keyframes chat-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chat-enter {
+  animation: chat-slide-in 0.6s ease-out 0.3s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-enter,
+  .chat-enter {
+    animation: none;
   }
 }
 

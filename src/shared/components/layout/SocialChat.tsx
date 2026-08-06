@@ -11,7 +11,7 @@ export default function SocialChat() {
   };
 
   return (
-    <div className="fixed bottom-2 right-2 z-50 flex flex-col items-center gap-2">
+    <div className="chat-enter fixed bottom-2 right-2 z-50 flex flex-col items-center gap-2">
       <button
         onClick={scrollToTop}
         className="bg-brand-secondary cursor-pointer p-2 rounded-full transition-colors group focus:outline-none"

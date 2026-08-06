@@ -2,6 +2,7 @@
 
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 interface ImageCardProps {
   title: string;
@@ -23,15 +24,16 @@ const ImageCard = ({
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 flex flex-col group transition-all duration-300 ${
-        touched
-          ? "border-blue-300 shadow-xl -translate-y-1"
-          : "border-blue-100 hover:border-blue-300 hover:shadow-xl hover:-translate-y-1"
-      } ${className ?? ""}`}
-    >
+    <Reveal className={`h-full ${className ?? ""}`}>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        className={`bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 flex flex-col group transition-all duration-300 h-full ${
+          touched
+            ? "border-blue-300 shadow-xl -translate-y-1"
+            : "border-blue-100 hover:border-blue-300 hover:shadow-xl hover:-translate-y-1"
+        }`}
+      >
       <div className="relative w-full overflow-hidden" style={{ height: imageHeight }}>
         <Image
           src={image}
@@ -47,6 +49,7 @@ const ImageCard = ({
         <p className="text-sm text-slate-600">{desc}</p>
       </div>
     </div>
+    </Reveal>
   );
 };
 

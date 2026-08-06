@@ -7,6 +7,7 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Reveal from "./Reveal";
 
 interface Slides {
   badge?: string;
@@ -24,7 +25,7 @@ const HeroSlider = ({ slides }: { slides: Slides[] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Reveal className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       {/* Main Swiper Window */}
       <Swiper
         modules={[Autoplay]}
@@ -130,7 +131,7 @@ const HeroSlider = ({ slides }: { slides: Slides[] }) => {
           })}
         </div>
       </div>
-    </div>
+    </Reveal>
   );
 };
 

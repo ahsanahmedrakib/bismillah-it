@@ -1,6 +1,7 @@
 "use client";
 
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
+import Reveal from "./Reveal";
 
 interface IconFeatureCardProps {
   title: string;
@@ -20,13 +21,14 @@ const IconFeatureCard = ({
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      } ${className ?? ""}`}
-    >
+    <Reveal className={`h-full ${className ?? ""}`}>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        className={`border-2 rounded-2xl p-6 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all h-full ${
+          touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
+        }`}
+      >
       <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
       <div className="flex justify-center pb-6 text-blue-600">
         <Icon size={iconSize} />
@@ -36,6 +38,7 @@ const IconFeatureCard = ({
       </h3>
       <p className="text-slate-600 text-sm text-justify">{desc}</p>
     </div>
+    </Reveal>
   );
 };
 

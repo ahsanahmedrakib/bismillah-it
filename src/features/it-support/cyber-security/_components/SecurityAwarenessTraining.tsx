@@ -1,5 +1,6 @@
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 
 import { securityAwarenessHeroData } from "@/features/it-support/cyber-security/data/cyberSecurityData";
 
@@ -10,6 +11,7 @@ const SecurityAwarenessTraining = () => {
       <Hero data={securityAwarenessHeroData} />
       {/* ==================== SECTION 1: Introduction (Human Error) ==================== */}
       <section className="pt-12 sm:pt-16 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800 mb-4 uppercase tracking-tight">
             Human Error: The Biggest Threat in Cybersecurity
@@ -31,10 +33,12 @@ const SecurityAwarenessTraining = () => {
             robust cybersecurity strategy.
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 2: HOW IT WORKS ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800 mb-4 uppercase tracking-tight">
             HOW IT WORKS
@@ -100,10 +104,12 @@ const SecurityAwarenessTraining = () => {
             organization and budget.
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 3: HOW IS IT USED? ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800 mb-4 uppercase tracking-tight">
             HOW IS IT USED?
@@ -119,10 +125,12 @@ const SecurityAwarenessTraining = () => {
             the chance of a security breach.
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 4: BENEFITS OF SECURITY AWARENESS TRAINING ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4">
             BENEFITS OF SECURITY AWARENESS TRAINING
@@ -145,10 +153,12 @@ const SecurityAwarenessTraining = () => {
             </p>
           </div>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 5: WHY CHOOSE Total Solutions IT? ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800 mb-4">
             WHY CHOOSE Total Solutions IT?
@@ -163,10 +173,12 @@ const SecurityAwarenessTraining = () => {
             your workforce with confidence and expertise.
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 6: SCHEDULE A DEMO (Contact) ==================== */}
       <section className="pt-6 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-4">
             SCHEDULE A DEMO
@@ -184,6 +196,7 @@ const SecurityAwarenessTraining = () => {
             .
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
     </main>
   );

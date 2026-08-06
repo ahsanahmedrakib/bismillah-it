@@ -3,6 +3,7 @@
 import { industriesData, heroData } from "@/features/industries/data/industriesData";
 import Hero from "@/shared/components/ui/Hero";
 import ImageCard from "@/shared/components/ui/ImageCard";
+import Reveal from "@/shared/components/ui/Reveal";
 
 const IndustriesPage = () => {
   return (
@@ -12,7 +13,7 @@ const IndustriesPage = () => {
 
       {/* Industries Grid */}
       <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+        <Reveal variant="fade-up" className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
           <h2 className="text-3xl font-bold text-center text-brand-active mb-12">
             Industries We Serve
           </h2>
@@ -26,7 +27,7 @@ const IndustriesPage = () => {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

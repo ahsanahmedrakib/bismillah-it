@@ -2,6 +2,7 @@
 
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { Check, ChevronRight } from "lucide-react";
+import Reveal from "./Reveal";
 
 interface ListCardProps {
   title: string;
@@ -19,13 +20,14 @@ const ListCard = ({
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`relative border-2 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all ${
-        touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
-      } ${className ?? ""}`}
-    >
+    <Reveal className={`h-full ${className ?? ""}`}>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        className={`relative border-2 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all h-full ${
+          touched ? "border-blue-300" : "border-blue-100 hover:border-blue-300"
+        }`}
+      >
       <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
       <h3 className="text-xl font-bold text-slate-900 mb-4">{title}</h3>
       {items.map((item, j) => (
@@ -39,6 +41,7 @@ const ListCard = ({
         </div>
       ))}
     </div>
+    </Reveal>
   );
 };
 

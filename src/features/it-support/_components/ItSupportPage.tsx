@@ -8,6 +8,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Hero from "@/shared/components/ui/Hero";
+import Reveal from "@/shared/components/ui/Reveal";
 import "swiper/css";
 
 import {
@@ -103,7 +104,7 @@ export default function ItSupportPage() {
 
       {/* ================= PARTNERS SECTION ================= */}
       <section className="bg-slate-50 py-12 relative z-10" id="partners">
-        <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <p className="text-blue-600 font-bold tracking-wide uppercase text-sm mb-8 text-center lg:text-left">
             Our Partners
           </p>
@@ -133,7 +134,7 @@ export default function ItSupportPage() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= CORE FEATURES LOOP ================= */}
@@ -143,6 +144,7 @@ export default function ItSupportPage() {
           className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8"
           id="capabilities"
         >
+        <Reveal variant="fade-up">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <HoverableContentCard className="order-2 lg:order-1">
               <div>
@@ -184,16 +186,20 @@ export default function ItSupportPage() {
           {/* Capabilities Cards */}
           <div className="grid md:grid-cols-3 gap-6">
             {capabilityCards.map((card, i) => (
-              <CapabilityCard key={i} card={card} />
+              <Reveal key={i} delay={i * 80}>
+                <CapabilityCard card={card} />
+              </Reveal>
             ))}
           </div>
-        </section>
+        </Reveal>
+      </section>
 
         {/* 2. Cyber Security */}
         <section
           className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8"
           id="security"
         >
+        <Reveal variant="fade-up">
           <div className="grid lg:grid-cols-2 gap-6 items-center mb-12">
             <div className="relative h-75 w-full flex justify-center">
               <div className="relative w-full max-w-md h-full">
@@ -229,16 +235,20 @@ export default function ItSupportPage() {
 
           <div className="flex flex-wrap justify-center gap-6">
             {cyberSecurityFeatures.map((feature, i) => (
-              <FeatureItemCard key={i} feature={feature} />
+              <Reveal key={i} delay={i * 80}>
+                <FeatureItemCard feature={feature} />
+              </Reveal>
             ))}
           </div>
-        </section>
+        </Reveal>
+      </section>
 
         {/* 3. Servers + Networking */}
         <section
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           id="networking"
         >
+        <Reveal variant="fade-up">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
             <HoverableContentCard className="order-2 lg:order-1">
               <div>
@@ -274,13 +284,17 @@ export default function ItSupportPage() {
 
           <div className="flex flex-wrap justify-center gap-6">
             {networkingFeatures.map((feature, i) => (
-              <FeatureItemCard key={i} feature={feature} />
+              <Reveal key={i} delay={i * 80}>
+                <FeatureItemCard feature={feature} />
+              </Reveal>
             ))}
           </div>
-        </section>
+        </Reveal>
+      </section>
 
         {/* 4. Managed IT Services */}
         <section className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8" id="it">
+        <Reveal variant="fade-up">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
             <div className="relative h-75 w-full">
               <Image
@@ -314,16 +328,20 @@ export default function ItSupportPage() {
 
           <div className="flex flex-wrap justify-center gap-6">
             {managedITFeatures.map((feature, i) => (
-              <FeatureItemCard key={i} feature={feature} />
+              <Reveal key={i} delay={i * 80}>
+                <FeatureItemCard feature={feature} />
+              </Reveal>
             ))}
           </div>
-        </section>
+        </Reveal>
+      </section>
 
         {/* 5. Device Repair */}
         <section
           className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 pb-20"
           id="repair"
         >
+        <Reveal variant="fade-up">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
             <HoverableContentCard className="order-2 lg:order-1">
               <div>
@@ -358,10 +376,13 @@ export default function ItSupportPage() {
 
           <div className="flex flex-wrap justify-center gap-6">
             {deviceRepairFeatures.map((feature, i) => (
-              <FeatureItemCard key={i} feature={feature} />
+              <Reveal key={i} delay={i * 80}>
+                <FeatureItemCard feature={feature} />
+              </Reveal>
             ))}
           </div>
-        </section>
+        </Reveal>
+      </section>
       </div>
     </main>
   );

@@ -4,6 +4,7 @@ import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/shared/components/ui/Reveal";
 
 interface AboutFeature {
   icon: string;
@@ -29,15 +30,22 @@ const aboutFeatures: AboutFeature[] = [
   },
 ];
 
-function FeatureItem({ feature }: { feature: AboutFeature }) {
+function FeatureItem({
+  feature,
+  delay = 0,
+}: {
+  feature: AboutFeature;
+  delay?: number;
+}) {
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <div
-      className="group flex items-start gap-5"
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-    >
+    <Reveal variant="fade-left" delay={delay}>
+      <div
+        className="group flex items-start gap-5"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
       <div
         className={`shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 ring-1 ring-blue-100 shadow-sm transition-all duration-300 ${
           touched
@@ -65,7 +73,8 @@ function FeatureItem({ feature }: { feature: AboutFeature }) {
           {feature.text}
         </p>
       </div>
-    </div>
+      </div>
+    </Reveal>
   );
 }
 
@@ -87,19 +96,19 @@ export default function AboutSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* ---------------- Section Heading ---------------- */}
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+        <Reveal className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
           <span className="text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 px-3 py-1.5 rounded-md ring-1 ring-blue-600/10">
             About Us
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mt-4 leading-tight">
             Empowering businesses with smart IT solutions
           </h2>
-        </div>
+        </Reveal>
 
         {/* ---------------- Main Layout ---------------- */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-center">
           {/* Left: image + floating stat card */}
-          <div className="relative">
+          <Reveal variant="fade-right" className="relative">
             <div className="rounded-2xl overflow-hidden border border-blue-100 shadow-[0_20px_50px_-20px_rgba(21,124,193,0.35)]">
               <Image
                 src="/images/home/about/about_13_2.png"
@@ -122,10 +131,10 @@ export default function AboutSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right: description + features + CTA */}
-          <div>
+          <Reveal variant="fade-left">
             <p className="text-gray-500 text-base sm:text-lg font-light leading-relaxed">
               Bismillah Computer &amp; Technology delivers secure, scalable, and
               affordable IT solutions — from network consultancy and website
@@ -136,7 +145,7 @@ export default function AboutSection() {
 
             <div className="flex flex-col gap-8 mt-10">
               {aboutFeatures.map((feature, idx) => (
-                <FeatureItem key={idx} feature={feature} />
+                <FeatureItem key={idx} feature={feature} delay={idx * 120} />
               ))}
             </div>
 
@@ -150,7 +159,7 @@ export default function AboutSection() {
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
             </Link>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

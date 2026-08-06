@@ -2,6 +2,7 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { AlertTriangle, ArrowRight, Check, ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -193,7 +194,10 @@ export default function SecureScorePage() {
 
       {/* ================= OVERVIEW SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="overview">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="flex justify-center">
             <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
               <Image
@@ -231,12 +235,15 @@ export default function SecureScorePage() {
               </a>
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= WHY SECURE SCORE MATTERS ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="why-matters">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Why Microsoft Secure Score Matters
           </h2>
@@ -247,15 +254,20 @@ export default function SecureScorePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {secureScoreBenefits.map((benefit, i) => (
-              <BenefitCard key={i} benefit={benefit} />
+              <Reveal key={i} delay={i * 80}>
+                <BenefitCard benefit={benefit} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= HOW IS IT CALCULATED ================= */}
       <section className="py-16 lg:py-24 bg-white" id="how-it-works">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <HoverableContentCard className="order-2 lg:order-1">
             <div>
               <span className="text-blue-500 font-bold text-sm tracking-wide mb-3 block">
@@ -293,12 +305,15 @@ export default function SecureScorePage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= SCORE CATEGORIES ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="categories">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Secure Score Categories
           </h2>
@@ -308,15 +323,20 @@ export default function SecureScorePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {secureScoreCategories.map((category, i) => (
-              <CategoryCard key={i} category={category} />
+              <Reveal key={i} delay={i * 80}>
+                <CategoryCard category={category} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= HOW TO IMPROVE ================= */}
       <section className="py-16 lg:py-24 bg-white" id="improve">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-start">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-start"
+        >
           <div className="relative h-80 lg:h-full min-h-100 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 lg:sticky lg:top-24">
             <Image
               src="/images/cloud/cyber-security/secure-score/section-3.jpg"
@@ -342,12 +362,15 @@ export default function SecureScorePage() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= REVIEW FREQUENCY ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="review">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             {secureScoreReview.title}
           </h2>
@@ -402,12 +425,15 @@ export default function SecureScorePage() {
               </ul>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= LIMITATIONS ================= */}
       <section className="py-8 lg:py-10 bg-white" id="limitations">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <div className="bg-blue-50 border-2 border-blue-100 rounded-2xl p-8">
             <div className="flex items-center gap-3 mb-4">
               <AlertTriangle size={24} className="text-blue-600" />
@@ -424,12 +450,15 @@ export default function SecureScorePage() {
               ))}
             </ul>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= NEED HELP ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="help">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <div className="bg-linear-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-12 text-white">
             <h2 className="text-3xl font-bold mb-6">
               Need Help Improving Your Secure Score?
@@ -461,44 +490,49 @@ export default function SecureScorePage() {
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= USEFUL LINKS ================= */}
       <section className="py-8 lg:py-10 bg-white" id="useful-links">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
             Useful Links
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {secureScoreUsefulLinks.map((link, i) => (
-              <div
-                key={i}
-                className="border-2 border-blue-100 hover:border-blue-300 relative rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all"
-              >
-                <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-                <h3 className="text-lg font-bold text-slate-900 mb-3">
-                  {link.title}
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  {link.description}
-                </p>
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  className="text-blue-600 font-semibold text-sm hover:underline"
-                >
-                  Find Out More &rarr;
-                </Link>
-              </div>
+              <Reveal key={i} delay={i * 80}>
+                <div className="border-2 border-blue-100 hover:border-blue-300 relative rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all">
+                  <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">
+                    {link.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    {link.description}
+                  </p>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    className="text-blue-600 font-semibold text-sm hover:underline"
+                  >
+                    Find Out More &rarr;
+                  </Link>
+                </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= FAQ SECTION ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="faq">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -510,7 +544,7 @@ export default function SecureScorePage() {
               <FAQItem key={i} faq={faq} />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

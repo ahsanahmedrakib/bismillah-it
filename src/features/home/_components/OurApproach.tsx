@@ -3,6 +3,7 @@
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { CheckCheck } from "lucide-react";
 import { ApproachCardItem, approachData } from "../data/homeData";
+import Reveal from "@/shared/components/ui/Reveal";
 
 function ApproachCard({
   item,
@@ -14,15 +15,16 @@ function ApproachCard({
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <div
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`group relative flex flex-col h-full rounded-2xl bg-linear-to-b from-dark-card to-dark-card-alt border p-8 transition-all duration-300 ${
-        touched
-          ? "-translate-y-2 border-blue-500/50 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)]"
-          : "border-gray-800 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)]"
-      }`}
-    >
+    <Reveal className="h-full" delay={index * 120}>
+      <div
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        className={`group relative flex flex-col h-full rounded-2xl bg-linear-to-b from-dark-card to-dark-card-alt border p-8 transition-all duration-300 ${
+          touched
+            ? "-translate-y-2 border-blue-500/50 shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)]"
+            : "border-gray-800 hover:-translate-y-2 hover:border-blue-500/50 hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.2)]"
+        }`}
+      >
       <div
         className={`absolute top-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-gray-700 to-transparent rounded-t-2xl transition-all duration-500 ${
           touched ? "via-blue-500" : "group-hover:via-blue-500"
@@ -62,7 +64,8 @@ function ApproachCard({
           ))}
         </ul>
       </div>
-    </div>
+      </div>
+    </Reveal>
   );
 }
 
@@ -89,7 +92,7 @@ export default function OurApproach() {
 
       <div className="max-w-7xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <Reveal className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <h2 className="text-xl font-bold tracking-wider text-blue-500 uppercase mb-3">
             Our Approach
           </h2>
@@ -103,7 +106,7 @@ export default function OurApproach() {
             and scalable business asset — supporting what you need today while
             preparing you for tomorrow.
           </p>
-        </div>
+        </Reveal>
 
         {/* Responsive Grid System (Equal Height Cards via h-full) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">

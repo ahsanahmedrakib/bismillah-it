@@ -4,6 +4,7 @@ import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "./Reveal";
 
 interface ActionButtons {
   label?: string;
@@ -65,7 +66,7 @@ function ContactButton() {
 const Hero = ({ data }: { data: Data }) => {
   return (
     <section className="relative bg-linear-to-t from-hero-gradient to-white pt-24 pb-32 lg:pt-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-24 items-center relative z-10">
+      <Reveal variant="fade-up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-24 items-center relative z-10">
         {/* Hero Content */}
         <div className="space-y-8 order-2 lg:order-1 lg:col-span-2">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
@@ -115,7 +116,7 @@ const Hero = ({ data }: { data: Data }) => {
             />
           </div>
         )}
-      </div>
+      </Reveal>
 
       {/* Curved bottom shape */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">

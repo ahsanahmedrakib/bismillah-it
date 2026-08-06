@@ -2,6 +2,7 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -66,7 +67,7 @@ const EssentialEight = () => {
 
       {/* Section 2: ACSC Essential Eight */}
       <section className="bg-white" id="what-is-it">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <Reveal variant="fade-up" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center">
               <Image
@@ -98,12 +99,12 @@ const EssentialEight = () => {
               </HoverableContentCard>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Section 3: FAQ */}
       <section className="py-20 bg-white" id="what-are-essentials">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
             WHAT ARE THE ESSENTIAL EIGHT?
           </h2>
@@ -121,7 +122,7 @@ const EssentialEight = () => {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

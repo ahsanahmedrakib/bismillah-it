@@ -10,6 +10,7 @@ import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
 import ListCard from "@/shared/components/ui/ListCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -21,25 +22,27 @@ export default function WebPage() {
 
       {/* ================= GRID SECTION ================= */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
-          Services that make your Website Perform
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {webFeatures.map((feature, i) => (
-            <IconFeatureCard
-              key={i}
-              title={feature.title}
-              desc={feature.desc}
-              icon={feature.icon}
-              iconSize={80}
-            />
-          ))}
-        </div>
+        <Reveal variant="fade-up">
+          <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
+            Services that make your Website Perform
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {webFeatures.map((feature, i) => (
+              <IconFeatureCard
+                key={i}
+                title={feature.title}
+                desc={feature.desc}
+                icon={feature.icon}
+                iconSize={80}
+              />
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       {/* ================= SPLIT SECTION 1 ================= */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Illustration */}
           <div className="flex justify-center">
             <Image
@@ -80,12 +83,12 @@ export default function WebPage() {
               More
             </a>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= SPLIT SECTION 2 ================= */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <HoverableContentCard className="order-2 lg:order-1">
             <h2 className="text-3xl font-bold text-blue-900 mb-6 mt-2">
@@ -126,12 +129,12 @@ export default function WebPage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= GRID SECTION ================= */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {serviceListData.map((feature, i) => (
             <ListCard
               key={i}
@@ -140,23 +143,24 @@ export default function WebPage() {
               variant="chevron"
             />
           ))}
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* LOGO SECTION  */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-          {webPartnerLogos.map((a) => (
-            <Image
-              key={a.logo}
-              src={a.logo}
-              alt={a.logo}
-              width={150}
-              height={120}
-              className="h-auto w-auto object-contain"
-            />
+        <Reveal variant="fade-up" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+          {webPartnerLogos.map((a, i) => (
+            <Reveal delay={i * 80} key={a.logo}>
+              <Image
+                src={a.logo}
+                alt={a.logo}
+                width={150}
+                height={120}
+                className="h-auto w-auto object-contain"
+              />
+            </Reveal>
           ))}
-        </div>
+        </Reveal>
       </section>
     </main>
   );

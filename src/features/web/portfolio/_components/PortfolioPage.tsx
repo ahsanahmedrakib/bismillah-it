@@ -9,6 +9,7 @@ import {
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -58,50 +59,56 @@ export default function PortfolioPage() {
 
       {/* ================= SERVICES GRID SECTION ================= */}
       <section className="py-20 bg-slate-50" id="services">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+        <Reveal variant="fade-up" className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
             Our Portfolio
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {allPortfoliData.map((portfolio, i) => (
-              <PortfolioCard key={i} portfolio={portfolio} />
+              <Reveal key={i} delay={i * 80}>
+                <PortfolioCard portfolio={portfolio} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
-          What We Create
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {portfolioCategories.map((category, i) => (
-            <IconFeatureCard
-              key={i}
-              title={category.title}
-              desc={category.desc}
-              icon={category.icon}
-            />
-          ))}
-        </div>
+        <Reveal variant="fade-up">
+          <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
+            What We Create
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {portfolioCategories.map((category, i) => (
+              <IconFeatureCard
+                key={i}
+                title={category.title}
+                desc={category.desc}
+                icon={category.icon}
+              />
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {portfolioStats.map((stat, i) => (
-              <div key={i}>
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  {stat.number}
+              <Reveal key={i} delay={i * 80}>
+                <div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-slate-600 text-sm">{stat.label}</div>
                 </div>
-                <div className="text-slate-600 text-sm">{stat.label}</div>
-              </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div className="flex justify-center order-1 lg:order-2">
             <Image
               src="/images/web/portfolio/portfolio.png"
@@ -134,7 +141,7 @@ export default function PortfolioPage() {
               Start Your Project
             </a>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

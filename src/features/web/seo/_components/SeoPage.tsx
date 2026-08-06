@@ -9,6 +9,7 @@ import {
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowUpRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
@@ -52,24 +53,26 @@ export default function SeoPage() {
 
       {/* SEO SERVICES CARDS */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
-          Our SEO Services
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {seoServices.map((service, i) => (
-            <IconFeatureCard
-              key={i}
-              title={service.title}
-              desc={service.desc}
-              icon={service.icon}
-            />
-          ))}
-        </div>
+        <Reveal variant="fade-up">
+          <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
+            Our SEO Services
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {seoServices.map((service, i) => (
+              <IconFeatureCard
+                key={i}
+                title={service.title}
+                desc={service.desc}
+                icon={service.icon}
+              />
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       {/* CHOOSING THE RIGHT SEARCH TERMS */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <HoverableContentCard className="order-2 lg:order-1">
             <h2 className="text-3xl font-bold text-blue-900 mb-6 mt-2">
               Choosing the right search terms to optimise
@@ -91,12 +94,12 @@ export default function SeoPage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* INTRODUCING YOAST */}
       <section className="py-16 lg:py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div className="flex justify-center">
             <Image
               src="/images/web/yoast.png"
@@ -128,12 +131,12 @@ export default function SeoPage() {
               engines, online store, ecommerce
             </p>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* HOW DOES IT WORK */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             How does it work?
           </h2>
@@ -145,10 +148,10 @@ export default function SeoPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {yoastFeatures.map((feature, i) => (
-              <div
-                key={i}
-                className="relative border-2 border-blue-100 hover:border-blue-300 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all"
-              >
+              <Reveal key={i} delay={i * 80}>
+                <div
+                  className="relative border-2 border-blue-100 hover:border-blue-300 rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all"
+                >
                 <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
                 <div className="flex items-start gap-3 mb-4">
                   <CheckCircle className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
@@ -157,7 +160,8 @@ export default function SeoPage() {
                 <p className="text-slate-600 text-sm leading-relaxed">
                   {feature.desc}
                 </p>
-              </div>
+                </div>
+              </Reveal>
             ))}
           </div>
           <div className="text-center mt-10">
@@ -171,21 +175,23 @@ export default function SeoPage() {
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* SEO POINTERS */}
       <section className="py-16 lg:py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Search Engine Optimisation (SEO) pointers.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
             {seoPointers.map((item, i) => (
-              <PointerCard key={i} item={item} />
+              <Reveal key={i} delay={i * 80}>
+                <PointerCard item={item} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

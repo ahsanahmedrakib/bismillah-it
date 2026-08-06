@@ -3,6 +3,7 @@
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import FAQAccordion from "@/shared/components/ui/FAQAccordion";
+import Reveal from "@/shared/components/ui/Reveal";
 import { Cpu, Database, Server, Shield, Wifi, Wrench } from "lucide-react";
 import Image from "next/image";
 import {
@@ -44,7 +45,7 @@ const DeviceRepairPage = () => {
       <Hero data={deviceRepairHeroData} />
 
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Illustration Image */}
           <div className="flex justify-center items-center">
             <Image
@@ -132,25 +133,29 @@ const DeviceRepairPage = () => {
               </li>
             </ul>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== BRANDS WE REPAIR ==================== */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center">
+        <Reveal variant="fade-up">
         <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-6">
           Brands We Repair
         </h3>
         {/* Partner Grid with sleek border hover states */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {deviceRepairPartnersData.map((partner, index) => (
-            <PartnerCard key={index} partner={partner} />
+            <Reveal key={index} delay={index * 80}>
+              <PartnerCard partner={partner} />
+            </Reveal>
           ))}
         </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 1: Repair Services ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Content Card */}
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
@@ -244,12 +249,12 @@ const DeviceRepairPage = () => {
               className="object-cover rounded-xl"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 2: Security & Cleanup Services ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Image */}
           <div className="flex justify-center items-center">
             <Image
@@ -344,12 +349,12 @@ const DeviceRepairPage = () => {
               </ul>
             </HoverableContentCard>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 3: Data & Backup Services ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Content Card */}
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
@@ -443,12 +448,12 @@ const DeviceRepairPage = () => {
               className="object-cover rounded-xl"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 4: Networking & Setup Services ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Image */}
           <div className="flex justify-center items-center">
             <Image
@@ -542,12 +547,12 @@ const DeviceRepairPage = () => {
               </ul>
             </HoverableContentCard>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 5: New Computers & Upgrades ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Content Card */}
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
@@ -642,23 +647,23 @@ const DeviceRepairPage = () => {
               className="object-cover rounded-xl"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* SECTION - 6 FAQS */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+        <Reveal variant="fade-up" className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
             Computer Repair FAQ
           </h2>
           <FAQAccordion items={faqs} />
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 7: IT Services ==================== */}
 
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Image */}
           <div className="flex justify-center items-center">
             <Image
@@ -709,7 +714,7 @@ const DeviceRepairPage = () => {
               </p>
             </HoverableContentCard>
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

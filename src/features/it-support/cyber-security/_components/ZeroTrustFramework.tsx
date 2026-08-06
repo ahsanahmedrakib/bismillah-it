@@ -1,5 +1,6 @@
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { Lock } from "lucide-react";
 import Image from "next/image";
 
@@ -12,6 +13,7 @@ const ZeroTrustFramework = () => {
       <Hero data={zeroTrustHeroData} />
       {/* ==================== SECTION 1: Header / Overview ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-justify">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <div className="flex items-start gap-4 mb-4">
             {/* Lock Icon */}
@@ -39,23 +41,24 @@ const ZeroTrustFramework = () => {
             </p>
           </div>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 2: Architecture Diagram ==================== */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="flex justify-center items-center overflow-hidden rounded-lg">
+        <Reveal variant="fade-up" className="flex justify-center items-center overflow-hidden rounded-lg">
           <Image
             src="/images/it-support/cyber-security/zero-trust-framework/zero-trust.png"
             alt="Description of the image"
             width={1300}
             height={600}
           />
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 3: Core Principles ==================== */}
       <section className="pt-6 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-justify">
+        <Reveal variant="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-justify">
           {/* Principle 1 */}
           <HoverableContentCard>
             <div className="space-y-3">
@@ -105,7 +108,7 @@ const ZeroTrustFramework = () => {
               </p>
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

@@ -2,6 +2,7 @@
 
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ServiceItem, servicesData } from "../data/homeData";
+import Reveal from "@/shared/components/ui/Reveal";
 
 function ServiceCard({
   service,
@@ -13,16 +14,17 @@ function ServiceCard({
   const { touched, onTouchStart, onTouchEnd } = useTouchHover();
 
   return (
-    <div
-      key={index}
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-      className={`group relative rounded-2xl p-0.5 transition-all duration-500 bg-linear-to-br border border-brand-blue ${
-        touched
-          ? "from-blue-500 via-indigo-500 to-cyan-400 shadow-[0_20px_40px_-15px_rgba(59,130,246,0.25)] -translate-y-1.5"
-          : "from-gray-200/80 via-gray-100 to-gray-200/40 hover:from-blue-500 hover:via-indigo-500 hover:to-cyan-400 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.25)] hover:-translate-y-1.5"
-      }`}
-    >
+    <Reveal className="h-full" delay={(index % 2) * 120}>
+      <div
+        key={index}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        className={`group relative rounded-2xl p-0.5 transition-all duration-500 bg-linear-to-br border border-brand-blue h-full ${
+          touched
+            ? "from-blue-500 via-indigo-500 to-cyan-400 shadow-[0_20px_40px_-15px_rgba(59,130,246,0.25)] -translate-y-1.5"
+            : "from-gray-200/80 via-gray-100 to-gray-200/40 hover:from-blue-500 hover:via-indigo-500 hover:to-cyan-400 hover:shadow-[0_20px_40px_-15px_rgba(59,130,246,0.25)] hover:-translate-y-1.5"
+        }`}
+      >
       <div className="relative flex items-start space-x-5 p-6 sm:p-8 bg-white rounded-[14px] h-full w-full">
         <div
           className={`shrink-0 flex items-center justify-center w-12 h-12 rounded-xl ring-1 ring-blue-100 transition-all duration-300 shadow-sm ${
@@ -53,7 +55,8 @@ function ServiceCard({
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </Reveal>
   );
 }
 
@@ -72,7 +75,7 @@ export default function WhatWeDo() {
 
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
         <div className="mb-24">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
+          <Reveal className="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
               <span className="text-xs font-bold tracking-widest text-blue-600 uppercase bg-blue-50 px-3 py-1.5 rounded-md ring-1 ring-blue-600/10">
                 Capabilities
@@ -86,7 +89,7 @@ export default function WhatWeDo() {
               secure operational logic pipelines optimized for peak
               availability.
             </p>
-          </div>
+          </Reveal>
 
           {/* Upgraded Modern Cards Layout with Eye-Catching Borders */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">

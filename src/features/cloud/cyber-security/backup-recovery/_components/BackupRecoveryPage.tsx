@@ -2,6 +2,7 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -197,7 +198,10 @@ export default function BackupRecoveryPage() {
 
       {/* ================= OVERVIEW SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="overview">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="flex justify-center">
             <Image
               src="/images/cloud/cyber-security/backup-recovery/section-1.png"
@@ -233,12 +237,15 @@ export default function BackupRecoveryPage() {
               </a>
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= WHY BACKUP MATTERS ================= */}
       <section className="py-16 lg:py-24 bg-white" id="why-matters">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Why Backup and Recovery Matters
           </h2>
@@ -249,15 +256,20 @@ export default function BackupRecoveryPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {businessBenefits.map((benefit, i) => (
-              <BenefitCard key={i} benefit={benefit} />
+              <Reveal key={i} delay={i * 80}>
+                <BenefitCard benefit={benefit} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= BACKUP SOLUTIONS ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="solutions">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Our Backup & Recovery Solutions
           </h2>
@@ -268,15 +280,20 @@ export default function BackupRecoveryPage() {
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {backupSolutions.map((solution, i) => (
-              <SolutionCard key={i} solution={solution} />
+              <Reveal key={i} delay={i * 80}>
+                <SolutionCard solution={solution} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= FULL SYSTEM BACKUP ================= */}
       <section className="py-16 lg:py-24 bg-white" id="full-system">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <HoverableContentCard>
             <div>
               <span className="text-blue-500 font-bold text-sm tracking-wide mb-3 block">
@@ -320,12 +337,15 @@ export default function BackupRecoveryPage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= MOZY PRO CLOUD BACKUP ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="mozy-pro">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="flex justify-center">
             <div className="relative h-80 w-full rounded-2xl overflow-hidden ">
               <Image
@@ -368,12 +388,15 @@ export default function BackupRecoveryPage() {
               </p>
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= BACKUP TYPES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="types">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Types of Backup Solutions
           </h2>
@@ -383,15 +406,20 @@ export default function BackupRecoveryPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {backupTypes.map((type, i) => (
-              <BackupTypeCard key={i} type={type} />
+              <Reveal key={i} delay={i * 80}>
+                <BackupTypeCard type={type} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= HOW IT WORKS ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="how-it-works">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             How Our Backup & Recovery Works
           </h2>
@@ -401,15 +429,20 @@ export default function BackupRecoveryPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {howItWorksSteps.map((step, i) => (
-              <StepCard key={i} step={step} index={i} />
+              <Reveal key={i} delay={i * 80}>
+                <StepCard step={step} index={i} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= NEED HELP ================= */}
       <section className="py-16 lg:py-24 bg-white" id="help">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center"
+        >
           <div className="bg-linear-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-10 text-white order-2 lg:order-1">
             <h2 className="text-2xl lg:text-3xl font-bold mb-6">
               Need Help with Your Backup Strategy?
@@ -451,44 +484,49 @@ export default function BackupRecoveryPage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= USEFUL LINKS ================= */}
       <section className="py-8 lg:py-10 bg-slate-50" id="useful-links">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
             Useful Links
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {backupRecoveryUsefulLinks.map((link, i) => (
-              <div
-                key={i}
-                className="border-2 border-blue-100 hover:border-blue-300 relative rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all"
-              >
-                <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-                <h3 className="text-lg font-bold text-slate-900 mb-3">
-                  {link.title}
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  {link.description}
-                </p>
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  className="text-blue-600 font-semibold text-sm hover:underline"
-                >
-                  Find Out More &rarr;
-                </Link>
-              </div>
+              <Reveal key={i} delay={i * 80}>
+                <div className="border-2 border-blue-100 hover:border-blue-300 relative rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all">
+                  <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">
+                    {link.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    {link.description}
+                  </p>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    className="text-blue-600 font-semibold text-sm hover:underline"
+                  >
+                    Find Out More &rarr;
+                  </Link>
+                </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= FAQ SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="faq">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -500,7 +538,7 @@ export default function BackupRecoveryPage() {
               <FAQItem key={i} faq={faq} />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

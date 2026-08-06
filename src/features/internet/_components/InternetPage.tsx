@@ -3,6 +3,7 @@
 import { heroData, internetCards } from "@/features/internet/data/internetData";
 import Hero from "@/shared/components/ui/Hero";
 import ImageCard from "@/shared/components/ui/ImageCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { ChevronRight, HeartHandshake, Users, Wrench } from "lucide-react";
 import Image from "next/image";
 
@@ -14,7 +15,7 @@ export default function InternetPage() {
 
       {/* ================= SERVICES GRID SECTION ================= */}
       <section className="relative bg-slate-50 py-12 lg:py-16 z-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {internetCards.map((card, idx) => (
               <ImageCard
@@ -25,12 +26,12 @@ export default function InternetPage() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= INTRO TEXT SECTION ================= */}
       <section className="py-16 lg:py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 hover:border-blue-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all relative">
             <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
             <h2 className="text-3xl font-bold text-blue-900 mb-6 mt-2">
@@ -55,12 +56,12 @@ export default function InternetPage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= SPLIT SECTION 1 ================= */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Illustration */}
           <div>
             <Image
@@ -102,12 +103,12 @@ export default function InternetPage() {
               Is it connected, now what?
             </a>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= SPLIT SECTION 2 ================= */}
       <section className="py-16 lg:py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="order-2 lg:order-1 bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 hover:border-blue-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all relative">
             <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
@@ -180,7 +181,7 @@ export default function InternetPage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

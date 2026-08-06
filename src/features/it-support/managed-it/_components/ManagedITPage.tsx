@@ -3,6 +3,7 @@
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { managedITFeatures, managedItHeroData } from "../data/managedItData";
@@ -15,6 +16,7 @@ const ManagedITPage = () => {
 
       {/* ================= GRID SECTION ================= */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <Reveal variant="fade-up">
         <h2 className="text-3xl text-center font-bold text-blue-900 mb-6">
           Why Choose Us?
         </h2>
@@ -35,6 +37,7 @@ const ManagedITPage = () => {
             />
           ))}
         </div>
+        </Reveal>
       </section>
 
       {/* SECTION 3*/}
@@ -42,7 +45,7 @@ const ManagedITPage = () => {
         className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8"
         id="networking"
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center my-12">
+        <Reveal variant="fade-up" className="grid lg:grid-cols-2 gap-12 items-center my-12">
           <HoverableContentCard className="order-2 lg:order-1">
             <div>
               <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
@@ -87,12 +90,12 @@ const ManagedITPage = () => {
               className="object-fit rounded-2xl"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* SECTION 4 */}
       <section className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8" id="it">
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+        <Reveal variant="fade-up" className="grid lg:grid-cols-2 gap-12 items-center mb-12">
           <div className="relative h-75 w-full">
             <Image
               src="/images/it-support/managed-it/section-2.jpg"
@@ -136,7 +139,7 @@ const ManagedITPage = () => {
               </a>
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

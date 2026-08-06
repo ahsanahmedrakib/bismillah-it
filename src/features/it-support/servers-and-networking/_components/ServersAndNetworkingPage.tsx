@@ -3,6 +3,7 @@
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import TestimonialCard from "@/shared/components/ui/TestimonialCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import {
   BarChart3,
@@ -71,6 +72,7 @@ const ServersAndNetworkingPage = () => {
 
       {/* TESTIMONIALS SECTION */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         <h2 className="text-center text-3xl font-black text-slate-900 tracking-tight mb-12">
           What people are talking about us
         </h2>
@@ -83,10 +85,11 @@ const ServersAndNetworkingPage = () => {
             />
           ))}
         </div>
+        </Reveal>
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
+        <Reveal variant="fade-up" className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
           <div className="">
             <div className="mb-12">
               <h2 className="text-center text-3xl font-black text-slate-900 tracking-tight mt-3">
@@ -106,16 +109,18 @@ const ServersAndNetworkingPage = () => {
             {/* Partner Grid with sleek border hover states */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
               {partnersData.map((partner, index) => (
-                <PartnerCard key={index} partner={partner} />
+                <Reveal key={index} delay={index * 80}>
+                  <PartnerCard partner={partner} />
+                </Reveal>
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 1: Intro / Top Cards ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left Column: Heading & Paragraph */}
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight mb-6">
@@ -157,11 +162,12 @@ const ServersAndNetworkingPage = () => {
               </HoverableContentCard>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 2: Solutions Overview & Image ==================== */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-10">
           Solutions
         </h2>
@@ -222,11 +228,12 @@ const ServersAndNetworkingPage = () => {
             </div>
           </div>
         </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 3: Networking Solutions (Dark Theme) ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white w-full">
-        <div className="max-w-7xl mx-auto">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
             <div>
@@ -266,8 +273,8 @@ const ServersAndNetworkingPage = () => {
               ];
               const Icon = icons[i];
               return (
+                <Reveal key={i} delay={i * 80}>
                 <div
-                  key={i}
                   className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6 hover:border-blue-500/50 transition-all"
                 >
                   <div className="flex items-start flex-col sm:flex-row space-x-4 space-y-4">
@@ -287,14 +294,16 @@ const ServersAndNetworkingPage = () => {
                     </div>
                   </div>
                 </div>
+                </Reveal>
               );
             })}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 4: Wireless Network ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
           <div>
@@ -343,11 +352,12 @@ const ServersAndNetworkingPage = () => {
             </HoverableContentCard>
           ))}
         </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 5: WAN & Advanced Networking Solutions (Dark Theme) ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white w-full">
-        <div className="max-w-7xl mx-auto">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
             <div>
@@ -379,8 +389,8 @@ const ServersAndNetworkingPage = () => {
               const icons = [Globe, RefreshCw];
               const Icon = icons[i];
               return (
+                <Reveal key={i} delay={i * 80}>
                 <div
-                  key={i}
                   className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6"
                 >
                   <div className="flex items-start flex-col sm:flex-row space-x-4 space-y-4">
@@ -399,6 +409,7 @@ const ServersAndNetworkingPage = () => {
                     </div>
                   </div>
                 </div>
+                </Reveal>
               );
             })}
           </div>
@@ -436,8 +447,8 @@ const ServersAndNetworkingPage = () => {
               ];
               const Icon = icons[i];
               return (
+                <Reveal key={i} delay={i * 80}>
                 <div
-                  key={i}
                   className={`bg-slate-800/80 border border-slate-700/60 rounded-xl p-6 ${
                     i === 4 ? "md:col-span-2 max-w-2xl mx-auto w-full" : ""
                   }`}
@@ -458,10 +469,11 @@ const ServersAndNetworkingPage = () => {
                     </div>
                   </div>
                 </div>
+                </Reveal>
               );
             })}
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

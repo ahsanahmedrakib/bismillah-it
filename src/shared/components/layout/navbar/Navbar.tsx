@@ -52,7 +52,7 @@ export default function Navbar() {
 
       {/* 2. MAIN NAV — sticks to top, hides on scroll down */}
       <div
-        className={`w-full bg-white border-b border-brand-subtle-border font-sans selection:bg-brand-blue selection:text-white sticky top-0 z-50 transition-transform duration-300 ${
+        className={`nav-enter w-full bg-white border-b border-brand-subtle-border font-sans selection:bg-brand-blue selection:text-white sticky top-0 z-50 transition-transform duration-300 ${
           hidden ? "-translate-y-full" : "translate-y-0"
         }`}
       >

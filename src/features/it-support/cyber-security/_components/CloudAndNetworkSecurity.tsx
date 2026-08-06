@@ -1,5 +1,6 @@
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { Cloud, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
@@ -13,7 +14,7 @@ const CloudAndNetworkSecurity = () => {
 
       {/* ==================== SECTION 1: Cloud Security Services ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Content Card */}
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
@@ -147,11 +148,12 @@ const CloudAndNetworkSecurity = () => {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 2: Key Elements of Cloud Security ==================== */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6">
             Key Elements of Cloud Security:
@@ -194,11 +196,12 @@ const CloudAndNetworkSecurity = () => {
             </li>
           </ol>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 3: Understanding Network Security ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Image */}
           <div className="flex justify-center items-center">
             <div className="flex justify-center">
@@ -380,11 +383,12 @@ const CloudAndNetworkSecurity = () => {
               </ul>
             </HoverableContentCard>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 4: Network Consulting, Design, and Installation ==================== */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
             Network Consulting, Design, and Installation
@@ -468,10 +472,12 @@ const CloudAndNetworkSecurity = () => {
             </li>
           </ul>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 5: Best Practices for Strengthening Security ==================== */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6">
             Best Practices for Strengthening Cloud and Network Security
@@ -514,10 +520,12 @@ const CloudAndNetworkSecurity = () => {
             </li>
           </ol>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 6: Emerging Trends ==================== */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6">
             Emerging Trends in Cloud and Network Security
@@ -561,10 +569,12 @@ const CloudAndNetworkSecurity = () => {
             </li>
           </ol>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 7: Why Choose Us ==================== */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
             Why Choose Us For Cloud and Network Security?
@@ -619,10 +629,12 @@ const CloudAndNetworkSecurity = () => {
             </li>
           </ul>
         </HoverableContentCard>
+        </Reveal>
       </section>
 
       {/* ==================== SECTION 8: Call To Action / Get Started ==================== */}
       <section className="py-10 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <Reveal variant="fade-up">
         <HoverableContentCard>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">
             Get Started Today with the Best Cloud and Network Security Solutions
@@ -648,6 +660,7 @@ const CloudAndNetworkSecurity = () => {
             threats.
           </p>
         </HoverableContentCard>
+        </Reveal>
       </section>
     </main>
   );

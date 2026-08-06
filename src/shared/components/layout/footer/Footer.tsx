@@ -4,6 +4,7 @@ import { NAV_ITEMS } from "@/shared/data/navbar";
 import { Home, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/shared/components/ui/Reveal";
 import SocialIcons from "../navbar/SocialIcons";
 
 export default function Footer() {
@@ -13,7 +14,7 @@ export default function Footer() {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 mb-16">
           {/* Column 1: Logos & About */}
-          <div className="space-y-6">
+          <Reveal variant="fade-right" className="space-y-6">
             {/* Logo Placeholders - Replace src with your actual logo paths */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
@@ -52,10 +53,10 @@ export default function Footer() {
               service. Best internet service provider in Uttara Dhaka.
             </p>
             <SocialIcons />
-          </div>
+          </Reveal>
 
           {/* Column 2: Navigation */}
-          <div className="lg:pl-8">
+          <Reveal variant="fade-up" delay={100} className="lg:pl-8">
             <h3 className="text-2xl font-bold mb-6">Navigation</h3>
             <ul className="space-y-3 list-disc pl-5 marker:text-gray-300 text-[15px] text-gray-200">
               {NAV_ITEMS?.map((nav, i) => (
@@ -69,7 +70,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
           {/* Column 3: Customer Service */}
           {/* <div className="lg:pl-4">
@@ -107,7 +108,7 @@ export default function Footer() {
           </div> */}
 
           {/* Column 4: Contact */}
-          <div>
+          <Reveal variant="fade-left" delay={200}>
             <h3 className="text-2xl font-bold mb-6">Contact</h3>
             <div className="space-y-6">
               {/* Email */}
@@ -151,11 +152,11 @@ export default function Footer() {
                 </address>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* Bottom Bar: Copyright & Privacy */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 text-[13px] text-white gap-4">
+        <Reveal variant="fade-up" delay={150} className="flex flex-col md:flex-row justify-between items-center pt-8 text-[13px] text-white gap-4">
           <p>
             © {new Date().getFullYear()}{" "}
             <Link href={"https://bct.com.bd/"}>
@@ -183,7 +184,7 @@ export default function Footer() {
               Privacy Policy
             </Link>
           </div>
-        </div>
+        </Reveal>
       </div>
     </footer>
   );

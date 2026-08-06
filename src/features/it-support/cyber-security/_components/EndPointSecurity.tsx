@@ -2,6 +2,7 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { Hexagon, Plus, Shield, TriangleAlert } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -22,7 +23,7 @@ export default function EndPointSecurityPage() {
       <Hero data={endPointHeroData} />
       {/* ==================== SECTION 1: Endpoint Security Overview ==================== */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Text Overview Card */}
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
@@ -116,14 +117,14 @@ export default function EndPointSecurityPage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
       {/* ==================== SECTION 2: Why do you need EndPoint Protection? ==================== */}
       <section
         className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
         id="why-need"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Phone Lock Key Illustration */}
           <div className="flex justify-center items-center">
             <div className="relative w-full max-w-sm aspect-square">
@@ -175,20 +176,22 @@ export default function EndPointSecurityPage() {
               </div>
             </HoverableContentCard>
           </div>
-        </div>
+        </Reveal>
       </section>
       {/* ==================== SECTION 3: Main Solutions Section Heading ==================== */}
       <section className="pt-12 pb-6 px-4 text-center">
+        <Reveal variant="fade-up">
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
           EndPoint Security Solutions
         </h2>
+        </Reveal>
       </section>
       {/* ==================== SECTION 4: Microsoft Defender for Business ==================== */}
       <section
         className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
         id="defender-for-business"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Solution Card */}
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
@@ -256,14 +259,14 @@ export default function EndPointSecurityPage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
       {/* ==================== SECTION 5: Sentinel One ==================== */}
       <section
         className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
         id="sentinel-one"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: SentinelOne Logo Graphic */}
           <div className="flex justify-center items-center">
             <div className="relative overflow-hidden flex justify-center">
@@ -329,14 +332,14 @@ export default function EndPointSecurityPage() {
               </button>
             </HoverableContentCard>
           </div>
-        </div>
+        </Reveal>
       </section>
       {/* ==================== SECTION 6: Bit Defender ==================== */}
       <section
         className="py-8 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full"
         id="bit-defender"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Right Column: Solution Card */}
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
@@ -403,7 +406,7 @@ export default function EndPointSecurityPage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );

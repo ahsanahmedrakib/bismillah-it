@@ -11,6 +11,7 @@ import {
 import FAQAccordion from "@/shared/components/ui/FAQAccordion";
 import Hero from "@/shared/components/ui/Hero";
 import ImageCard from "@/shared/components/ui/ImageCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import TestimonialCard from "@/shared/components/ui/TestimonialCard";
 import Image from "next/image";
 
@@ -22,23 +23,28 @@ export default function VoicePage() {
 
       {/* TESTIMONIALS SECTION */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
-          What people are talking about us
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {voiceTestimonials.map((testimonial, i) => (
-            <TestimonialCard
-              key={i}
-              text={testimonial.text}
-              name={testimonial.name}
-            />
-          ))}
-        </div>
+        <Reveal variant="fade-up">
+          <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">
+            What people are talking about us
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {voiceTestimonials.map((testimonial, i) => (
+              <TestimonialCard
+                key={i}
+                text={testimonial.text}
+                name={testimonial.name}
+              />
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       {/* UPGRADE & FORM SECTION */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start"
+        >
           <div className="pt-8">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-snug">
               Upgrade to the latest smart business phone system technology and
@@ -120,12 +126,15 @@ export default function VoicePage() {
               </button>
             </form>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* INFO SECTION */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="order-2 lg:order-1 bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 hover:border-blue-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all relative">
             <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
             <div className="space-y-6 text-slate-600 leading-relaxed mt-4">
@@ -160,12 +169,15 @@ export default function VoicePage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* PRODUCTS / SERVICES GRID */}
       <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto"
+        >
           <h2 className="text-3xl font-bold text-blue-900 mb-12">
             Phone Systems Support
           </h2>
@@ -179,12 +191,15 @@ export default function VoicePage() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* DARK BANNER */}
       <section className="bg-dark-section py-16">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row items-center gap-12">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row items-center gap-12"
+        >
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold text-white leading-relaxed">
               As well as taking incoming calls on fixed line phones, IP
@@ -199,12 +214,15 @@ export default function VoicePage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* FEATURES ACCORDION & IMAGE */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start relative">
+        <Reveal
+          variant="fade-up"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start relative"
+        >
           <div className="relative h-150 rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100">
             <Image
               src="/images/voice/feature.jpg"
@@ -215,30 +233,32 @@ export default function VoicePage() {
           </div>
           <div className="space-y-6">
             {voiceFeatures.map((feature, i) => (
-              <div
-                key={i}
-                className="border-2 border-blue-100 hover:border-blue-300 rounded-2xl relative p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all"
-              >
-                <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  • {feature.title}
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">{feature.desc}</p>
-                <a
-                  href="#"
-                  className="text-blue-600 font-semibold text-sm hover:underline"
-                >
-                  Read More &rarr;
-                </a>
-              </div>
+              <Reveal key={i} delay={i * 80}>
+                <div className="border-2 border-blue-100 hover:border-blue-300 rounded-2xl relative p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all">
+                  <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
+                    • {feature.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-4">{feature.desc}</p>
+                  <a
+                    href="#"
+                    className="text-blue-600 font-semibold text-sm hover:underline"
+                  >
+                    Read More &rarr;
+                  </a>
+                </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* WHY CHOOSE US */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="order-2 lg:order-1 bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 hover:border-blue-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all relative">
             <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
             <h2 className="text-3xl font-bold text-blue-900 mb-6 mt-2">
@@ -285,12 +305,15 @@ export default function VoicePage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* HARDWARE CTA */}
       <section className="bg-dark-section py-16 text-white">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-12 items-center"
+        >
           <div className="relative h-64 md:h-80 w-full">
             <Image
               src="/images/voice/telephone.png"
@@ -315,35 +338,40 @@ export default function VoicePage() {
               Read More
             </button>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* BENEFITS GRID */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto"
+        >
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-16">
             Increase Time To Money and Boost Productivity with Phone Systems.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12">
             {voiceBenefits.map((benefit, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center text-center space-y-4"
-              >
-                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold">
-                  ✓
+              <Reveal key={i} delay={i * 80}>
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl font-bold">
+                    ✓
+                  </div>
+                  <h3 className="font-bold text-slate-900">{benefit.title}</h3>
+                  <p className="text-sm text-slate-600">{benefit.desc}</p>
                 </div>
-                <h3 className="font-bold text-slate-900">{benefit.title}</h3>
-                <p className="text-sm text-slate-600">{benefit.desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* PARTNERSHIP */}
       <section className="py-16 bg-slate-50 border-t border-blue-100">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+        >
           <div className="order-2 lg:order-1 bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-2 border-blue-100 hover:border-blue-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all relative">
             <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
             <div className="text-center md:text-left">
@@ -365,17 +393,20 @@ export default function VoicePage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* FAQS */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto"
+        >
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">
             FAQs
           </h2>
           <FAQAccordion items={faqs} />
-        </div>
+        </Reveal>
       </section>
     </main>
   );

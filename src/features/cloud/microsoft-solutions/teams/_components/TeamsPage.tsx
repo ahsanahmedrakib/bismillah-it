@@ -4,6 +4,7 @@ import FAQAccordion from "@/shared/components/ui/FAQAccordion";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -105,7 +106,10 @@ export default function TeamsPage() {
 
       {/* ================= OVERVIEW SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="overview">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center"
+        >
           <div className="flex justify-center">
             <Image
               src="/images/cloud/microsoft-solutions/teams/section.png"
@@ -141,12 +145,15 @@ export default function TeamsPage() {
               </a>
             </div>
           </HoverableContentCard>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= KEY FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="features">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Key Features of Microsoft Teams
           </h2>
@@ -165,12 +172,15 @@ export default function TeamsPage() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= ALL FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="all-features">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Teams Features
           </h2>
@@ -182,44 +192,51 @@ export default function TeamsPage() {
               <FeatureCategory key={i} feature={feature} />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= USEFUL LINKS ================= */}
       <section className="py-8 lg:py-10 bg-slate-50" id="useful-links">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-12">
             Useful Links
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {teamsUsefulLinks.map((link, i) => (
-              <div
-                key={i}
-                className="border-2 border-blue-100 hover:border-blue-300 relative rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all"
-              >
-                <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  • {link.title}
-                </h3>
-                <p className="text-slate-600 text-sm mb-4">
-                  {link.description}
-                </p>
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  className="text-blue-600 font-semibold text-sm hover:underline"
+              <Reveal key={i} delay={i * 80}>
+                <div
+                  className="border-2 border-blue-100 hover:border-blue-300 relative rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white transition-all"
                 >
-                  Read More &rarr;
-                </Link>
-              </div>
+                  <div className="absolute top-0 left-8 w-16 h-1 bg-blue-600 rounded-b-md"></div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
+                    • {link.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    {link.description}
+                  </p>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    className="text-blue-600 font-semibold text-sm hover:underline"
+                  >
+                    Read More &rarr;
+                  </Link>
+                </div>
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= BENEFITS SECTION ================= */}
       <section className="py-16 lg:py-24 bg-slate-50" id="benefits">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Benefits of Using Microsoft Teams
           </h2>
@@ -228,15 +245,20 @@ export default function TeamsPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamsBenefits.map((benefit, i) => (
-              <BenefitCard key={i} benefit={benefit} />
+              <Reveal key={i} delay={i * 80}>
+                <BenefitCard benefit={benefit} />
+              </Reveal>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ================= FAQ SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="faq">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal
+          variant="fade-up"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -244,7 +266,7 @@ export default function TeamsPage() {
             Common questions about Microsoft Teams
           </p>
           <FAQAccordion items={teamsFAQs} />
-        </div>
+        </Reveal>
       </section>
     </main>
   );

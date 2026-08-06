@@ -2,6 +2,7 @@
 
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
+import Reveal from "@/shared/components/ui/Reveal";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { Check } from "lucide-react";
 import Image from "next/image";
@@ -113,7 +114,7 @@ export default function CyberSecurityPage() {
 
       {/* Section 1: Cyber Security Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+        <Reveal variant="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           <div className="col-span-1 sm:col-span-2 lg:col-span-2 pr-0 md:pr-8 flex flex-col justify-start pt-4">
             <h2 className="text-blue-600 font-bold text-xl mb-6 tracking-wide">
               Cyber Security
@@ -140,7 +141,7 @@ export default function CyberSecurityPage() {
           {gridServices.map((service, idx) => (
             <CyberCard key={`grid-${idx}`} {...service} />
           ))}
-        </div>
+        </Reveal>
       </section>
 
       {/* Section 2: Security is a Necessity */}
@@ -148,7 +149,7 @@ export default function CyberSecurityPage() {
         className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
         id="cybersecurity"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
               <span className="text-blue-500 font-bold text-sm tracking-wide mb-3 block">
@@ -183,12 +184,12 @@ export default function CyberSecurityPage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Section 3: What is Cyber Security */}
       <section className="bg-white">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <Reveal variant="fade-up" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center">
               <Image
@@ -224,12 +225,12 @@ export default function CyberSecurityPage() {
               </HoverableContentCard>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Section 4: What We Do */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <Reveal variant="fade-up" className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
             <HoverableContentCard>
               <span className="text-blue-500 font-bold text-sm tracking-wide mb-3 block">
@@ -260,12 +261,12 @@ export default function CyberSecurityPage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Section 5: ACSC Essential Eight */}
       <section className="bg-white" id="acsc">
-        <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <Reveal variant="fade-up" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center">
               <Image
@@ -300,12 +301,12 @@ export default function CyberSecurityPage() {
               </HoverableContentCard>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Section 6: FAQ */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-brand-blue mb-12">
             FAQs
           </h2>
@@ -323,12 +324,12 @@ export default function CyberSecurityPage() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Section 7: Partner Logos */}
       <section className="py-16 bg-slate-50 border-t border-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal variant="fade-up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
             {partnerLogos.map((logo, idx) => (
               <Image
@@ -341,7 +342,7 @@ export default function CyberSecurityPage() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
     </main>
   );
