@@ -6,8 +6,6 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import DesktopNav from "./DesktopNav";
 import MobileDrawer from "./MobileDrawer";
-import SocialIcons from "./SocialIcons";
-import UtilityLinks from "./UtilityLinks";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -43,14 +41,14 @@ export default function Navbar() {
   return (
     <>
       {/* 1. TOP UTILITY BAR — always visible, scrolls away naturally */}
-      <div className="w-full border-b border-slate-100 bg-brand-light-bg/50 font-sans">
+      {/* <div className="w-full border-b border-slate-100 bg-brand-light-bg/50 font-sans">
         <div className="mx-auto max-w-365 px-2">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
             <SocialIcons />
             <UtilityLinks />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* 2. MAIN NAV — sticks to top, hides on scroll down */}
       <div

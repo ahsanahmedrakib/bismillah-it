@@ -1,10 +1,10 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
+import FAQAccordion from "@/shared/components/ui/FAQAccordion";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
-import FAQAccordion from "@/shared/components/ui/FAQAccordion";
+import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +18,6 @@ import {
   teamsOverview,
   teamsUsefulLinks,
 } from "../data/teamsData";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
 
 function BenefitCard({
   benefit,
@@ -145,9 +144,6 @@ export default function TeamsPage() {
         </div>
       </section>
 
-      {/* ================= OUR APPROACH ================= */}
-      <OurApproach />
-
       {/* ================= KEY FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,15 +155,15 @@ export default function TeamsPage() {
             collaboration
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamsKeyFeatures.map((feature, i) => (
-            <IconFeatureCard
-              key={i}
-              title={feature.title}
-              desc={feature.desc}
-              icon={feature.icon}
-              iconSize={44}
-            />
-          ))}
+            {teamsKeyFeatures.map((feature, i) => (
+              <IconFeatureCard
+                key={i}
+                title={feature.title}
+                desc={feature.desc}
+                icon={feature.icon}
+                iconSize={44}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -253,4 +249,3 @@ export default function TeamsPage() {
     </main>
   );
 }
-

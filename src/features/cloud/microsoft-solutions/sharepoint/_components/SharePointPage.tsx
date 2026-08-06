@@ -1,6 +1,5 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
 import FAQAccordion from "@/shared/components/ui/FAQAccordion";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
@@ -86,9 +85,6 @@ export default function SharePointPage() {
           </HoverableContentCard>
         </div>
       </section>
-
-      {/* ================= OUR APPROACH ================= */}
-      <OurApproach />
 
       {/* ================= KEY FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="features">
@@ -179,4 +175,3 @@ export default function SharePointPage() {
     </main>
   );
 }
-

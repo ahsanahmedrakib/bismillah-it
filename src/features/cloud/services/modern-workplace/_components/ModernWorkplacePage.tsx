@@ -1,14 +1,13 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
+import FAQAccordion from "@/shared/components/ui/FAQAccordion";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
-import FAQAccordion from "@/shared/components/ui/FAQAccordion";
+import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import {
   advancedFeatures,
   coreApps,
@@ -140,11 +139,6 @@ export default function ModernWorkplacePage() {
             </div>
           </HoverableContentCard>
         </div>
-      </section>
-
-      {/* ================= OUR APPROACH ================= */}
-      <section className="py-16 lg:py-24 bg-slate-50" id="approach">
-        <OurApproach />
       </section>
 
       {/* ================= CORE APPLICATIONS ================= */}
@@ -424,4 +418,3 @@ export default function ModernWorkplacePage() {
     </main>
   );
 }
-

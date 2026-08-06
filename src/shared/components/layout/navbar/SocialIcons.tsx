@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SocialIcons() {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center gap-2">
       {SOCIAL_ICONS.map((item) => {
         const Icon = item.icon;
         return (
@@ -15,7 +15,7 @@ export default function SocialIcons() {
                 style={{ backgroundColor: item.color }}
                 target="_blank"
               >
-                <Icon color={"#FFF"} size={16} />
+                <Icon color={"#FFF"} size={30} />
               </Link>
             ) : null}
           </div>

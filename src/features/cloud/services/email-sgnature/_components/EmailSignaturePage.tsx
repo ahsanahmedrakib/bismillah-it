@@ -1,6 +1,5 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
@@ -9,15 +8,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import {
+  businessScenarios,
+  coreFeatures,
+  emailSignatureFaqs,
   emailSignatureHeroData,
   emailSignatureOverview,
-  coreFeatures,
-  businessScenarios,
-  signatureModes,
-  keyBenefits,
-  tsitServices,
   emailSignatureUsefulLinks,
-  emailSignatureFaqs,
+  keyBenefits,
+  signatureModes,
+  tsitServices,
 } from "../data/emailSignatureData";
 
 function FeatureCard({
@@ -107,7 +106,7 @@ function ModeCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
         />
       </div>
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col grow">
         <div className="flex items-center gap-3 mb-3">
           <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white shrink-0">
             <span className="font-bold text-sm">{index + 1}</span>
@@ -235,11 +234,6 @@ export default function EmailSignaturePage() {
         </div>
       </section>
 
-      {/* ================= OUR APPROACH ================= */}
-      <section className="py-16 lg:py-24 bg-slate-50" id="approach">
-        <OurApproach />
-      </section>
-
       {/* ================= CORE FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -326,7 +320,7 @@ export default function EmailSignaturePage() {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-10 text-white">
+          <div className="bg-linear-to-br from-blue-600 to-blue-800 rounded-2xl p-8 lg:p-10 text-white">
             <h2 className="text-2xl lg:text-3xl font-bold mb-6">
               Need Help with Email Signature Management?
             </h2>
@@ -340,10 +334,7 @@ export default function EmailSignaturePage() {
             <div className="space-y-3 mb-6">
               {tsitServices.map((service, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <Check
-                    size={18}
-                    className="text-blue-200 shrink-0 mt-0.5"
-                  />
+                  <Check size={18} className="text-blue-200 shrink-0 mt-0.5" />
                   <span className="text-blue-50 text-sm">{service}</span>
                 </div>
               ))}

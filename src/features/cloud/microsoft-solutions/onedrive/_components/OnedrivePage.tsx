@@ -1,6 +1,5 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
@@ -151,9 +150,6 @@ export default function OnedrivePage() {
         </div>
       </section>
 
-      {/* ================= OUR APPROACH ================= */}
-      <OurApproach />
-
       {/* ================= KEY FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,7 +220,7 @@ export default function OnedrivePage() {
 
       {/* ================= FAQ SECTION ================= */}
       <section className="py-16 lg:py-24 bg-white" id="faq">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl text-center font-bold text-blue-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -241,4 +237,3 @@ export default function OnedrivePage() {
     </main>
   );
 }
-

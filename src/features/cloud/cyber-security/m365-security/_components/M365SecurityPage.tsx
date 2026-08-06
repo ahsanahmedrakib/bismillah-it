@@ -1,6 +1,5 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
@@ -164,11 +163,6 @@ export default function M365SecurityPage() {
             </div>
           </HoverableContentCard>
         </div>
-      </section>
-
-      {/* ================= OUR APPROACH ================= */}
-      <section className="py-16 lg:py-24 bg-slate-50" id="approach">
-        <OurApproach />
       </section>
 
       {/* ================= SECURITY AREAS ================= */}
@@ -491,4 +485,3 @@ export default function M365SecurityPage() {
     </main>
   );
 }
-

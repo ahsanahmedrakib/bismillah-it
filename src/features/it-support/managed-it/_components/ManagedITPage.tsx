@@ -1,6 +1,5 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
@@ -37,9 +36,6 @@ const ManagedITPage = () => {
           ))}
         </div>
       </section>
-
-      {/* APPROACH SECTION  */}
-      <OurApproach />
 
       {/* SECTION 3*/}
       <section

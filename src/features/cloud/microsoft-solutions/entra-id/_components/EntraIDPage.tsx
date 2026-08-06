@@ -1,6 +1,5 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import { useTouchHover } from "@/shared/hooks/useTouchHover";
@@ -204,9 +203,6 @@ export default function EntraIDPage() {
         </div>
       </section>
 
-      {/* ================= OUR APPROACH ================= */}
-      <OurApproach />
-
       {/* ================= KEY FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -361,4 +357,3 @@ export default function EntraIDPage() {
     </main>
   );
 }
-

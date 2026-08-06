@@ -1,14 +1,13 @@
 "use client";
 
-import OurApproach from "@/features/home/_components/OurApproach";
+import FAQAccordion from "@/shared/components/ui/FAQAccordion";
 import Hero from "@/shared/components/ui/Hero";
 import HoverableContentCard from "@/shared/components/ui/HoverableContentCard";
 import IconFeatureCard from "@/shared/components/ui/IconFeatureCard";
-import FAQAccordion from "@/shared/components/ui/FAQAccordion";
+import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTouchHover } from "@/shared/hooks/useTouchHover";
 import {
   windows365Benefits,
   windows365FAQs,
@@ -90,9 +89,6 @@ export default function Windows365Page() {
         </div>
       </section>
 
-      {/* ================= OUR APPROACH ================= */}
-      <OurApproach />
-
       {/* ================= KEY FEATURES ================= */}
       <section className="py-16 lg:py-24 bg-white" id="features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,15 +99,15 @@ export default function Windows365Page() {
             Everything you need for a secure, cloud-based desktop experience
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {windows365KeyFeatures.map((feature, i) => (
-            <IconFeatureCard
-              key={i}
-              title={feature.title}
-              desc={feature.desc}
-              icon={feature.icon}
-              iconSize={44}
-            />
-          ))}
+            {windows365KeyFeatures.map((feature, i) => (
+              <IconFeatureCard
+                key={i}
+                title={feature.title}
+                desc={feature.desc}
+                icon={feature.icon}
+                iconSize={44}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -268,4 +264,3 @@ export default function Windows365Page() {
     </main>
   );
 }
-
